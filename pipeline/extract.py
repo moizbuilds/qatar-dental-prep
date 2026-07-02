@@ -49,7 +49,10 @@ def extract_book(filename: str, title: str) -> tuple[int, int, int]:
 
     try:
         reader = PdfReader(str(pdf_path))
-    except (PdfReadError, OSError) as exc:
+    except Exception as exc:
+        # Broad catch on purpose: a book-level failure (including pypdf
+        # DependencyError for encrypted PDFs missing `cryptography`) must
+        # log a warning and skip that book, never fail silently.
         print(f"WARNING: failed to open PDF '{filename}': {exc}", file=sys.stderr)
         return (0, 0, 0)
 
