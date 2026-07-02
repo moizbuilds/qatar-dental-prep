@@ -1,0 +1,39 @@
+{
+  "name": "qatar-dental-prep",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:init": "tsx scripts/init-db.ts",
+    "db:load": "tsx scripts/load-chunks.ts",
+    "questions:verify": "tsx scripts/verify-questions.ts",
+    "questions:load": "tsx scripts/load-questions.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.109.1",
+    "better-sqlite3": "^12.11.1",
+    "next": "15.5.20",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.61.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.20",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.4",
+    "typescript": "^5",
+    "vitest": "^4.1.9"
+  }
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "stem": "What weekly intake of carbonated drinks is associated with high erosion risk in children, according to risk prediction guidance?",
+    "options": [
+      "More than two",
+      "More than six",
+      "More than 14",
+      "More than 21"
+    ],
+    "answer_index": 2,
+    "justification": "The text states that intake of more than 14 carbonated drinks weekly is associated with high erosion risk, while more than six is associated with moderate erosion risk.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 64,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In dentists delivering sedation to children, what type of course completion is required as documented evidence of competency?",
+    "options": [
+      "A theoretical training course covering the principles of sedation practice",
+      "A course in advanced orthodontic mechanics",
+      "A certification in general anaesthesia administration only",
+      "A course exclusively in pharmacology of local anaesthetics"
+    ],
+    "answer_index": 0,
+    "justification": "The text specifies satisfactory completion of a theoretical training course covering the principles of sedation practice as part of documented evidence of competency for dentists delivering sedation.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 92,
+    "category": "pediatric",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to dental caries epidemiology trends, what has happened to caries experience in the primary dentition since about 1986-1987, in contrast to the permanent dentition?",
+    "options": [
+      "It has continued to decline at the same rate",
+      "It may have stabilized, while permanent dentition caries prevalence and severity continued to decline",
+      "It has increased dramatically worldwide",
+      "It has been eradicated entirely in developed nations"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes that caries prevalence and severity in the permanent dentition have continued to decline since 1982 in Canada and the USA, but that caries experience in the primary dentition may have stabilized since about 1986-1987.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 120,
+    "category": "pediatric",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is emphasized as the best overall approach to tackling the problem of dental caries in children, according to the introduction on operative treatment?",
+    "options": [
+      "Immediate extraction of all carious primary teeth",
+      "An effective programme of prevention",
+      "Routine placement of stainless steel crowns on all molars",
+      "Delaying treatment until the permanent dentition erupts"
+    ],
+    "answer_index": 1,
+    "justification": "The text states there is no doubt that the best way to tackle the problem of dental caries is through an effective programme of prevention, as outlined in previous chapters.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 148,
+    "category": "pediatric",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Regarding remineralization of early smooth surface lesions in the young permanent dentition, which key point is emphasized?",
+    "options": [
+      "Early smooth surface lesions are reversible",
+      "The surface layer of enamel contains most fluoride and is most resistant to caries",
+      "Restorations should always be replaced rather than repaired",
+      "Fluoride has no effect on enamel remineralization"
+    ],
+    "answer_index": 1,
+    "justification": "The key points state that the surface layer of enamel contains most fluoride and is most resistant to caries, which is central to the remineralization discussion.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 176,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the internal bleaching technique described for advanced restorative dentistry, what concentration of hydrogen peroxide is used along with a heating light with rheostat?",
+    "options": [
+      "3-5%",
+      "10-15%",
+      "30-35%",
+      "50-60%"
+    ],
+    "answer_index": 2,
+    "justification": "The armamentarium lists 30-35% hydrogen peroxide alongside a heating light with rheostat as part of the internal bleaching technique.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 204,
+    "category": "pediatric",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "When should toothbrushing begin, according to guidance on home-based oral health care for children?",
+    "options": [
+      "Only after all primary teeth have erupted",
+      "As soon as the first primary tooth erupts",
+      "At the age of two years",
+      "When the first permanent molar erupts"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that toothbrushing should start as soon as the first primary tooth erupts, and it is recommended that teeth are brushed twice daily.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 232,
+    "category": "pediatric",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In the recommended protocol for regenerative endodontic treatment, what concentration of sodium hypochlorite is used for irrigation during the first treatment visit?",
+    "options": [
+      "0.5% NaOCl",
+      "1.5% NaOCl",
+      "5.25% NaOCl",
+      "10% NaOCl"
+    ],
+    "answer_index": 1,
+    "justification": "The protocol specifies irrigating the root canal system with copious amounts of 1.5% sodium hypochlorite (NaOCl) with the needle introduced into the canal.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 260,
+    "category": "pediatric",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What long-term benefit is associated with elective loss of severely compromised first permanent molars as part of a comprehensive treatment plan?",
+    "options": [
+      "Guaranteed prevention of future caries in all remaining teeth",
+      "The child may benefit from their elective loss as part of a comprehensive treatment plan",
+      "Automatic correction of any existing malocclusion without further intervention",
+      "Elimination of the need for any future orthodontic assessment"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that in the long term the child may benefit from their elective loss of severely compromised first permanent molars as part of a comprehensive treatment plan.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 288,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What role might the paediatric dentist provide input on when working closely with an orthodontist in multidisciplinary management?",
+    "options": [
+      "Prognosis of teeth, patient's ability to accept treatment, advanced restorative options, and oral surgery procedures",
+      "Selection of orthodontic wire alloy composition exclusively",
+      "General anaesthetic dosing for unrelated medical procedures",
+      "Design of the practice's radiography suite"
+    ],
+    "answer_index": 0,
+    "justification": "The text states such cases may require the paediatric dentist to provide input on a range of issues, including prognosis of teeth, patient's ability to accept treatment, advanced restorative options, and oral surgery procedures.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 316,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "How does recurrent salivary gland infection typically present over many years in a child, according to the discussion of oral medicine and oral surgery in children?",
+    "options": [
+      "It resolves permanently after a single course of antibiotics",
+      "This low-level damage over many years causes increasing permanent damage to the acini and duct structures",
+      "It always requires immediate surgical excision of the gland",
+      "It has no long-term effect on gland flow rates"
+    ],
+    "answer_index": 1,
+    "justification": "The text explains that this low-level damage over many years causes increasing permanent damage to the acini and duct structures, resulting in lower gland flow rates and incomplete emptying of the ductal system.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 344,
+    "category": "pediatric",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Why are general anaesthetics considered a particular problem for children with adrenal insufficiency such as Addison's disease?",
+    "options": [
+      "Because of the pre-anaesthetic fasting that is required, so these are normally carried out on an inpatient basis",
+      "Because general anaesthesia is contraindicated in all endocrine disorders",
+      "Because adrenal insufficiency causes resistance to anaesthetic agents",
+      "Because these children cannot receive any form of sedation"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that general anaesthetics are a problem because of the pre-anaesthetic fasting that is required, and so these are normally carried out on an inpatient basis to enable the insulin and carbohydrate balance to be stabilized intravenously.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 372,
+    "category": "pediatric",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the history of accidental injuries in children, which characteristic distinguishes them from suspicious injuries?",
+    "options": [
+      "Accidental injuries typically involve bony prominences and match the history and developmental stage of the child",
+      "Accidental injuries always involve soft tissue areas like the ears and neck",
+      "Accidental injuries occur exclusively at night",
+      "Accidental injuries never involve the head or face"
+    ],
+    "answer_index": 0,
+    "justification": "The text notes that accidental injuries typically involve bony prominences, match the history, and are in keeping with the development of the child, listing sites such as elbows, knees, shins, and forehead.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 73,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to research on needle phobia and dental anxiety in children, what is the reported prevalence of needle phobia in 4- to 6-year-olds?",
+    "options": [
+      "As high as 5%",
+      "As high as 19%",
+      "As high as 40%",
+      "As high as 60%"
+    ],
+    "answer_index": 1,
+    "justification": "The text cites that Montiero et al. (2014) indicate that the prevalence of needle phobia may be as high as 19% in 4- to 6-year-olds.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 103,
+    "category": "pediatric",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the key to successful management of molar incisor hypomineralization (MIH)?",
+    "options": [
+      "Immediate extraction of all affected teeth",
+      "Early identification, with careful review around the time of eruption of the first permanent molars",
+      "Delaying any preventive intervention until adulthood",
+      "Applying orthodontic brackets to affected teeth immediately"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that the key to successful management of this condition is early identification, with careful review needed around the time of eruption of the first permanent molars to identify affected teeth.",
+    "source_book": "Paediatric Dentistry",
+    "source_page": 223,
+    "category": "pediatric",
+    "difficulty": "medium"
+  }
+]

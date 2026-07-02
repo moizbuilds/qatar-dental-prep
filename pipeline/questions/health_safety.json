@@ -1,0 +1,182 @@
+[
+  {
+    "stem": "What is the single most important measure to help prevent needlestick injury among dental health workers?",
+    "options": [
+      "Wearing double gloves at all times",
+      "Avoiding recapping and resheathing of used needles",
+      "Using only disposable local anaesthetic cartridges",
+      "Washing hands after every patient contact"
+    ],
+    "answer_index": 1,
+    "justification": "The text states 'the single most important measure that will help to prevent needlestick injury is to avoid recapping and resheathing,' recommending a rigid puncture-proof container be kept close at hand for used needles.",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 722,
+    "category": "health_safety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Following a needlestick injury with a bleeding wound, what is the correct immediate first-aid action?",
+    "options": [
+      "Squeeze the wound immediately and apply alcohol only",
+      "Let the wound bleed for a moment, then cleanse thoroughly with soap and water followed by 70% alcohol",
+      "Apply a tourniquet above the wound immediately",
+      "Cover the wound without cleansing and report it the next day"
+    ],
+    "answer_index": 1,
+    "justification": "The guidance states that if there is a wound, one should 'let it bleed for a moment and then cleanse thoroughly using an ample amount of soap and water followed by 70% alcohol,' whereas mucous membrane contact should be rinsed with water or saline only.",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 722,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which bloodborne infection can currently be prevented in dental health workers through immunization, unlike hepatitis C or HIV?",
+    "options": [
+      "Hepatitis B virus (HBV)",
+      "Hepatitis C virus (HCV)",
+      "Human immunodeficiency virus (HIV)",
+      "Cytomegalovirus (CMV)"
+    ],
+    "answer_index": 0,
+    "justification": "The passage states that 'HBV transmission can be prevented by immunization of DHWs,' whereas 'controlling HCV and HIV requires efforts to reduce the incidence and dosage of exposures to blood and body fluids.'",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 721,
+    "category": "health_safety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "For which cause of death is the risk somewhat higher in male dentists compared with the general population, according to occupational health data?",
+    "options": [
+      "Ischaemic heart disease",
+      "Chronic lung disease",
+      "Liver cirrhosis and suicide",
+      "Cerebrovascular disease"
+    ],
+    "answer_index": 2,
+    "justification": "The text notes that 'the risks in male dentists from liver cirrhosis and suicide are somewhat higher than in the general population,' while dentists have a lower standardized mortality ratio for cancers, ischaemic heart disease, cerebrovascular disease and chronic lung diseases.",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 720,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A patient with suxamethonium sensitivity (pseudocholinesterase deficiency) is given suxamethonium during general anaesthesia induction. What is the clinical consequence?",
+    "options": [
+      "Muscle paralysis and apnoea persist and the patient will die unless artificially ventilated until drug action abates",
+      "The patient experiences no effect due to enzyme resistance",
+      "Paralysis resolves faster than in unaffected individuals",
+      "The condition only affects cardiac muscle, not respiratory muscles"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that patients with suxamethonium sensitivity 'remain unable to breathe and will die unless artificially ventilated until the drug action abates after 2 hours or more,' due to a defect in the plasma enzyme that normally destroys the drug within about 6 minutes.",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 610,
+    "category": "health_safety",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Which group of haemophilia patients is generally more appropriately cared for in a hospital setting rather than primary dental care?",
+    "options": [
+      "Those with mild bleeding disorders needing only a scale and polish",
+      "Those with a severe bleeding condition with associated complications such as HIV, hepatitis C, or inhibitors, or requiring surgery",
+      "All haemophilia patients regardless of severity",
+      "Only those who have never previously bled excessively"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that 'those with a severe bleeding condition with associated complications such as HIV, hepatitis C or inhibitors, or those requiring surgery, are often more appropriately cared for in a hospital care setting.'",
+    "source_book": "Scully's Medical Problems in Dentistry",
+    "source_page": 225,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During the first trimester of pregnancy, which period is described as the most critical window for foetal developmental defects due to organogenesis?",
+    "options": [
+      "The 3rd to 8th week",
+      "The 9th to 12th week",
+      "The first 2 weeks after conception",
+      "The entire second trimester"
+    ],
+    "answer_index": 0,
+    "justification": "The text states 'the most critical period is the 3rd to 8th week, when differentiation is occurring,' and that precautions to avoid foetal damage should be adequate from the time of the first missed menstruation.",
+    "source_book": "Scully's Handbook of Medical Problems in Dentistry",
+    "source_page": 66,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the management of anaphylaxis in the dental surgery, where should adrenaline be administered intramuscularly and what is the adult dose?",
+    "options": [
+      "Deltoid muscle, 1000 micrograms",
+      "Anterolateral aspect of the middle third of the thigh, 500 micrograms (0.5 mL of 1:1000)",
+      "Gluteal muscle, 100 micrograms",
+      "Subcutaneously into the forearm, 250 micrograms"
+    ],
+    "answer_index": 1,
+    "justification": "The handbook specifies that 'adrenaline should be given intramuscularly (anterolateral aspect of the middle third of the thigh) in a dose for adults of 500 micrograms (0.5 mL adrenaline injection of 1:1000).'",
+    "source_book": "Scully's Handbook of Medical Problems in Dentistry",
+    "source_page": 35,
+    "category": "health_safety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to current guidelines referenced in relation to infective endocarditis (IE) prophylaxis for dental procedures, what is the recommended approach?",
+    "options": [
+      "Routine antibiotic prophylaxis is advised against for all patients previously considered at risk",
+      "All dental patients must receive antibiotic prophylaxis before any procedure",
+      "Antibiotic prophylaxis is only needed for routine scaling in healthy patients",
+      "IE prophylaxis is unrelated to dental procedures and never indicated"
+    ],
+    "answer_index": 0,
+    "justification": "The text notes that although sporadic high-grade bacteraemia from invasive dental procedures was previously considered the main risk factor for IE of oral origin, 'the current guidelines advise against routine use of antibiotic prophylaxis' for all patients previously considered at risk.",
+    "source_book": "Clinical Dental Pharmacology",
+    "source_page": 69,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which route of antiresorptive medication administration poses a higher risk of medication-related osteonecrosis of the jaw (MRONJ)?",
+    "options": [
+      "Oral route poses a higher risk than intravenous",
+      "Intravenous route poses a higher risk than oral route",
+      "Both routes carry identical risk with no difference",
+      "Subcutaneous route poses the highest risk of all"
+    ],
+    "answer_index": 1,
+    "justification": "The MRONJ risk factors table states under antiresorptive medications that the 'intravenous route poses a higher risk than oral route,' and that longer duration of therapy increases the risk further.",
+    "source_book": "Clinical Dental Pharmacology",
+    "source_page": 144,
+    "category": "health_safety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In adult basic life support for a patient who becomes unresponsive and stops breathing normally in the dental surgery, what is the correct compression-to-ventilation ratio during CPR?",
+    "options": [
+      "15 chest compressions to 2 rescue breaths",
+      "30 chest compressions to 2 rescue breaths",
+      "5 chest compressions to 1 rescue breath",
+      "Continuous compressions only, with no rescue breaths at any point"
+    ],
+    "answer_index": 1,
+    "justification": "The Adult Basic Life Support Algorithm specifies '30 chest compression, 2 rescue breaths, Continue CPR 30:2,' and to attach an AED as soon as possible while following its instructions.",
+    "source_book": "Clinical Dental Pharmacology",
+    "source_page": 164,
+    "category": "health_safety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Which of the following is among the most recognised triggers of anaphylaxis encountered in dental practice, besides penicillin?",
+    "options": [
+      "Sodium fluoride and calcium hydroxide",
+      "Latex, chlorhexidine, eugenol and benzocaine topical anaesthetic gel",
+      "Amalgam and composite resin materials only",
+      "Distilled water used for handpiece irrigation"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that 'the most recognised causes in dentistry include administration of drugs, e.g., penicillin, and exposure to latex, chlorhexidine, eugenol and benzocaine topical anaesthetic gel,' while allergy to amide local anaesthetics is relatively rare.",
+    "source_book": "Clinical Dental Pharmacology",
+    "source_page": 174,
+    "category": "health_safety",
+    "difficulty": "medium"
+  }
+]

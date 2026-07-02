@@ -1,0 +1,152 @@
+[
+  {
+    "stem": "How is normal occlusion commonly described, given that an ideal occlusion is rarely, if ever, found in nature?",
+    "options": [
+      "An occlusion with perfect Class I molar relationships on all surfaces",
+      "An occlusion within the accepted deviation of the ideal",
+      "An occlusion requiring no orthodontic assessment ever",
+      "An occlusion defined solely by anterior overjet measurements"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that normal occlusion is commonly described as 'An occlusion within the accepted deviation of the ideal', noting this is a vague definition with no clear limits.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 14,
+    "category": "orthodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What structure does growth continue to actively contribute to jaw position until about the age of puberty?",
+    "options": [
+      "The spheno-occipital synchondrosis",
+      "The temporomandibular joint capsule",
+      "The mandibular symphysis",
+      "The maxillary tuberosity"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that growth at the spheno-occipital synchondrosis actively contributes until about the age of puberty, having a crucial influence on relative jaw position.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 34,
+    "category": "orthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is characteristic of neonatal teeth, which are occasionally present when a child is born?",
+    "options": [
+      "They are usually present in the upper jaw and are supernumerary in origin",
+      "They are usually present in the lower jaw, are normal teeth from the deciduous series, and have little root development",
+      "They always require immediate extraction to prevent aspiration",
+      "They are composed entirely of dentine with no enamel covering"
+    ],
+    "answer_index": 1,
+    "justification": "The text explains neonatal teeth are usually present in the lower jaw, are normal teeth from the deciduous series, and have little root development, which in turn means they are often quite mobile.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 62,
+    "category": "orthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is under direct genetic control in tooth-arch disproportion, in contrast to the size of the dental arches?",
+    "options": [
+      "Tooth size",
+      "Alveolar bone density",
+      "Soft tissue morphology",
+      "Occlusal plane angulation"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that tooth size is under direct genetic control whilst the size of the dental arches depends on skeletal base size and on the soft tissue morphology and activity.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 90,
+    "category": "orthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What retention option is described for maintaining post-treatment stability when lip control of the upper incisors cannot be achieved naturally?",
+    "options": [
+      "A Hawley retainer worn on alternate nights, or a bonded palatal retainer attached to the six upper anterior teeth",
+      "No retention is ever necessary if lip control fails",
+      "A rapid maxillary expansion appliance worn continuously",
+      "An extraoral headgear worn permanently"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that if lip control cannot be achieved, some form of permanent retention may be necessary, which may take the form of a Hawley retainer worn on alternate nights, or a bonded palatal retainer attached to the six upper anterior teeth.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 118,
+    "category": "orthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why might tubes be attached to molar clasps on a removable appliance designed to retract upper canines with palatal springs?",
+    "options": [
+      "So that a facebow can be fitted to reinforce anchorage with extra-oral traction",
+      "So that the appliance can be converted into a fixed bridge",
+      "So that elastomeric chain can be threaded through them",
+      "So that the appliance can be worn only during meals"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains it is usually wise to have tubes attached to the clasps on the molars so that, if required, a facebow (the outer bow) can be fitted to them and anchorage can be reinforced by extra-oral traction worn in the evening and at nights.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 145,
+    "category": "orthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In functional appliance therapy, what is the effect of channels trimmed over the occlusal surfaces of the molars and premolars, directed backwards in the upper arch and forwards in the lower?",
+    "options": [
+      "They facilitate tooth movement and allow overbite reduction",
+      "They prevent any tooth movement from occurring",
+      "They are used solely to improve appliance retention",
+      "They eliminate the need for intermaxillary traction"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that in order to facilitate tooth movement and allow overbite reduction, channels are trimmed over the occlusal surfaces of the molars and premolars, directed backwards in the upper arch and forwards in the lower.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 175,
+    "category": "orthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What should be conserved by pulp treatment and stainless-steel crowns if necessary, to fulfil the function of space maintenance for permanent successors?",
+    "options": [
+      "Primary molars",
+      "Permanent incisors",
+      "Third molars",
+      "Supernumerary teeth"
+    ],
+    "answer_index": 0,
+    "justification": "The text at the orthodontic-restorative interface states that primary teeth should be conserved by pulp treatment and stainless-steel crowns if necessary, so that they can fulfil the function of space maintenance for their permanent successors.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 235,
+    "category": "orthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What consequence can occur to second molars if the first permanent molar is lost prior to the eruption of the second molar?",
+    "options": [
+      "The second molars may be tilted mesially and rotated lingually",
+      "The second molars will erupt prematurely into buccal crossbite",
+      "The second molars fail to develop entirely",
+      "The second molars become ankylosed to the alveolar bone"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that the loss of the first molar prior to the eruption of the second molar will make the use of space maintainers very difficult, and the second molars, when they erupt, may be tilted mesially and rotated lingually.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 235,
+    "category": "orthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Which tooth is most commonly associated with microdontia, often referred to as 'peg laterals'?",
+    "options": [
+      "Maxillary lateral incisor",
+      "Mandibular central incisor",
+      "Maxillary first premolar",
+      "Mandibular second molar"
+    ],
+    "answer_index": 0,
+    "justification": "The text describes microdontia as occasionally presenting with small teeth, often associated with one particular tooth type and most commonly the maxillary lateral incisor, often referred to as 'peg laterals'.",
+    "source_book": "W.H. Orthodontic Notes",
+    "source_page": 83,
+    "category": "orthodontics",
+    "difficulty": "easy"
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "stem": "In periodontal disease progression, what happens to the junctional epithelium as subgingival plaque extends onto the root surface?",
+    "options": [
+      "It detaches completely and disappears",
+      "It proliferates apically on the root surface while a strand always remains at the base of the pocket",
+      "It converts into connective tissue attachment",
+      "It becomes keratinized and resistant to bacterial invasion"
+    ],
+    "answer_index": 1,
+    "justification": "The text explains that the junctional epithelium enables it to proliferate apically on the root surface, and a strand of junctional epithelium will always be present at the base of the advancing pocket, denying the bacteria access to the connective tissues in this direction.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 20,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the definition of occlusal trauma (trauma from occlusion) as described in periodontal texts?",
+    "options": [
+      "Loss of tooth structure due to erosion",
+      "An injury to any part of the masticatory system resulting from abnormal occlusal contact relationships",
+      "Inflammation of the gingiva caused by plaque accumulation",
+      "A fracture of the alveolar bone from external trauma"
+    ],
+    "answer_index": 1,
+    "justification": "Occlusal trauma is defined as an injury to any part of the masticatory system resulting from abnormal occlusal contact relationships, as stated in the chapter on occlusal trauma.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 35,
+    "category": "periodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to the discussion of mucogingival assessment, why are lip-pull tests considered unreliable for assessing the need for mucogingival surgery?",
+    "options": [
+      "They cause excessive bleeding of the gingival margin",
+      "Manipulation of lip and cheek in this way is not physiological and such tests are meaningless",
+      "They can only be performed under general anaesthesia",
+      "They are accurate only in edentulous patients"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that manipulation of lip and cheek in this way is not physiological and such tests are, therefore, meaningless, referring to lip-pull tests for mucogingival assessment.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 47,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is described as an essential factor in establishing a pattern of behaviour that makes a patient independent of professional support during oral hygiene instruction?",
+    "options": [
+      "Motivation",
+      "Sedation",
+      "Antibiotic prophylaxis",
+      "Radiographic monitoring"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that motivation is an essential factor in establishing a pattern of behaviour which will make the patient independent of professional support, in the context of dental health education.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 59,
+    "category": "periodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Besides allowing access for scaling and root planing, what other objective should the surgical technique selected in periodontal treatment planning achieve?",
+    "options": [
+      "Complete removal of the alveolar bone",
+      "A gingival contour which allows plaque control afterwards and is acceptable cosmetically",
+      "Elimination of the need for post-operative home care",
+      "Permanent widening of the periodontal ligament space"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes the surgical technique should allow access for scaling and root planing at the time of surgery but also result in a gingival contour which will allow plaque control afterwards and be acceptable cosmetically.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 71,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the text, what is fundamental to the success of all aspects of periodontal treatment?",
+    "options": [
+      "Effective scaling and root planing",
+      "Systemic antibiotic therapy",
+      "Orthodontic realignment of teeth",
+      "Occlusal adjustment alone"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter states that effective scaling and root planing is fundamental to the success of all aspects of periodontal treatment, and expertise in this field is essential.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 83,
+    "category": "periodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Which surgical procedure is described simply as 'the removal of unwanted gingival tissue'?",
+    "options": [
+      "Flap procedure",
+      "Mucogingival surgery",
+      "Gingivectomy",
+      "Osteoplasty"
+    ],
+    "answer_index": 2,
+    "justification": "The text lists gingivectomy as simply the removal of unwanted gingival tissue, distinguishing it from flap procedures and mucogingival surgery.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 95,
+    "category": "periodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In the management of a thickened palatal flap margin during molar periodontitis surgery, what procedure is carried out before the palatal gingivectomy?",
+    "options": [
+      "Root resection",
+      "Osteoplasty has been carried out",
+      "Free gingival grafting",
+      "Coronal repositioning of the flap"
+    ],
+    "answer_index": 1,
+    "justification": "The figure legend describes that osteoplasty has been carried out prior to palatal gingivectomy to allow better flap adaptation to tooth and bone.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 108,
+    "category": "periodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Why are approximal surfaces of posterior teeth with large restorations especially susceptible to periodontal problems near overhanging margins?",
+    "options": [
+      "Because they are more likely to have overhanging margins, especially if matrix bands are used without adequate wedging",
+      "Because they are always placed subgingivally by design",
+      "Because composite resin is inherently more plaque-retentive than amalgam",
+      "Because they require no interproximal contact"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that late diagnosis of caries results in large restorations which are more likely to have overhanging margins, especially if matrix bands are used without adequate wedging.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 120,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What does Ante's Law propose regarding fixed bridgework in cases of reduced periodontal support?",
+    "options": [
+      "The number of pontics should never exceed two",
+      "The root surface area of the abutment teeth should be equal to or greater than the root surface area of the teeth to be replaced by pontics",
+      "Only anterior teeth may serve as abutments",
+      "Bridges must always be cantilevered from a single abutment"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that Ante proposed that in a fixed bridge the root surface area of the abutment teeth should be equal to or greater than the root surface area of the teeth to be replaced by pontics.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 185,
+    "category": "periodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "How is desquamative gingivitis characterized clinically?",
+    "options": [
+      "A localized abscess with purulent discharge",
+      "A painful gingival lesion with a smooth, red, glistening surface with a tendency to desquamation and haemorrhage on slight trauma",
+      "A firm, fibrotic enlargement of the gingiva with no bleeding tendency",
+      "A pigmented lesion confined to the attached gingiva"
+    ],
+    "answer_index": 1,
+    "justification": "Desquamative gingivitis is described as a painful gingival lesion or lesions characterised by a smooth, red, glistening surface with a tendency to desquamation and haemorrhage on slight trauma.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 197,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which periodontal pathogens is tetracycline noted to be particularly effective against, given that its concentrations in gingival crevicular fluid are higher than in serum?",
+    "options": [
+      "Streptococcus mutans and Lactobacillus species",
+      "A. actinomycetemcomitans and Capnocytophaga",
+      "Candida albicans and Actinomyces israelii",
+      "Staphylococcus aureus and Pseudomonas aeruginosa"
+    ],
+    "answer_index": 1,
+    "justification": "The text states tetracycline is a broad-spectrum bacteriostatic antibiotic, effective against the majority of periodontal pathogens and notably against A. actinomycetemcomitans and Capnocytophaga.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 209,
+    "category": "periodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Why is monitoring of attachment levels considered of little value once a maintenance programme is achieving a physiological gingival sulcus?",
+    "options": [
+      "Because attachment loss is difficult and time consuming to measure, involving identification of the amelocemental junction and pocket base",
+      "Because attachment levels are unrelated to periodontal health",
+      "Because periodontal probes cannot detect the amelocemental junction",
+      "Because attachment loss occurs regardless of maintenance quality"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that attachment loss will not occur when maintenance is sufficient, and there is little point in monitoring since attachment loss is difficult and time consuming to measure since it involves identification of the amelocemental junction as well as the base of the pocket.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 172,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is recommended for the local treatment of severe cases of acute necrotizing ulcerative gingivitis when only loose debris removal is possible?",
+    "options": [
+      "Immediate surgical flap debridement",
+      "Removing loose debris with cotton wool pellets soaked in hydrogen peroxide",
+      "Application of a chlorhexidine varnish only",
+      "Extraction of all affected teeth"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that in severe cases it may only be possible to remove loose debris with cotton wool pellets soaked in hydrogen peroxide, which is probably effective in the local treatment described.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 190,
+    "category": "periodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is described as the basis for conventional, mechanical treatment of periodontitis regarding plaque ecology?",
+    "options": [
+      "Eliminating all subgingival bacteria permanently through antibiotics",
+      "Maintaining a plaque ecology unfavourable for virulent species by removing subgingival plaque and keeping supragingival plaque and gingivitis at a minimum",
+      "Sealing the gingival sulcus with a periodontal dressing",
+      "Applying fluoride varnish to root surfaces monthly"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that the way to achieve a permanent reduction of the most virulent species is to maintain a plaque ecology unfavourable for these species, by removing subgingival plaque and keeping supragingival plaque and gingivitis at a minimum, forming the basis for conventional mechanical treatment.",
+    "source_book": "Guide to Periodontics",
+    "source_page": 207,
+    "category": "periodontics",
+    "difficulty": "hard"
+  }
+]

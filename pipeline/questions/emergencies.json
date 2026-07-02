@@ -1,0 +1,132 @@
+[
+  {
+    "stem": "According to survey data cited in a text on dental office medical emergencies, what is the most frequently reported emergency situation in dental practice?",
+    "options": ["Anaphylaxis", "Vasodepressor syncope (common faint)", "Myocardial infarction", "Grand mal seizure"],
+    "answer_index": 1,
+    "justification": "The text states that loss of consciousness was the most commonly reported emergency, and specifically that 'Vasodepressor syncope (common faint) is the medical emergency most often reported in the dental office.'",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 140,
+    "category": "emergencies",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "A healthy 22-year-old male becomes pale, diaphoretic, and loses consciousness immediately after receiving a local anesthetic injection. What is the recommended immediate positioning for this patient?",
+    "options": ["Trendelenburg position with head down 45 degrees", "Upright with head between the knees", "Supine position with the feet slightly elevated", "Left lateral decubitus with the head extended"],
+    "answer_index": 2,
+    "justification": "The management protocol for vasodepressor syncope and general unconsciousness directs the rescuer to 'Place unconscious victim in supine position with feet elevated' because the supine position enhances cerebral perfusion.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 154,
+    "category": "emergencies",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Which demographic group is described as being the most likely candidates for vasodepressor syncope in the dental office environment?",
+    "options": ["Women older than 60 years", "Men aged 16 to 35 years", "Pediatric patients under age 10", "Women in their third trimester of pregnancy"],
+    "answer_index": 1,
+    "justification": "The text notes that 'men aged 16 to 35 years may be the most likely candidates for vasodepressor syncope in a dental office environment,' attributed partly to societal expectations that males suppress fear and pain.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 157,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Postural (orthostatic) hypotension is clinically defined as a drop in blood pressure of what magnitude within 3 minutes of standing after at least 5 minutes supine?",
+    "options": ["10 mm Hg systolic or 5 mm Hg diastolic", "20 mm Hg systolic or 10 mm Hg diastolic", "40 mm Hg systolic or 20 mm Hg diastolic", "5 mm Hg systolic or 5 mm Hg diastolic"],
+    "answer_index": 1,
+    "justification": "Postural hypotension is defined in the text as 'a drop of either 20 mm Hg in the systolic blood pressure (BP) or 10 mm Hg in the diastolic BP within 3 min of assuming an upright position after at least 5 min in the supine position.'",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 166,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A dental patient who has been reclined in the chair for a lengthy procedure stands up too quickly afterward and loses consciousness at the front desk. This scenario best illustrates which condition?",
+    "options": ["Postural hypotension", "Acute adrenal insufficiency", "Thyroid storm", "Hyperventilation syndrome"],
+    "answer_index": 0,
+    "justification": "The text gives the example of 'A 35-year-old man lost consciousness after lying in the dental chair in the supine position for 1 h,' who then stood up and felt faint at the reception desk, illustrating postural hypotension after prolonged recumbency.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 166,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Acute adrenal insufficiency (adrenal crisis) in a dental patient is most commonly precipitated by which circumstance?",
+    "options": ["Abrupt withdrawal of or failure to supplement exogenous corticosteroids during severe stress", "Excessive dietary sodium intake before the appointment", "Administration of a topical anesthetic gel", "Mild anxiety about an upcoming filling"],
+    "answer_index": 0,
+    "justification": "The text explains that patients with adrenocortical insufficiency depend on exogenous steroids, and 'if an Addisonian patient is subjected to severe stress, however, an adrenal crisis can be precipitated,' since abrupt withdrawal of therapy leaves them unable to adapt to stress normally.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 175,
+    "category": "emergencies",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "A dental patient begins breathing 40 times per minute with increased depth during a stressful procedure, and reports tingling in the fingers and a feeling of chest tightness. Blood gas analysis would most likely reveal which acid-base disturbance?",
+    "options": ["Metabolic acidosis", "Respiratory acidosis", "Respiratory alkalosis", "Metabolic alkalosis"],
+    "answer_index": 2,
+    "justification": "The text explains that anxiety-driven hyperventilation causes excessive 'blowing off' of CO2, so that 'This decreased CO2 level produces an increase in the blood pH to 7.55... a condition known as respiratory alkalosis.'",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 224,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In an asthmatic patient who is also allergic to bisulfites, which type of local anesthetic cartridge is absolutely contraindicated?",
+    "options": ["Any cartridge formulated with a vasoconstrictor such as epinephrine or levonordefrin", "Any cartridge containing articaine", "Any cartridge with a plain (vasoconstrictor-free) anesthetic", "Any cartridge stored below room temperature"],
+    "answer_index": 0,
+    "justification": "The text states that bisulfites are added to local anesthetic cartridges with vasopressors to prevent oxidation, and 'the use of local anesthetics containing bisulfites (i.e., all local anesthetics containing vasopressors) is therefore absolutely contraindicated in this group of patients.'",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 234,
+    "category": "emergencies",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Which factor increases a diabetic dental patient's risk of developing hypoglycemia during a lengthy restorative or surgical appointment?",
+    "options": ["Use of a long-acting local anesthetic such as bupivacaine that delays the next meal", "Administration of nitrous oxide-oxygen sedation", "Use of a rubber dam during the procedure", "Placement of a stainless steel crown"],
+    "answer_index": 0,
+    "justification": "The text notes that 'the use of long-acting local anesthetics, such as bupivacaine, can delay a patient's next meal, increasing the risk of developing hypoglycemia' in diabetic patients whose eating schedule is disrupted by treatment.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 274,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A dental patient has a brief absence seizure characterized by a blank stare and slow blinking that resolves within 30 seconds. What is the recommended staff action during the seizure itself?",
+    "options": ["Immediately begin chest compressions", "Administer intramuscular epinephrine", "Protect the patient from injury without attempting to restrain movement", "Insert a tongue depressor between the teeth"],
+    "answer_index": 2,
+    "justification": "The text describes management of absence and partial seizures as 'protective in nature; the rescuer acts to protect the victim from injury,' and notes such brief seizures (5-30 seconds) typically need no positioning change or intervention beyond protection.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 344,
+    "category": "emergencies",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In generalized anaphylaxis, most fatalities occur within what time frame after exposure to the antigen?",
+    "options": ["The first 30 minutes, though some occur up to 120 minutes later", "24 hours after exposure", "Immediately, within the first 10 seconds", "48 to 72 hours after exposure"],
+    "answer_index": 0,
+    "justification": "The text states that 'Most deaths from anaphylaxis occur within the first 30 min after antigenic exposure, although many victims succumb up to 120 min after the onset of the anaphylactic reaction,' underscoring the need for rapid recognition and treatment.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 414,
+    "category": "emergencies",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "For a dental patient developing bronchospasm during anaphylaxis, if wheezing persists after two IM doses of epinephrine, what should be considered next?",
+    "options": ["A third IM dose of epinephrine given immediately", "Oral inhalation of albuterol from a metered-dose inhaler", "Administration of intravenous naloxone", "Discontinuation of oxygen therapy"],
+    "answer_index": 1,
+    "justification": "The management protocol states: 'If, following 2 IM doses of epinephrine, bronchospasm (wheezing) has not resolved, consider the oral inhalation of albuterol from a metered-dose inhaler (MDI).'",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 424,
+    "category": "emergencies",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the 2010 revision of AHA basic life support guidelines, the recommended sequence of steps for adult cardiac arrest was changed from A-B-C to which sequence?",
+    "options": ["B-A-C (Breathing, Airway, Compressions)", "C-A-B (Compressions, Airway, Breathing)", "D-A-B (Defibrillation, Airway, Breathing)", "A-C-B (Airway, Compressions, Breathing)"],
+    "answer_index": 1,
+    "justification": "The text explains that 'the sequence of steps of BLS was subsequently changed from \"A-B-C\" (Airway, Breathing, Chest compressions) to \"C-A-B\" (Chest compressions, Airway, Breathing) for adult and pediatric patients,' to reduce delays before starting chest compressions.",
+    "source_book": "Medical Emergencies in the Dental Office",
+    "source_page": 514,
+    "category": "emergencies",
+    "difficulty": "medium"
+  }
+]

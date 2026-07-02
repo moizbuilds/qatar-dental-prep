@@ -1,0 +1,332 @@
+[
+  {
+    "stem": "What chemical process converts calcium sulphate hemihydrate back into calcium sulphate dihydrate when dental plaster is used to make a cast?",
+    "options": ["Calcination", "Hydration by mixing with water", "Sublimation", "Oxidation"],
+    "answer_index": 1,
+    "justification": "The text explains that applications of gypsum products in dentistry involve the reverse of calcination: 'the hemihydrate is mixed with water and reacts to form the dihydrate,' regenerating calcium sulphate dihydrate.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 43,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to Applied Dental Materials, dental plaster (plaster of Paris) is produced by heating gypsum to approximately what temperature to drive off part of the water of crystallization?",
+    "options": ["60°C", "120°C", "250°C", "400°C"],
+    "answer_index": 1,
+    "justification": "The text states plaster is produced by calcination: 'Gypsum is heated to a temperature of about 120°C in order to drive off part of the water of crystallization,' producing irregular porous beta-hemihydrate particles.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 43,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In a typical non-elastic impression compound, what is the main function of the filler component such as talc?",
+    "options": ["Characterises the softening temperature", "Gives 'body' by increasing viscosity of the softened material and reduces thermal contraction", "Improves flow properties during tempering", "Acts as the primary thermoplastic matrix"],
+    "answer_index": 1,
+    "justification": "The composition table lists filler (talc, 50%) as the component that 'gives body by increasing viscosity of the softened material; reduces thermal contraction,' distinct from the thermoplastic resin and the stearic acid lubricant.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 159,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "For optimal clinical handling, type I impression compound should show considerable flow above what temperature while remaining minimally flowable at or below 37°C?",
+    "options": ["30°C", "45°C", "60°C", "80°C"],
+    "answer_index": 1,
+    "justification": "The text specifies that 'type I impression compound should undergo considerable flow at temperatures above 45°C but flow should be minimal at or below 37°C,' guiding chairside tempering technique.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 159,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Creep in dental amalgam restorations is clinically significant primarily because it leads to which outcome?",
+    "options": ["Increased setting expansion", "Formation of unsupported margins that can fracture", "Enhanced corrosion resistance", "Reduced compressive strength during trituration"],
+    "answer_index": 1,
+    "justification": "The figure caption describes 'how creep of amalgam causes the formation of unsupported edges which can fracture,' progressing from the initial restoration through creep to marginal fracture.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 197,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Amalgam alloys that are copper-enriched and contain little or no gamma-2 phase in the set material demonstrate which clinical advantage over conventional lathe-cut amalgam?",
+    "options": ["Faster setting time", "Significantly lower creep values and less ditching", "Higher mercury content", "Greater solubility in saliva"],
+    "answer_index": 1,
+    "justification": "The text notes that alloys 'which contain little or no y2 in the set material, have significantly lower creep values and clinical trials show they are less prone to ditching,' compared with conventional lathe-cut amalgam.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 197,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In acid-etch bonding of composite to enamel, what visual sign confirms that etching has been effective before rinsing?",
+    "options": ["A glossy, translucent surface", "A white, chalky appearance", "A yellow discoloration", "A smooth, mirror-like finish"],
+    "answer_index": 1,
+    "justification": "The text states etching time 'should be sufficient to cause effective etching as evidenced by a white, chalky appearance on the treated section of enamel after washing and drying.'",
+    "source_book": "Applied Dental Materials",
+    "source_page": 236,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What is the recommended washing time after acid-etching enamel with 37% phosphoric acid, per Applied Dental Materials?",
+    "options": ["10 seconds", "30 seconds", "60 seconds", "120 seconds"],
+    "answer_index": 2,
+    "justification": "The text specifies that following etching 'the enamel surface should be washed with copious amounts of water to remove debris. The washing time usually used is 60 seconds.'",
+    "source_book": "Applied Dental Materials",
+    "source_page": 236,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which material became the almost universal choice for denture base construction after 1940, replacing vulcanite?",
+    "options": ["Acrylic resin", "Cobalt-chromium alloy", "Gutta-percha", "Zinc phosphate cement"],
+    "answer_index": 0,
+    "justification": "The chapter states that prior to 1940 vulcanite was widely used but 'nowadays acrylic resin is used almost universally for denture base construction,' fabricated in a two-part gypsum mould.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 120,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "During acrylic denture base processing, what is the purpose of applying an alginate mould-sealing agent to the gypsum mould before packing the acrylic dough?",
+    "options": ["To speed up the setting reaction of the acrylic", "To prevent monomer in the acrylic dough from entering the gypsum", "To colour-match the denture base to the tissue", "To increase the mould's thermal conductivity"],
+    "answer_index": 1,
+    "justification": "The text explains the alginate solution 'forms a thin skin over the surface of the mould, preventing monomer in the acrylic dough from entering the gypsum,' after boiling out the wax trial denture.",
+    "source_book": "Applied Dental Materials",
+    "source_page": 120,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During endodontic clinical examination, which instrument combination composes the basic examination kit used to assess pulp vitality and periapical status?",
+    "options": ["Mouth mirror, Shepherd's hook explorer, periodontal probe, and cotton pliers", "Rubber dam clamp, gutta-percha spreader, and endodontic file", "Apex locator, rotary handpiece, and irrigation syringe", "Curette, scaler, and prophy cup"],
+    "answer_index": 0,
+    "justification": "The text states clinicians use a basic examination kit 'composed of a mouth mirror, Shepherd's hook explorer, periodontal probe, and cotton pliers' to determine pulp vitality and periapical status.",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 132,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In the management of the vital pulp, the reparative dentin formed by odontoblast-like cells after localized odontoblast death is also often referred to by what term because it resembles bone?",
+    "options": ["Peritubular dentin", "Osteodentin", "Sclerotic dentin", "Predentin"],
+    "answer_index": 1,
+    "justification": "The text describes reparative dentin as atubular tissue that 'often traps the mineralizing cells within its matrix resembling osteocytes; it is often referred to as osteodentin.'",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 194,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "According to the chapter on root canal anatomy, what determines the ethnic variations found in crown and root morphology across human populations?",
+    "options": ["Genetics plays the main role in determining the shape of a crown and root", "Dietary habits alone dictate root number", "Environmental temperature during tooth development", "Age at eruption of the permanent dentition"],
+    "answer_index": 0,
+    "justification": "The text states 'it is true that genetics plays the main role in determining the shape of a crown and root,' while noting bilateral symmetry is usually present in the antimere of the opposite quadrant.",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 258,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the passive step-back technique of canal preparation, what action is performed with each successively larger instrument once it reaches its binding point?",
+    "options": ["It is rotated one-half turn and removed", "It is left in place for two minutes without rotation", "It is advanced 2 mm past the binding point", "It is used with a reaming motion for 30 seconds"],
+    "answer_index": 0,
+    "justification": "The text describes that after the next higher instrument is inserted until it first makes contact (binding point), 'it is then rotated one-half turn and removed,' with the process repeated using progressively larger instruments.",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 327,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Internal discoloration of dentin caused by intracanal medicaments sealed within the root canal space is usually managed successfully by which approach?",
+    "options": ["Extraction and implant placement", "Internal bleaching", "External microabrasion only", "Full crown coverage without bleaching"],
+    "answer_index": 1,
+    "justification": "The text notes that although intracanal medications can cause gradual dentin discoloration, 'most such discolorations are not marked and are readily and permanently corrected by bleaching,' referring to internal bleaching of nonvital teeth.",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 390,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why is the submarginal curved flap generally not indicated or used in apical microsurgery despite providing access without impinging on crown margins?",
+    "options": ["It requires general anesthesia", "It has restricted access, risks tearing at incision corners, and frequently heals with scarring", "It cannot be used on maxillary teeth", "It provides too much visibility of the surgical field"],
+    "answer_index": 1,
+    "justification": "The text lists disadvantages of the submarginal curved flap including 'restricted access with limited visibility, tearing of the incision corners' and notes 'the incision margins of this flap frequently heal with scarring,' explaining why it is generally not used.",
+    "source_book": "Endodontics: Principles and Practice",
+    "source_page": 452,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "During diagnostic assessment of a tooth, why is any darkening of the clinical crown compared with adjacent teeth clinically significant?",
+    "options": ["It indicates the presence of dental fluorosis", "It may be related to a history of trauma", "It always indicates active caries", "It confirms the tooth is periodontally healthy"],
+    "answer_index": 1,
+    "justification": "The text states 'the colour of the tooth should be compared with adjacent teeth; any darkening of the clinical crown may be related to a history of trauma,' as part of assessing the specific tooth during diagnosis.",
+    "source_book": "Harty's Endodontics in Clinical Practice",
+    "source_page": 43,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "When removing a tapered or parallel-sided metal post cemented with traditional cement, what is a key risk of using a postpulling device such as the Eggler or Ruddle postpuller?",
+    "options": ["Overheating of the pulp chamber", "Risk of root fracture", "Permanent discoloration of the crown", "Loss of working length measurement"],
+    "answer_index": 1,
+    "justification": "The text explains that postpullers 'work rather like a corkscrew, applying pressure to the root as the post is extracted; however, there is a risk of root fracture.'",
+    "source_book": "Harty's Endodontics in Clinical Practice",
+    "source_page": 112,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why does ferric sulphate require an overlying protective material such as zinc oxide-eugenol when used as a pulpotomy medicament in primary teeth?",
+    "options": ["Because it lacks bactericidal properties and cannot provide a hermetic seal against bacteria alone", "Because it dissolves dentin over time", "Because it is incompatible with calcium hydroxide", "Because it causes excessive inflammation on its own"],
+    "answer_index": 0,
+    "justification": "The text notes 'since ferric sulphate lacks bactericidal properties, an overlying protective material is required to provide a hermetic seal to prevent any ingress of bacteria.'",
+    "source_book": "Harty's Endodontics in Clinical Practice",
+    "source_page": 180,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During nonsurgical retreatment, when a file encounters a ledge in the canal, what technique is recommended to negotiate past it?",
+    "options": ["Apply heavy apical pressure with a Hedstrom file", "Work the file up and down in a watch-winding action until loose, with copious irrigation", "Abandon the canal and proceed directly to surgery", "Use a Gates-Glidden drill at the ledge site"],
+    "answer_index": 1,
+    "justification": "The text advises that 'the file should then be worked up and down in a watch-winding action until loose. The canal should be flushed with copious amounts of a suitable irrigant such as sodium hypochlorite.'",
+    "source_book": "Harty's Endodontics in Clinical Practice",
+    "source_page": 249,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Ledging during canal instrumentation can be avoided in the first instance through which combination of measures?",
+    "options": ["Using stiffer stainless steel hand files exclusively", "More flexible NiTi instruments, generous and frequent irrigation, and close attention to recapitulation", "Avoiding irrigation to preserve dentin", "Using a single file technique without recapitulation"],
+    "answer_index": 1,
+    "justification": "The text states 'ledging can be avoided in the first instance with the use of more flexible NiTi instruments, generous and frequent irrigation, and if close attention is paid to recapitulation.'",
+    "source_book": "Harty's Endodontics in Clinical Practice",
+    "source_page": 249,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Guided tissue regeneration (GTR) membranes function primarily by achieving which key aspects at the surgical site?",
+    "options": ["Exclusion of epithelium, preservation of space for cell migration, and formation of a stable blood clot under the membrane", "Direct stimulation of enamel remineralization", "Acceleration of osseointegration around titanium implants", "Replacement of the periodontal ligament with synthetic fibers"],
+    "answer_index": 0,
+    "justification": "The text states 'key aspects of GTR include exclusion of epithelium, preservation of space under the membrane into which cells can migrate and formation of a stable blood clot under the membrane.'",
+    "source_book": "Master Dentistry Volume Two: Restorative Dentistry, Paediatric Dentistry and Orthodontics",
+    "source_page": 50,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the approximate distance that must be maintained between a restoration's margin and the alveolar bone crest to preserve supracrestal tissue attachment (biologic width)?",
+    "options": ["0.5-1 mm", "2-2.5 mm", "5-6 mm", "8-10 mm"],
+    "answer_index": 1,
+    "justification": "The text explains that supracrestal tissue attachment 'covers the importance of maintaining a distance of approximately 2-2.5 mm between the margins of a restoration and the alveolar bone crest.'",
+    "source_book": "Master Dentistry Volume Two: Restorative Dentistry, Paediatric Dentistry and Orthodontics",
+    "source_page": 50,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Resorbable GTR membranes made of materials such as polylactic acid or collagen offer what practical clinical advantage over non-resorbable membranes?",
+    "options": ["They eliminate the need for a bone graft entirely", "They biodegrade within the tissues and do not require a second surgical procedure for removal", "They provide antibacterial activity superior to non-resorbable types", "They can only be used with dental implants"],
+    "answer_index": 1,
+    "justification": "The text states resorbable membranes 'biodegrade within the tissues over 1-2 months and do not require a second surgical procedure for removal,' unlike non-resorbable membranes which required removal 4-6 weeks after placement.",
+    "source_book": "Master Dentistry Volume Two: Restorative Dentistry, Paediatric Dentistry and Orthodontics",
+    "source_page": 50,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In preventive, non-operative caries management, what does the term 'preventive treatment' imply about the dental team's role, as opposed to a simple 'wait and watch' approach?",
+    "options": ["Active intervention that is skilful, time-consuming, and worthy of payment", "A passive monitoring approach requiring no patient involvement", "Immediate operative restoration in all cases", "Referral to a specialist in every instance"],
+    "answer_index": 0,
+    "justification": "The text emphasizes that preventive treatment 'implies active intervention by the dental team that is skilful, time-consuming, and worthy of payment. It is not an observe or wait and watch approach.'",
+    "source_book": "Pickard's Manual of Operative Dentistry",
+    "source_page": 33,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Who ultimately controls the progression or arrest of the carious process, according to Pickard's Manual of Operative Dentistry's discussion of patient involvement?",
+    "options": ["The dentist through restorative intervention alone", "The patient, through plaque control, dietary modification, and fluoride use", "The dental hygienist exclusively", "Government public health policy"],
+    "answer_index": 1,
+    "justification": "The text states 'the patient is in control of his or her own dental destiny because it is the patient, not the dentist, who influences the carious process,' through meticulous plaque control, dietary modification, and fluoride use.",
+    "source_book": "Pickard's Manual of Operative Dentistry",
+    "source_page": 33,
+    "category": "restorative_endodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Which clinical use is described for rigid discs mounted on mandrels in a straight handpiece, as distinct from flexible single-sided discs?",
+    "options": ["Finishing composite restorations intraorally", "Cutting and trimming things such as posts and temporary crowns outside the mouth", "Polishing amalgam restorations in situ", "Etching enamel prior to bonding"],
+    "answer_index": 1,
+    "justification": "The text states 'rigid discs are used in a straight handpiece outside the mouth for cutting and trimming such things as posts and temporary crowns,' distinguishing them from flexible discs used clinically for finishing composite.",
+    "source_book": "Pickard's Manual of Operative Dentistry",
+    "source_page": 114,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why are metal abrasive strips considered a poor choice for removing overhanging amalgam ledges on old restorations?",
+    "options": ["They are not very effective and are traumatic to the gingival papilla", "They cannot be held by hand", "They dissolve in saliva within minutes", "They are exclusively single-use and expensive"],
+    "answer_index": 0,
+    "justification": "The text notes metal strips 'are sometimes used to remove overhanging amalgam ledges on old restorations, but they are not very effective and are traumatic to the gingival papilla.'",
+    "source_book": "Pickard's Manual of Operative Dentistry",
+    "source_page": 114,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the all-etch technique for a composite restoration, how long should enamel and dentine be etched before washing and gently drying?",
+    "options": ["5 seconds", "15 seconds", "45 seconds", "90 seconds"],
+    "answer_index": 1,
+    "justification": "The text describes that 'the enamel and dentine of the cavity and the enamel of the occlusal surface are etched for 15 seconds and then washed and gently dried,' before applying the dentine bonding agent.",
+    "source_book": "Pickard's Manual of Operative Dentistry",
+    "source_page": 141,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why might a slight shade mismatch be considered desirable when selecting the shade for a posterior class II composite restoration?",
+    "options": ["So cavity margins can be visualised and enamel damage reduced during finishing procedures", "To make the restoration invisible to the patient", "Because posterior teeth naturally have no shade variation", "To reduce the cost of the composite material"],
+    "answer_index": 0,
+    "justification": "The clinical sequence table states for shade selection: 'A slight mismatch is desirable in posterior teeth so that cavity margins can be visualised and enamel damage reduced during finishing procedures.'",
+    "source_book": "Restorative Dentistry",
+    "source_page": 86,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In complex restorative cases, why might a patient with a failing root canal treated tooth choose a surgical rather than an orthograde (nonsurgical) retreatment approach?",
+    "options": ["Surgical treatment is always faster to complete", "Orthograde retreatment may involve removal or destruction of expensive crown and bridgework", "Surgical treatment does not require local anaesthesia", "Orthograde retreatment cannot address any periapical pathology"],
+    "answer_index": 1,
+    "justification": "The text explains that 'retreatment of a tooth may involve the removal/destruction of expensive crown and bridgework. In such situations, a patient may opt for a surgical as opposed to an orthograde approach.'",
+    "source_book": "Restorative Dentistry",
+    "source_page": 114,
+    "category": "restorative_endodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Aside from cases considered hopeless for orthograde retreatment, what is a further important indication for periradicular surgery mentioned in Restorative Dentistry?",
+    "options": ["Routine six-month recall examination", "Obtaining tissue for a biopsy or examination of the root surface to check for root cracks or fractures", "Cosmetic improvement of gingival contour only", "Replacement of a well-fitting crown for aesthetic reasons"],
+    "answer_index": 1,
+    "justification": "The text states 'further important indications for periradicular surgery include obtaining tissue for a biopsy or examination of the root surface to check for root cracks/fractures.'",
+    "source_book": "Restorative Dentistry",
+    "source_page": 114,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "For an anterior tooth with a shortened crown due to tooth surface loss (TSL), why might a non-adhesive restorative procedure such as a traditionally cemented metal-ceramic crown be unsuitable without further intervention?",
+    "options": ["A shortened crown will be unlikely to achieve the necessary retention for a non-adhesive restorative procedure", "Non-adhesive crowns cannot be shade-matched", "Metal-ceramic crowns cannot be used on anterior teeth under any circumstances", "TSL always requires extraction rather than restoration"],
+    "answer_index": 0,
+    "justification": "The text states 'a shortened crown will be unlikely to achieve the necessary retention for a non-adhesive restorative procedure such as a metal ceramic crown cemented with a traditional cement,' requiring crown-lengthening or an adhesive alternative.",
+    "source_book": "Restorative Dentistry",
+    "source_page": 142,
+    "category": "restorative_endodontics",
+    "difficulty": "hard"
+  }
+]

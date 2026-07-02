@@ -1,0 +1,272 @@
+[
+  {
+    "stem": "During X-ray production, an incoming high-speed electron passes close to a tungsten nucleus and is rapidly slowed and deflected. What is emitted as a result of this interaction?",
+    "options": [
+      "Characteristic radiation only",
+      "X-ray photons (continuous spectrum radiation)",
+      "Visible light only",
+      "Alpha particles"
+    ],
+    "answer_index": 1,
+    "justification": "The text describes this exact collision: 'the incoming electron passes close to the tungsten nucleus and is rapidly slowed down and deflected with the emission of X-ray photons,' which is the mechanism producing the continuous spectrum.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 62,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Below what tube voltage will characteristic K-line photons NOT be produced by a dental X-ray tube with a tungsten target?",
+    "options": [
+      "30 kV",
+      "50 kV",
+      "69.5 kV",
+      "100 kV"
+    ],
+    "answer_index": 2,
+    "justification": "The chunk states 'Characteristic K-line photons are not produced by X-ray tubes with tungsten targets operating at less than 69.5 kV – referred to as the critical voltage,' directly identifying 69.5 kV as the threshold.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 66,
+    "category": "patient_assessment",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "According to the inverse square law described for X-ray physics, what happens to beam intensity when the distance from the X-ray source is doubled?",
+    "options": [
+      "Intensity doubles",
+      "Intensity is halved",
+      "Intensity is reduced to one quarter",
+      "Intensity stays the same"
+    ],
+    "answer_index": 2,
+    "justification": "The text explains that 'in free space, X-rays obey the inverse square law: doubling the distance from an X-ray source reduces the intensity to 1/4,' calling this a very important radiation protection principle.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 68,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In manual chemical processing of a dental radiographic film, roughly how long should the film remain in the fixer solution?",
+    "options": [
+      "30 seconds",
+      "1-2 minutes",
+      "8-10 minutes",
+      "30-40 minutes"
+    ],
+    "answer_index": 2,
+    "justification": "The processing steps state 'the film is immersed in fixer for about 8-10 minutes,' followed by washing and drying, giving the correct fixation time.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 139,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In the developer solution used for manual film processing, which constituent acts as the restrainer that prevents fog and controls the activity of the developing agents?",
+    "options": [
+      "Hydroquinone",
+      "Sodium sulphite",
+      "Benzotriazole",
+      "Potassium carbonate"
+    ],
+    "answer_index": 2,
+    "justification": "The table of developer constituents lists 'Benzotriazole - Restrainer - prevents fog and controls the activity of the developing agents,' identifying its specific function.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 141,
+    "category": "patient_assessment",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is a recognized disadvantage of using rapid/instant film processing chemicals compared with conventional processing?",
+    "options": [
+      "It takes far longer than manual processing",
+      "Image quality is usually inferior to conventionally processed film",
+      "It cannot be used at all for intraoral films",
+      "It eliminates the need for a darkroom entirely"
+    ],
+    "answer_index": 1,
+    "justification": "The disadvantages listed include that 'image quality is usually inferior to conventional film processed manually or automatically' along with deterioration over time and lack of lead foil.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 145,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "On a digital radiographic image, what visual effect results from allocating every pixel the highest available numerical value?",
+    "options": [
+      "The image becomes totally black",
+      "The image becomes totally white",
+      "Contrast is maximized with no grey tones",
+      "Resolution improves dramatically"
+    ],
+    "answer_index": 1,
+    "justification": "The text explains that with brightness, 'taken to the extreme, every pixel would be allocated the highest number and the image would be totally white,' describing this specific effect on image appearance.",
+    "source_book": "Essentials of Dental Radiography and Radiology",
+    "source_page": 131,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A 68-year-old man reports sudden numbness of the lower right lip, with normal sensation preserved under the chin. Which nerve territory does this pattern of numbness most strongly implicate as being affected between the mandibular foramen and mental foramen?",
+    "options": [
+      "Lingual nerve",
+      "Facial nerve",
+      "Inferior alveolar nerve",
+      "Buccal nerve"
+    ],
+    "answer_index": 2,
+    "justification": "The case explains that 'the normal sensation under the chin is significant' because the nerve to mylohyoid supplies that area, so 'the cause must lie between the start of the inferior dental canal' and the mental foramen, implicating the inferior alveolar nerve.",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 102,
+    "category": "patient_assessment",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In a patient presenting with jaw numbness and a destructive 'moth-eaten' radiolucency, breast and prostate metastases are unusual among jaw metastases because they sometimes cause what unexpected radiographic finding?",
+    "options": [
+      "A large soft tissue mass with no bone change",
+      "Bone formation producing a sclerotic or mixed radiolucency",
+      "Complete absence of any radiographic change",
+      "Widening of the periodontal ligament space only"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes 'breast and prostate metastases are unusual in that they sometimes cause bone formation at the site, producing a sclerotic or mixed radiolucency rather than the more typical pure moth-eaten poorly defined radiolucency.'",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 104,
+    "category": "patient_assessment",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "A patient develops an oroantral fistula after extraction of an upper first molar. According to the definition given, how long must the communication persist before it is classed as a fistula rather than a communication?",
+    "options": [
+      "24 hours",
+      "48 hours",
+      "7 days",
+      "1 month"
+    ],
+    "answer_index": 1,
+    "justification": "The text defines an oroantral fistula as 'a persistent epithelialized communication between the maxillary antrum and the mouth, present for more than 48 hours,' distinguishing it from an unepithelialized communication.",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 113,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "At the time of an upper molar extraction, which clinical sign at the socket suggests an oroantral communication has occurred?",
+    "options": [
+      "A dull, muffled sound on percussion of the adjacent tooth",
+      "An echoing 'wind tunnel sound' when a suction tip is held in the socket",
+      "Bleeding that stops immediately after extraction",
+      "Increased mobility of the neighboring tooth only"
+    ],
+    "answer_index": 1,
+    "justification": "The text states that if a communication is present, 'an echoing wind tunnel sound will be heard if a small suction tip is held in the socket, the result of air being sucked from the antrum as well as the mouth.'",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 117,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A 38-year-old woman has recurrent mouth ulcers, usually one at a time, that have recently increased to 3-4 ulcers with greater frequency. Based on the classic presentation described, what is the most likely diagnosis?",
+    "options": [
+      "Erythema multiforme",
+      "Immunobullous disease",
+      "Recurrent aphthous stomatitis (RAS) minor",
+      "Oral squamous cell carcinoma"
+    ],
+    "answer_index": 2,
+    "justification": "The case states 'the history is suggestive of RAS minor, which has recently increased in severity,' and the ulcer's irregular but well-defined margin with a halo of erythema is described as typical of this diagnosis.",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 119,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "A 55-year-old man has a painless, slowly enlarging neck lump found to be a cystic squamous cell carcinoma metastasis. Current guidelines recommend testing the tissue for which viruses when no primary tumor site is known?",
+    "options": [
+      "Hepatitis B and Hepatitis C",
+      "HIV and CMV",
+      "High-risk human papillomavirus (HPV) and Epstein-Barr virus (EBV)",
+      "Herpes simplex virus and varicella zoster"
+    ],
+    "answer_index": 2,
+    "justification": "The text states that once squamous differentiation is confirmed, 'current guidelines recommend testing the tissue for high-risk human papillomavirus (HPV) and Epstein-Barr virus (EBV) if no primary is known,' since these viruses cause many oropharyngeal and nasopharyngeal cancers.",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 126,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During history-taking, when should sensibility (vitality) testing and percussion be performed on a recently traumatically displaced upper central incisor?",
+    "options": [
+      "Immediately, before any other examination",
+      "They should not be tested for loss of vitality or percussed at this early stage",
+      "Only after root canal treatment is complete",
+      "Sensibility testing should be repeated hourly on the day of injury"
+    ],
+    "answer_index": 1,
+    "justification": "The case explicitly states 'the teeth should not be percussed and should not be tested for loss of vitality at this stage. Sensibility tests have been shown to give false-negative results' shortly after luxation injuries.",
+    "source_book": "Odell's Clinical Problem Solving in Dentistry",
+    "source_page": 129,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "When taking a presenting complaint history, why should a dentist avoid the introductory question 'What brought you here today?'",
+    "options": [
+      "It is too formal and clinical for most patients",
+      "It gives the patient a chance to complain about transport or car parking rather than their dental problem",
+      "It cannot legally be asked without written consent",
+      "It confuses patients whose first language is not English"
+    ],
+    "answer_index": 1,
+    "justification": "The Oxford Handbook advises: 'Avoid \"What brought you here today?\" unless you want to give them the chance to complain about transport or car parking,' explaining the reasoning behind this recommendation.",
+    "source_book": "Oxford Handbook of Clinical Dentistry",
+    "source_page": 22,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "During a dental history, asking a patient 'How often do you brush your teeth and how long for?' is primarily intended to give the clinician information about which two things?",
+    "options": [
+      "Diet and family history",
+      "Motivation and likely gingival condition",
+      "Occlusion and jaw joint function",
+      "Medical history and allergies"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes this question yields '(motivation and likely gingival condition)' as the clinical value of asking about brushing frequency and duration.",
+    "source_book": "Oxford Handbook of Clinical Dentistry",
+    "source_page": 23,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "For most dental out-patients, when is a full formal medical examination (beyond simply recording a medical history) indicated?",
+    "options": [
+      "For every routine check-up regardless of treatment planned",
+      "Only for patients undergoing general anaesthesia or with a positive medical history undergoing extensive treatment under LA or sedation",
+      "Only for patients over 65 years old",
+      "Never; medical examination is outside a dentist's scope"
+    ],
+    "answer_index": 1,
+    "justification": "The text states 'simply recording a medical history should suffice to screen for any potential problems. The exceptions are patients who are to undergo general anaesthesia and anyone with a positive medical history undergoing extensive treatment under LA or sedation.'",
+    "source_book": "Oxford Handbook of Clinical Dentistry",
+    "source_page": 27,
+    "category": "patient_assessment",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the Oxford Handbook of Clinical Dentistry, what is the key to examining the mouth efficiently in routine clinical practice?",
+    "options": [
+      "Developing a systematic approach that becomes almost automatic",
+      "Memorising every rare disease presentation before starting",
+      "Always performing the full new-patient examination on every attendee",
+      "Referring all symptomless patients for specialist assessment"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that the key is to develop a systematic approach, which becomes almost automatic, so that the routine symptomless attendee can be examined in a briefer format rather than following an exhaustive textbook description every time.",
+    "source_book": "Oxford Handbook of Clinical Dentistry",
+    "source_page": 30,
+    "category": "patient_assessment",
+    "difficulty": "easy"
+  }
+]

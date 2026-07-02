@@ -1,0 +1,112 @@
+[
+  {
+    "stem": "In the Turku sugar studies comparing total substitution of sucrose with xylitol or fructose, what was the mean 2-year caries increment in the xylitol group compared with the sucrose group?",
+    "options": ["Xylitol group had 0.0 increment versus 7.2 in the sucrose group", "Xylitol group had 7.2 versus 0.0 in the sucrose group", "Both groups had identical increments of 3.8", "Xylitol group had a higher increment than sucrose"],
+    "answer_index": 0,
+    "justification": "The text reports that 'The mean 2-year caries increments for the sucrose, fructose, and xylitol groups were 7.2, 3.8, and 0.0 respectively,' demonstrating that dietary starch did not meaningfully contribute to caries when sucrose was replaced.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 38,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to epidemiological and ecological studies described in the text, how does the cariogenicity of starch compare with that of dietary sugars?",
+    "options": ["Starch is far more cariogenic than sugars", "Starch is of low cariogenicity compared with sugars, which are the most cariogenic dietary item", "Starch and sugars are equally cariogenic in all populations", "Starch has no relationship to caries whatsoever, positive or negative"],
+    "answer_index": 1,
+    "justification": "The text's summary box states that 'Sugars are the most cariogenic item in the diet' and human observational studies show that 'starch is of low cariogenicity,' with populations eating high-starch, low-sugar diets showing low caries levels.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 38,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Dr. Frederick McKay's early 20th-century investigations in Colorado Springs of a permanent dental stain known locally as 'Colorado stain' eventually led to the discovery of the relationship between dental health and which water-supply constituent?",
+    "options": ["Chlorine", "Fluoride", "Calcium carbonate", "Nitrates"],
+    "answer_index": 1,
+    "justification": "The text describes how McKay's decades-long research into 'mottled enamel' culminated when ALCOA chemist H.V. Churchill ran a spectrographic analysis and 'noted that fluoride was present in Bauxite water at a level of 13.7,' linking mottled enamel to fluoride concentration in drinking water.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 53,
+    "category": "prevention_population",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What key clinical observation led Dr. McKay to conclude that mottled enamel was not caused by diet or home environment?",
+    "options": ["Only wealthy families in the endemic areas were affected", "Families whether rich or poor were affected, but only those born and raised in the endemic area were affected", "Mottling appeared equally in all geographic regions regardless of water source", "Mottling only occurred in children who drank cow's milk"],
+    "answer_index": 1,
+    "justification": "The text states that within endemic areas, 'families whether rich or poor were affected. This observation tended to eliminate diet as an aetiological factor,' while only those 'born and lived all their lives in an endemic area had mottled enamel.'",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 53,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the microbiology of caries prevention, what is the primary functional role of streptococcal glucosyltransferases (GTF) in the caries process?",
+    "options": ["They directly demineralize enamel through acid production alone", "They synthesize sticky glucan polymers from sucrose that mediate bacterial attachment and stabilize the plaque biofilm", "They break down fluoride ions in saliva", "They produce antibodies against Streptococcus mutans"],
+    "answer_index": 1,
+    "justification": "The text explains that glucosyltransferases 'synthesize, from sucrose, polymers consisting solely of glucose (glucans),' and that these polymers 'mediate attachment of bacteria to the tooth surface and to other bacteria,' thereby stabilizing the plaque biofilm.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 83,
+    "category": "prevention_population",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In a Scottish study of reasons for adult tooth extraction, what proportion of extractions was attributable to periodontal disease compared with caries and its sequelae?",
+    "options": ["Periodontal disease caused 55% and caries caused 17%", "Caries and its sequelae accounted for 55% of extractions and periodontal disease was responsible for only 17%", "Both causes were responsible for exactly 50% each", "Periodontal disease was the leading cause in every age group"],
+    "answer_index": 1,
+    "justification": "The text reports that in the Scottish study, 'caries and its sequelae accounted for 55% of extractions overall and periodontal disease was responsible for only 17%,' contradicting the common assumption that periodontal disease dominates extractions in older adults.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 144,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to population studies of periodontitis correlates, for which risk factor is the evidence for a causal role considered greatest?",
+    "options": ["Low educational status", "Smoking", "Black race", "Osteoporosis"],
+    "answer_index": 1,
+    "justification": "The text states that severe periodontitis has been positively associated with several correlates, but 'Among this list of correlates, evidence for a causal role is greatest for smoking.'",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 144,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the mixed dentition, what is the effect of losing a primary second molar prematurely in a crowded dental arch?",
+    "options": ["The permanent canine erupts prematurely with no space loss", "The first permanent molar tends to move forward (mesially) into the space, reducing room for the second premolar", "No space loss occurs because primary molars are not load-bearing", "The centre-line shifts away from the affected side only"],
+    "answer_index": 1,
+    "justification": "The text explains that 'If a primary second molar is lost and the teeth are crowded, the first permanent molar will move forward into the space, reducing the space available for the second premolar,' which is a key rationale for space maintenance.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 174,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Regarding age-related changes in salivary gland function, what does the text conclude about resting and stimulated salivary flow rates from the major glands with normal aging?",
+    "options": ["Flow rates decrease dramatically and predictably with age regardless of other factors", "There is little alteration in salivary flow from the major glands with increasing age when other variables are controlled", "Stimulated flow increases substantially while resting flow decreases", "Salivary flow becomes impossible to measure reliably after age 60"],
+    "answer_index": 1,
+    "justification": "The text states that when systemic disease and medication effects are controlled for, 'it is now accepted that there is little alteration in salivary flow from the major glands with increasing age, either in terms of stimulated or resting flow rates,' though older individuals show greater flow reduction under additional challenge.",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 205,
+    "category": "prevention_population",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Which category of fissure sealant material has been the most successful in terms of retention and caries prevention since the 1970s?",
+    "options": ["Silver nitrate preparations", "Zinc phosphate/amalgam ('prophylactic odontotomy')", "Bis-GMA resins", "Black copper cement"],
+    "answer_index": 2,
+    "justification": "The text states that 'The most successful materials as fissure sealants, in terms of retention and thus caries prevention, are the bis-GMA resins,' noting these 'have been in use since the 1970s and have not been superseded.'",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 108,
+    "category": "prevention_population",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to the WHO's 1982 definition cited in discussions of oral health promotion goals, an acceptable overall oral health outcome includes retention throughout life of a functional dentition of not less than how many teeth?",
+    "options": ["10 teeth", "16 teeth", "20 teeth", "28 teeth"],
+    "answer_index": 2,
+    "justification": "The oral health goal is defined as 'the retention throughout life of a functional, aesthetic, natural dentition of not less than 20 teeth and not requiring recourse to a prosthesis (WHO 1982).'",
+    "source_book": "The Prevention of Oral Disease",
+    "source_page": 267,
+    "category": "prevention_population",
+    "difficulty": "medium"
+  }
+]

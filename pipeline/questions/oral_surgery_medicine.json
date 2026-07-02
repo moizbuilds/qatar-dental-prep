@@ -1,0 +1,212 @@
+[
+  {
+    "stem": "A patient on intravenous bisphosphonate therapy for bony metastases requires a dental extraction. Which statement about medication-related osteonecrosis of the jaw (MRONJ) risk is correct?",
+    "options": [
+      "Risk is higher with intravenous bisphosphonates than with oral administration",
+      "Risk is higher with oral bisphosphonates than with intravenous administration",
+      "Bisphosphonates carry no risk of jaw osteonecrosis regardless of route",
+      "Stopping bisphosphonates before extraction is proven to eliminate risk"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that osteonecrosis of the jaw is more frequent in 'patients receiving bisphosphonates intravenously for management of bony metastases or hypercalcaemia of malignancy than in those individuals using oral administration,' and notes there is no real evidence that stopping bisphosphonates prior to extraction improves outcome.",
+    "source_book": "A Clinical Guide to Oral Medicine",
+    "source_page": 92,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which class of drugs, along with bisphosphonates, is specifically identified as being associated with medication-related osteonecrosis of the jaw (MRONJ)?",
+    "options": [
+      "Beta-blockers and diuretics",
+      "Denosumab (RANK ligand inhibitor) and tyrosine kinase inhibitors",
+      "Antihistamines and proton pump inhibitors",
+      "Statins and calcium channel blockers"
+    ],
+    "answer_index": 1,
+    "justification": "The chunk names 'Bisphosphonates, denosumab (RANK ligand inhibitor), tyrosine kinase inhibitors and monoclonal antibodies targeting VEGF' as medications used for bone conditions that have been linked to increasing reports of jaw necrosis.",
+    "source_book": "Master Dentistry Volume One: Oral and Maxillofacial Surgery, Radiology, Pathology and Oral Medicine",
+    "source_page": 96,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During surgical removal of a lower third molar, why is a lingual flap raised with a retractor placed as a physical barrier before removing distolingual bone?",
+    "options": [
+      "To improve access for suturing only",
+      "To protect the lingual nerve from injury caused by hand instruments or a surgical bur",
+      "To reduce postoperative bleeding from the buccal vessels",
+      "To prevent fracture of the maxillary tuberosity"
+    ],
+    "answer_index": 1,
+    "justification": "The surgical technique box explains that raising a lingual flap and placing a retractor as 'a physical barrier to protect the lingual nerve when using hand instruments or a surgical bur' prevents permanent nerve injury during distolingual bone removal.",
+    "source_book": "Master Dentistry Volume One: Oral and Maxillofacial Surgery, Radiology, Pathology and Oral Medicine",
+    "source_page": 111,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A patient with trigeminal neuralgia is started on carbamazepine. Which of the following is correct regarding its use?",
+    "options": [
+      "It should be started at a high dose and reduced if symptoms improve",
+      "It should be prescribed cautiously, starting at a low dose and increasing slowly until symptoms are controlled",
+      "It is contraindicated in trigeminal neuralgia and only used for facial pain of vascular origin",
+      "No monitoring of blood count or organ function is required during treatment"
+    ],
+    "answer_index": 1,
+    "justification": "The text states carbamazepine 'should be prescribed cautiously, starting at a dose of 100 mg once or twice daily and increasing slowly until the patient's symptoms are controlled,' with full blood count, liver and renal function tests recommended before and during treatment.",
+    "source_book": "Master Dentistry Volume One: Oral and Maxillofacial Surgery, Radiology, Pathology and Oral Medicine",
+    "source_page": 261,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which odontogenic cyst is most commonly discovered on a radiograph taken because of failure of tooth eruption, and most frequently displaces the mandibular third molar or maxillary canine?",
+    "options": [
+      "Radicular cyst",
+      "Eruption cyst",
+      "Dentigerous cyst",
+      "Odontogenic keratocyst"
+    ],
+    "answer_index": 2,
+    "justification": "The clinical features table describes the dentigerous cyst as typically found at the 'Mandibular 3rd molar followed by maxillary canine' site, noting it 'may grow to large size before diagnosis and displace the associated tooth; most discovered on radiograph taken because of tooth eruption failure.'",
+    "source_book": "Master Dentistry Volume One: Oral and Maxillofacial Surgery, Radiology, Pathology and Oral Medicine",
+    "source_page": 171,
+    "category": "oral_surgery_medicine",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "True allergic reactions to dental local anaesthetic injections are most likely to be caused by which agents or components?",
+    "options": [
+      "Amide-type anaesthetics such as lidocaine themselves",
+      "Ester-type local anaesthetics such as benzocaine, cocaine and procaine, or additives like methylparaben",
+      "Adrenaline (epinephrine) as the sole causative agent",
+      "The volume of anaesthetic solution injected regardless of type"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes that reports of allergic reactions are extremely rare and were historically associated with the preservative methylparaben or antioxidant metabisulphite, and that 'hypersensitivity reactions occur mainly with the ester-type LAs such as benzocaine, cocaine and procaine.'",
+    "source_book": "Master Dentistry Volume One: Oral and Maxillofacial Surgery, Radiology, Pathology and Oral Medicine",
+    "source_page": 66,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Where should the treatment and management of osteomyelitis of the jaws best be carried out, and what is the typical antibiotic duration?",
+    "options": [
+      "In general dental practice, with a single dose of antibiotic",
+      "Within a hospital setting, with antibiotics maintained for 6-8 weeks",
+      "At home with no antibiotics, relying on surgical debridement alone",
+      "In hospital, with antibiotics maintained for only 2-3 days"
+    ],
+    "answer_index": 1,
+    "justification": "The text states 'the investigation and management of osteomyelitis are best performed within a hospital setting' and that 'treatment relies upon antibiotics, maintained for 6-8 weeks,' with penicillin V as the usual initial empirical choice.",
+    "source_book": "Oral and Maxillofacial Surgery",
+    "source_page": 99,
+    "category": "oral_surgery_medicine",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "When planning surgical removal of an impacted lower third molar, what radiographic assessment is essential before determining the difficulty of the surgery?",
+    "options": [
+      "A cephalometric radiograph showing the whole skull",
+      "A radiograph showing the whole tooth and its association with neighbouring structures such as the inferior dental canal",
+      "A bitewing radiograph of the contralateral side",
+      "No radiograph is required if the tooth is palpable clinically"
+    ],
+    "answer_index": 1,
+    "justification": "The surgical assessment section states 'a radiograph is essential before such assessment, and should show the whole tooth and its association to neighbouring structures (e.g. ID canal, adjacent teeth and preferably the lower border of the mandible).'",
+    "source_book": "Oral and Maxillofacial Surgery",
+    "source_page": 57,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which imaging modalities are useful for determining the position of the temporomandibular joint disc in disc displacement disorders, given that plain radiographs are of no value for this purpose?",
+    "options": [
+      "Arthrography, arthroscopy or MRI",
+      "Bitewing radiography only",
+      "Panoramic radiography only",
+      "Ultrasound is the only reliable method"
+    ],
+    "answer_index": 0,
+    "justification": "The text states 'plain radiographs are of no value in determining the position of the disc. This may be done by arthrography, arthroscopy or MRI, but for almost all cases diagnosis on clinical grounds alone is quite satisfactory.'",
+    "source_book": "Oral and Maxillofacial Surgery",
+    "source_page": 239,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "For a patient with recurrent TMJ dislocation, which pharmacological injection has been reported with some success in preventing further episodes by causing prolonged muscle weakness?",
+    "options": [
+      "Corticosteroid injection into the joint capsule",
+      "Botulinus toxin injected into the lateral pterygoid muscle",
+      "Hyaluronic acid injection into the joint space",
+      "Local anaesthetic injection into the masseter muscle"
+    ],
+    "answer_index": 1,
+    "justification": "The passage states 'some success has been reported with the injection of Botulinus toxin into the lateral pterygoid muscle. This causes prolonged muscle weakness, aimed at preventing the forward displacement associated with dislocation.'",
+    "source_book": "Oral and Maxillofacial Surgery",
+    "source_page": 253,
+    "category": "oral_surgery_medicine",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Regarding salivary gland neoplasms, which statement is correct about the relationship between pain and malignancy?",
+    "options": [
+      "Pain is a highly reliable indicator that a salivary tumour is malignant",
+      "Pain is not a reliable indication of malignancy, and benign tumours can also present with pain",
+      "Malignant salivary tumours are always painless",
+      "Salivary neoplasms never present with pain regardless of type"
+    ],
+    "answer_index": 1,
+    "justification": "The text explains that 'pain is not a reliable indication of malignancy' since malignant tumours invading a sensory nerve can cause pain, but 'benign tumours often present with pain and aching in the affected gland, presumably due to capsular distension.'",
+    "source_book": "Oral and Maxillofacial Surgery",
+    "source_page": 211,
+    "category": "oral_surgery_medicine",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is the recommended initial-visit management for a patient presenting with primary herpes simplex virus (HSV) infection in general dental practice?",
+    "options": [
+      "Aciclovir elixir 200 mg in 5 ml, five times daily for five days, plus an antiseptic mouthwash",
+      "Amoxicillin 500 mg three times daily for five days",
+      "No treatment is needed as primary HSV infection is always self-limiting and asymptomatic",
+      "Topical corticosteroid ointment applied to the lesions four times daily"
+    ],
+    "answer_index": 0,
+    "justification": "The management table specifies 'Aciclovir elixir, 200 mg in 5 ml, five times daily for five days' as preferable to tablets, along with 'use of an antiseptic mouthwash (chlorhexidine 0.2% or benzydamine 0.15%) to reduce secondary bacterial infection.'",
+    "source_book": "A Clinical Guide to Oral Medicine",
+    "source_page": 29,
+    "category": "oral_surgery_medicine",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What is described as the most common cause of pain of bony origin in the jaws, aside from acute trauma?",
+    "options": [
+      "Osteoradionecrosis following radiotherapy",
+      "Dry socket (localised osteitis)",
+      "Torus mandibularis",
+      "Medication-related osteonecrosis of the jaw"
+    ],
+    "answer_index": 1,
+    "justification": "The text states 'the most common cause of bone pain is dry socket (localised osteitis)' while noting that suppurative infection in bone is rare but can complicate radiotherapy-induced osteoradionecrosis.",
+    "source_book": "A Clinical Guide to Oral Medicine",
+    "source_page": 36,
+    "category": "oral_surgery_medicine",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "A patient with erosive lichen planus is being managed in general dental practice. Which finding on review should prompt consideration of a lichenoid drug reaction rather than lichen planus?",
+    "options": [
+      "Symmetrical involvement of the buccal mucosa bilaterally",
+      "Asymmetry of lesions and involvement of the palate",
+      "Reticular white striae on the tongue only",
+      "Complete resolution within 48 hours of topical steroid use"
+    ],
+    "answer_index": 1,
+    "justification": "The text notes that lichenoid reactions 'may be clinically indistinguishable from lichen planus,' but 'asymmetry and involvement of the palate are suggestive of a lichenoid reaction rather than lichen planus,' especially with a history of causative drug therapy.",
+    "source_book": "A Clinical Guide to Oral Medicine",
+    "source_page": 50,
+    "category": "oral_surgery_medicine",
+    "difficulty": "hard"
+  }
+]

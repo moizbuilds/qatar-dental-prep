@@ -1,0 +1,102 @@
+[
+  {
+    "stem": "What structural feature must a local anesthetic molecule possess to be suitable for injection into body tissues?",
+    "options": ["A purely lipophilic structure with no hydrophilic portion", "Both a lipophilic and a hydrophilic portion (amphipathic structure)", "A quaternary ammonium group only", "A pure carbohydrate backbone"],
+    "answer_index": 1,
+    "justification": "The text states that local anesthetic molecules are 'amphipathic; that is, they possess both lipophilic and hydrophilic characteristics, generally at opposite ends of the molecule,' and explicitly notes that 'Local anesthetics without a hydrophilic part are not suited for injection.'",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 14,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the FDA-approved maximum recommended dose (MRD) table, what is the maximum recommended dose of lidocaine with vasoconstrictor in milligrams per kilogram?",
+    "options": ["2.0 mg/kg", "4.4 mg/kg", "7.0 mg/kg", "8.0 mg/kg"],
+    "answer_index": 2,
+    "justification": "The Maximum Recommended Doses of Local Anesthetics table lists lidocaine 'With vasoconstrictor 7.0' mg/kg (3.2 mg/lb), with an absolute maximum of 500 mg.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 69,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why should a patient's calculated maximum recommended dose (MRD) of local anesthetic always be reduced in medically compromised, debilitated, or elderly individuals?",
+    "options": ["These patients metabolize local anesthetics faster than healthy adults", "Changes in liver function, plasma protein binding, and blood volume alter drug distribution and biotransformation", "Elderly patients require higher blood levels to achieve anesthesia", "The FDA mandates a flat dose regardless of body weight for these patients"],
+    "answer_index": 1,
+    "justification": "The text explains that 'Changes in liver function, plasma protein binding, blood volume, and other important physiologic functions influence the manner in which local anesthetics are distributed and biotransformed in the body,' which is why the MRD calculated should always be decreased in these patients.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 69,
+    "category": "pain_anxiety",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "During aspiration with a traditional harpoon-aspirating syringe, how much should the thumb ring be pulled back to generate adequate negative pressure?",
+    "options": ["Only 1 or 2 mm", "At least 10 mm", "The full length of the cartridge", "5 to 6 mm"],
+    "answer_index": 0,
+    "justification": "The text instructs that 'the thumb ring should be pulled back gently. Movement of only 1 or 2 mm is needed,' which produces enough negative pressure within the cartridge to test for blood return at the needle tip.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 190,
+    "category": "pain_anxiety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "During a local anesthetic injection, aspirating and seeing bright red blood rapidly fill the cartridge most likely indicates penetration of which type of vessel?",
+    "options": ["A lymphatic vessel", "A vein", "An artery", "A salivary duct"],
+    "answer_index": 2,
+    "justification": "The figure caption explains that '(C) Positive aspiration. Bright red blood rapidly filling the cartridge usually indicates arterial penetration,' in contrast to a slight reddish discoloration, which usually indicates venous penetration.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 190,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "After how many tissue penetrations in the same patient should a dental local anesthetic needle be changed?",
+    "options": ["After one penetration", "After three or four penetrations", "After ten penetrations", "Needles never need to be changed within one patient visit"],
+    "answer_index": 1,
+    "justification": "The text advises that 'Needles should be changed after several (three or four) tissue penetrations in the same patient' because after that many insertions, disposable needles become dulled and tissue penetration becomes increasingly traumatic.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 114,
+    "category": "pain_anxiety",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Which needle gauge does the author recommend as the single most versatile choice for dental local anesthetic injections, citing greater rigidity and more reliable aspiration?",
+    "options": ["30-gauge short needle", "27-gauge extra-short needle", "25-gauge long needle", "23-gauge long needle"],
+    "answer_index": 2,
+    "justification": "The summary states that 'only one local anesthetic needle is necessary in the dental office, the 25-gauge long needle,' noting it 'provides a rigidity that is not available with higher-gauge (smaller-diameter) needles' and 'provides easier and more reliable aspiration.'",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 114,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the reported rate of positive aspiration (blood return) for the inferior alveolar nerve block, the highest among all intraoral injection techniques?",
+    "options": ["1% to 3%", "10% to 15%", "40% to 50%", "60% to 75%"],
+    "answer_index": 1,
+    "justification": "Among the disadvantages of the inferior alveolar nerve block listed is a 'Positive aspiration (10% to 15%, highest of all intraoral injection techniques),' making it the most likely intraoral technique to enter a blood vessel.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 250,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Why is depositing a few drops of local anesthetic before the needle contacts the periosteum recommended in techniques such as the inferior alveolar nerve block?",
+    "options": ["To reduce the total volume of anesthetic required", "Because the periosteum is richly innervated and contact with the needle tip produces pain", "To speed the onset of anesthesia", "To prevent discoloration of the cartridge"],
+    "answer_index": 1,
+    "justification": "The text explains that in techniques where the needle touches or nears the periosteum, drops should be deposited first because 'Periosteum is richly innervated, and contact with the needle tip produces pain,' and anesthetizing it first permits atraumatic contact.",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 190,
+    "category": "pain_anxiety",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A patient requires bilateral anesthesia of the mandibular premolars and anterior teeth for a restorative procedure. Which block is preferred over bilateral inferior alveolar nerve blocks to minimize patient discomfort and self-inflicted soft tissue trauma?",
+    "options": ["Bilateral incisive nerve block", "Bilateral Gow-Gates mandibular nerve block", "Bilateral posterior superior alveolar nerve block", "Bilateral greater palatine nerve block"],
+    "answer_index": 0,
+    "justification": "The text states that because bilateral inferior alveolar or mandibular nerve blocks are seldom needed given patient discomfort, 'Where dental treatment involves bilateral procedures on mandibular premolars and anterior teeth, bilateral incisive nerve blocks can be administered.'",
+    "source_book": "Handbook of Local Anesthesia",
+    "source_page": 270,
+    "category": "pain_anxiety",
+    "difficulty": "hard"
+  }
+]
