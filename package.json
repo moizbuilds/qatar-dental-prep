@@ -9,7 +9,9 @@
     "lint": "eslint",
     "test": "vitest run",
     "db:init": "tsx scripts/init-db.ts",
-    "db:load": "tsx scripts/load-chunks.ts"
+    "db:load": "tsx scripts/load-chunks.ts",
+    "questions:verify": "tsx scripts/verify-questions.ts",
+    "questions:load": "tsx scripts/load-questions.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.109.1",
