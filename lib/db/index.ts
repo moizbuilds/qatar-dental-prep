@@ -16,12 +16,16 @@ import {
 } from "./types";
 
 const DEFAULT_DB_PATH = path.join(process.cwd(), "data", "app.db");
+// Resolve from the project root (process.cwd()), not __dirname: under the
+// Next.js/Turbopack server bundle __dirname becomes a virtual path like
+// /ROOT/lib/db and fs.readFileSync fails with ENOENT. cwd is the project
+// root in dev, `next start`, tests, and the db scripts alike.
+const SCHEMA_PATH = path.join(process.cwd(), "lib", "db", "schema.sql");
 
 let dbInstance: Database.Database | null = null;
 
 function applySchemaIfNeeded(database: Database.Database) {
-  const schemaPath = path.join(__dirname, "schema.sql");
-  const schema = fs.readFileSync(schemaPath, "utf-8");
+  const schema = fs.readFileSync(SCHEMA_PATH, "utf-8");
   database.exec(schema);
 }
 
