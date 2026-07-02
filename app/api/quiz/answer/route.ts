@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getChunkById, getQuestionById, recordAnswer } from "../../../../lib/db";
+import { attemptExists, getChunkById, getQuestionById, recordAnswer } from "../../../../lib/db";
 
 type AnswerBody = {
   attemptId?: number;
@@ -26,6 +26,12 @@ export async function POST(request: NextRequest) {
       { error: "'attemptId', 'questionId', and 'selectedIndex' are required" },
       { status: 400 }
     );
+  }
+
+  if (!attemptExists(attemptId)) {
+    // Guard the FK before recordAnswer, otherwise a bogus attemptId throws an
+    // unhandled 500 instead of a clean 404.
+    return NextResponse.json({ error: "Attempt not found" }, { status: 404 });
   }
 
   const question = getQuestionById(questionId);

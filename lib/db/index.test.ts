@@ -13,6 +13,8 @@ import {
   createAttempt,
   recordAnswer,
   attemptHistory,
+  attemptExists,
+  completeAttempt,
   attemptStats,
   missedQuestions,
   saveChatMessage,
@@ -240,6 +242,26 @@ describe("createAttempt / recordAnswer / attemptStats / missedQuestions", () => 
     const missed = missedQuestions();
     expect(missed.length).toBe(1);
     expect(missed[0].id).toBe(q1);
+  });
+});
+
+describe("attemptExists / completeAttempt", () => {
+  it("attemptExists is true for a created attempt, false otherwise", () => {
+    const id = createAttempt();
+    expect(attemptExists(id)).toBe(true);
+    expect(attemptExists(id + 999)).toBe(false);
+  });
+
+  it("completeAttempt stamps completed_at", () => {
+    const id = createAttempt();
+    expect(db.prepare(`SELECT completed_at FROM quiz_attempts WHERE id = ?`).get(id)).toEqual({
+      completed_at: null,
+    });
+    completeAttempt(id);
+    const row = db.prepare(`SELECT completed_at FROM quiz_attempts WHERE id = ?`).get(id) as {
+      completed_at: string | null;
+    };
+    expect(row.completed_at).not.toBeNull();
   });
 });
 

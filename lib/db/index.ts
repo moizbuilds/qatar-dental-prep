@@ -276,6 +276,18 @@ export function getAttemptScore(attemptId: number): { correct: number; total: nu
   return { correct: row.correct, total: row.total };
 }
 
+/** True if a quiz attempt with this id exists. */
+export function attemptExists(attemptId: number): boolean {
+  const db = getDb();
+  return db.prepare(`SELECT 1 FROM quiz_attempts WHERE id = ?`).get(attemptId) !== undefined;
+}
+
+/** Marks an attempt finished by stamping completed_at (idempotent). */
+export function completeAttempt(attemptId: number): void {
+  const db = getDb();
+  db.prepare(`UPDATE quiz_attempts SET completed_at = datetime('now') WHERE id = ?`).run(attemptId);
+}
+
 /**
  * Per-attempt scores ordered oldest-first, for the dashboard trend line.
  * Only counts attempts that have at least one recorded answer.

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAttemptScore } from "../../../../lib/db";
+import { getAttemptScore, completeAttempt } from "../../../../lib/db";
 
 const PASS_THRESHOLD_PERCENT = 60;
 
@@ -21,6 +21,7 @@ export async function POST(request: NextRequest) {
   }
 
   const { correct, total } = getAttemptScore(attemptId);
+  completeAttempt(attemptId);
   const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
   const passed = percentage >= PASS_THRESHOLD_PERCENT;
 
