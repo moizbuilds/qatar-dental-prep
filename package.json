@@ -7,7 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "db:init": "tsx scripts/init-db.ts",
+    "db:load": "tsx scripts/load-chunks.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.109.1",
@@ -27,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.20",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "^5",
     "vitest": "^4.1.9"
   }
