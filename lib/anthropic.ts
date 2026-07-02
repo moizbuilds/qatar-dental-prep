@@ -25,9 +25,10 @@ export interface AnthropicLike {
 }
 
 /**
- * Builds the system prompt. Claude must answer ONLY from the supplied
- * passages, cite the book + page for each claim, and say plainly when the
- * books don't cover the question — no guessing.
+ * Builds the system prompt. Claude answers from the supplied passages and
+ * cites book + page when they cover the question; when they don't, it gives a
+ * clearly-labelled general-knowledge answer instead of a dead end, and never
+ * attaches a citation to a non-sourced claim.
  */
 export function buildSystemPrompt(chunks: Chunk[]): string {
   const passages = chunks
