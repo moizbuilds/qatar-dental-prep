@@ -1,5 +1,8 @@
 # Qatar Dental Prep
 
+**Live:** https://qatar-dental-prep.vercel.app (passcode-gated). Hosted on
+Vercel with a Supabase Postgres backend.
+
 A personal, mobile-friendly study app for the Qatar MOPH **National General
 Dental Qualifying Examination** (150 MCQs, 3½ hours, 60% pass). Everything is
 grounded in the official reading-list textbooks.
