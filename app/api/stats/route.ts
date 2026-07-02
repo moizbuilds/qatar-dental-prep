@@ -10,7 +10,7 @@ const PASS_THRESHOLD_PERCENT = 60;
  * trend. Read-only; auth is enforced by middleware.
  */
 export async function GET() {
-  const statsByCategory = new Map(attemptStats().map((s) => [s.category, s]));
+  const statsByCategory = new Map((await attemptStats()).map((s) => [s.category, s]));
 
   const categories = BLUEPRINT.map(({ category, examCount }) => {
     const s = statsByCategory.get(category);
@@ -34,7 +34,7 @@ export async function GET() {
   return NextResponse.json({
     passThreshold: PASS_THRESHOLD_PERCENT,
     categories,
-    history: attemptHistory(),
+    history: await attemptHistory(),
     weakest,
   });
 }

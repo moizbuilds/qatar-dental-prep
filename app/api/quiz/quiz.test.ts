@@ -9,7 +9,7 @@ import {
   insertChunks,
   _setDbForTests,
   _resetDbForTests,
-} from "../../../lib/db";
+} from "../../../lib/db/sqlite";
 import type { NewQuestion } from "../../../lib/db/types";
 
 import { POST as startQuiz } from "./start/route";

@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
   let questions: Question[];
   if (mode === "full") {
-    questions = randomMock();
+    questions = await randomMock();
   } else if (mode === "topic") {
     const { category, count } = body;
     if (!category || typeof count !== "number" || count <= 0) {
@@ -46,9 +46,9 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    questions = getQuestionsByCategory(category, count);
+    questions = await getQuestionsByCategory(category, count);
   } else if (mode === "review") {
-    questions = missedQuestions();
+    questions = await missedQuestions();
   } else {
     return NextResponse.json(
       { error: "Invalid 'mode'; expected 'full', 'topic', or 'review'" },
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const attemptId = createAttempt();
+  const attemptId = await createAttempt();
 
   return NextResponse.json({
     attemptId,

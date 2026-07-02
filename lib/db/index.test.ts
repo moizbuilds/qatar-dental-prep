@@ -21,7 +21,7 @@ import {
   listChatMessages,
   _setDbForTests,
   _resetDbForTests,
-} from "./index";
+} from "./sqlite";
 import { BLUEPRINT, type BlueprintCategory, type NewQuestion } from "./types";
 
 let tmpDir: string;

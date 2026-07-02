@@ -28,27 +28,27 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  if (!attemptExists(attemptId)) {
+  if (!(await attemptExists(attemptId))) {
     // Guard the FK before recordAnswer, otherwise a bogus attemptId throws an
     // unhandled 500 instead of a clean 404.
     return NextResponse.json({ error: "Attempt not found" }, { status: 404 });
   }
 
-  const question = getQuestionById(questionId);
+  const question = await getQuestionById(questionId);
   if (!question) {
     return NextResponse.json({ error: "Question not found" }, { status: 404 });
   }
 
   const correct = selectedIndex === question.correct_index;
 
-  recordAnswer({
+  await recordAnswer({
     attempt_id: attemptId,
     question_id: questionId,
     selected_index: selectedIndex,
     is_correct: correct,
   });
 
-  const chunk = question.source_chunk_id ? getChunkById(question.source_chunk_id) : undefined;
+  const chunk = question.source_chunk_id ? await getChunkById(question.source_chunk_id) : undefined;
   const citation = chunk ? { book: chunk.book, page_start: chunk.page_start } : null;
 
   return NextResponse.json({

@@ -8,7 +8,7 @@ import {
   recordAnswer,
   _setDbForTests,
   _resetDbForTests,
-} from "../../../lib/db";
+} from "../../../lib/db/sqlite";
 import { GET } from "./route";
 import { BLUEPRINT } from "../../../lib/db/types";
 

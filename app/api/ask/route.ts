@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
   if (!session) {
     return NextResponse.json({ error: "'session' is required" }, { status: 400 });
   }
-  return NextResponse.json({ messages: listChatMessages(session) });
+  return NextResponse.json({ messages: await listChatMessages(session) });
 }
 
 export async function POST(request: NextRequest) {
@@ -35,8 +35,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const chunks = searchChunks(question, RETRIEVE_K);
-  saveChatMessage({ session, role: "user", content: question });
+  const chunks = await searchChunks(question, RETRIEVE_K);
+  await saveChatMessage({ session, role: "user", content: question });
 
   let answer: string;
   let sources;
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  saveChatMessage({ session, role: "assistant", content: answer });
+  await saveChatMessage({ session, role: "assistant", content: answer });
 
   return NextResponse.json({ answer, sources });
 }

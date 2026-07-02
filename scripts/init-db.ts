@@ -1,7 +1,7 @@
 // Applies lib/db/schema.sql to data/app.db, creating the DB file/dir if needed.
 // Usage: npm run db:init
 
-import { getDb } from "../lib/db";
+import { getDb } from "../lib/db/sqlite";
 
 function main() {
   const db = getDb();

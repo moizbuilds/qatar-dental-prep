@@ -20,8 +20,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "'attemptId' is required" }, { status: 400 });
   }
 
-  const { correct, total } = getAttemptScore(attemptId);
-  completeAttempt(attemptId);
+  const { correct, total } = await getAttemptScore(attemptId);
+  await completeAttempt(attemptId);
   const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
   const passed = percentage >= PASS_THRESHOLD_PERCENT;
 

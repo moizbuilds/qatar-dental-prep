@@ -25,8 +25,8 @@ const LABELS: Record<string, string> = {
   affective_skills: "Affective Skills",
 };
 
-export default function DashboardPage() {
-  const statsByCategory = new Map(attemptStats().map((s) => [s.category, s]));
+export default async function DashboardPage() {
+  const statsByCategory = new Map((await attemptStats()).map((s) => [s.category, s]));
   const categories = BLUEPRINT.map(({ category }) => {
     const s = statsByCategory.get(category);
     const attempted = s?.attempted ?? 0;
@@ -38,7 +38,7 @@ export default function DashboardPage() {
     };
   });
 
-  const history = attemptHistory();
+  const history = await attemptHistory();
   const weakest = [...categories]
     .filter((c) => c.attempted > 0)
     .sort((a, b) => a.accuracyPercent - b.accuracyPercent)

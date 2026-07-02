@@ -12,7 +12,7 @@
 //
 // Usage: npm run questions:load
 
-import { getDb, insertQuestion } from "../lib/db";
+import { getDb, insertQuestion } from "../lib/db/sqlite";
 import type { NewQuestion } from "../lib/db/types";
 import {
   loadChunks,

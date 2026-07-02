@@ -1,378 +1,100 @@
-import Database from "better-sqlite3";
-import fs from "node:fs";
-import path from "node:path";
-import {
-  BLUEPRINT,
-  type AttemptScore,
-  type BlueprintCategory,
-  type CategoryStat,
-  type ChatMessage,
-  type Chunk,
-  type NewAnswer,
-  type NewChatMessage,
-  type NewQuestion,
-  type Question,
-  type QuestionFilter,
+/**
+ * Data-layer facade. Presents a uniform async interface and picks a backend:
+ * Supabase Postgres when SUPABASE_URL is configured (dev with cloud + the
+ * Vercel deployment), otherwise the local SQLite backend (used by the test
+ * suite, which injects an in-memory DB via _setDbForTests).
+ *
+ * SQLite is imported dynamically so `better-sqlite3`'s native binary is never
+ * loaded on Vercel serverless (where SUPABASE_URL is always set).
+ */
+import type {
+  BlueprintCategory,
+  Chunk,
+  NewAnswer,
+  NewChatMessage,
+  NewQuestion,
+  Question,
+  QuestionFilter,
 } from "./types";
+import * as supabase from "./supabase";
 
-const DEFAULT_DB_PATH = path.join(process.cwd(), "data", "app.db");
-// Resolve from the project root (process.cwd()), not __dirname: under the
-// Next.js/Turbopack server bundle __dirname becomes a virtual path like
-// /ROOT/lib/db and fs.readFileSync fails with ENOENT. cwd is the project
-// root in dev, `next start`, tests, and the db scripts alike.
-const SCHEMA_PATH = path.join(process.cwd(), "lib", "db", "schema.sql");
+const useSupabase = !!process.env.SUPABASE_URL;
 
-let dbInstance: Database.Database | null = null;
-
-function applySchemaIfNeeded(database: Database.Database) {
-  const schema = fs.readFileSync(SCHEMA_PATH, "utf-8");
-  database.exec(schema);
+// Lazy SQLite loader — resolves to the same cached module instance the test
+// suite imports statically, so an injected test DB is shared.
+type Sqlite = typeof import("./sqlite");
+function sq(): Promise<Sqlite> {
+  return import("./sqlite");
 }
 
-/**
- * Returns the singleton better-sqlite3 Database instance, opening and
- * initializing it (applying schema.sql) on first use.
- */
-export function getDb(): Database.Database {
-  if (dbInstance) return dbInstance;
-
-  const dbDir = path.dirname(DEFAULT_DB_PATH);
-  if (!fs.existsSync(dbDir)) {
-    fs.mkdirSync(dbDir, { recursive: true });
-  }
-
-  const database = new Database(DEFAULT_DB_PATH);
-  database.pragma("journal_mode = WAL");
-  database.pragma("foreign_keys = ON");
-  applySchemaIfNeeded(database);
-
-  dbInstance = database;
-  return dbInstance;
+export async function searchChunks(query: string, limit: number) {
+  return useSupabase ? supabase.searchChunks(query, limit) : (await sq()).searchChunks(query, limit);
 }
 
-/** Test-only hook: inject a pre-built Database (e.g. temp file or in-memory) in place of the singleton. */
-export function _setDbForTests(database: Database.Database): void {
-  dbInstance = database;
+export async function getChunkById(id: string) {
+  return useSupabase ? supabase.getChunkById(id) : (await sq()).getChunkById(id);
 }
 
-/** Test-only hook: clear the injected/singleton instance so the next getDb() call re-opens the default DB. */
-export function _resetDbForTests(): void {
-  dbInstance = null;
+export async function insertQuestion(q: NewQuestion) {
+  return useSupabase ? supabase.insertQuestion(q) : (await sq()).insertQuestion(q);
 }
 
-// ---------------------------------------------------------------------------
-// Chunks / full-text search
-// ---------------------------------------------------------------------------
-
-/**
- * Sanitizes a free-text user query into a safe FTS5 MATCH expression.
- * Extracts word-like tokens, double-quotes each one (escaping embedded
- * quotes) to neutralize FTS5 operators/punctuation, then joins with OR so
- * any queried term can match.
- */
-function toFtsQuery(query: string): string {
-  const tokens = query.match(/[\p{L}\p{N}]+/gu) ?? [];
-  if (tokens.length === 0) return "";
-  return tokens.map((t) => `"${t.replace(/"/g, '""')}"`).join(" OR ");
+export async function listQuestions(filter: QuestionFilter = {}) {
+  return useSupabase ? supabase.listQuestions(filter) : (await sq()).listQuestions(filter);
 }
 
-/**
- * Bulk-inserts chunk rows (used by scripts/load-chunks.ts). Runs inside a
- * single transaction and upserts on id so re-running the loader is safe.
- * The chunks_fts triggers in schema.sql keep the FTS index in sync.
- */
-export function insertChunks(chunks: Chunk[]): number {
-  const db = getDb();
-  const insert = db.prepare(
-    `INSERT INTO chunks (id, book, page_start, page_end, category_hint, text)
-     VALUES (@id, @book, @page_start, @page_end, @category_hint, @text)
-     ON CONFLICT (id) DO UPDATE SET
-       book = excluded.book,
-       page_start = excluded.page_start,
-       page_end = excluded.page_end,
-       category_hint = excluded.category_hint,
-       text = excluded.text`
-  );
-
-  const insertMany = db.transaction((rows: Chunk[]) => {
-    for (const row of rows) insert.run(row);
-    return rows.length;
-  });
-
-  return insertMany(chunks);
+export async function getQuestionsByCategory(cat: BlueprintCategory, n: number) {
+  return useSupabase
+    ? supabase.getQuestionsByCategory(cat, n)
+    : (await sq()).getQuestionsByCategory(cat, n);
 }
 
-export function getChunkById(id: string): Chunk | undefined {
-  const db = getDb();
-  const row = db
-    .prepare(
-      `SELECT id, book, page_start, page_end, category_hint, text FROM chunks WHERE id = ?`
-    )
-    .get(id) as Chunk | undefined;
-  return row;
+export async function randomMock() {
+  return useSupabase ? supabase.randomMock() : (await sq()).randomMock();
 }
 
-export function searchChunks(query: string, limit: number): Chunk[] {
-  const ftsQuery = toFtsQuery(query);
-  if (!ftsQuery) return [];
-
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `SELECT c.id, c.book, c.page_start, c.page_end, c.category_hint, c.text
-       FROM chunks_fts
-       JOIN chunks c ON c.rowid = chunks_fts.rowid
-       WHERE chunks_fts MATCH ?
-       ORDER BY bm25(chunks_fts)
-       LIMIT ?`
-    )
-    .all(ftsQuery, limit) as Chunk[];
-
-  return rows;
+export async function getQuestionById(id: number) {
+  return useSupabase ? supabase.getQuestionById(id) : (await sq()).getQuestionById(id);
 }
 
-// ---------------------------------------------------------------------------
-// Questions
-// ---------------------------------------------------------------------------
-
-interface QuestionRow {
-  id: number;
-  category: string;
-  stem: string;
-  choices: string;
-  correct_index: number;
-  explanation: string | null;
-  source_chunk_id: string | null;
-  created_at: string;
+export async function createAttempt() {
+  return useSupabase ? supabase.createAttempt() : (await sq()).createAttempt();
 }
 
-function rowToQuestion(row: QuestionRow): Question {
-  return {
-    id: row.id,
-    category: row.category as BlueprintCategory,
-    stem: row.stem,
-    choices: JSON.parse(row.choices) as string[],
-    correct_index: row.correct_index,
-    explanation: row.explanation,
-    source_chunk_id: row.source_chunk_id,
-    created_at: row.created_at,
-  };
+export async function recordAnswer(a: NewAnswer) {
+  return useSupabase ? supabase.recordAnswer(a) : (await sq()).recordAnswer(a);
 }
 
-export function insertQuestion(q: NewQuestion): number {
-  const db = getDb();
-  const result = db
-    .prepare(
-      `INSERT INTO questions (category, stem, choices, correct_index, explanation, source_chunk_id)
-       VALUES (?, ?, ?, ?, ?, ?)`
-    )
-    .run(
-      q.category,
-      q.stem,
-      JSON.stringify(q.choices),
-      q.correct_index,
-      q.explanation ?? null,
-      q.source_chunk_id ?? null
-    );
-  return Number(result.lastInsertRowid);
+export async function attemptExists(attemptId: number) {
+  return useSupabase ? supabase.attemptExists(attemptId) : (await sq()).attemptExists(attemptId);
 }
 
-export function listQuestions(filter: QuestionFilter = {}): Question[] {
-  const db = getDb();
-  let sql = "SELECT * FROM questions";
-  const params: unknown[] = [];
-
-  if (filter.category) {
-    sql += " WHERE category = ?";
-    params.push(filter.category);
-  }
-
-  sql += " ORDER BY id ASC";
-
-  if (filter.limit) {
-    sql += " LIMIT ?";
-    params.push(filter.limit);
-  }
-
-  const rows = db.prepare(sql).all(...params) as QuestionRow[];
-  return rows.map(rowToQuestion);
+export async function completeAttempt(attemptId: number) {
+  return useSupabase ? supabase.completeAttempt(attemptId) : (await sq()).completeAttempt(attemptId);
 }
 
-export function getQuestionById(id: number): Question | undefined {
-  const db = getDb();
-  const row = db.prepare(`SELECT * FROM questions WHERE id = ?`).get(id) as
-    | QuestionRow
-    | undefined;
-  return row ? rowToQuestion(row) : undefined;
+export async function getAttemptScore(attemptId: number) {
+  return useSupabase ? supabase.getAttemptScore(attemptId) : (await sq()).getAttemptScore(attemptId);
 }
 
-export function getQuestionsByCategory(cat: BlueprintCategory, n: number): Question[] {
-  const db = getDb();
-  const rows = db
-    .prepare(`SELECT * FROM questions WHERE category = ? ORDER BY RANDOM() LIMIT ?`)
-    .all(cat, n) as QuestionRow[];
-  return rows.map(rowToQuestion);
+export async function attemptStats() {
+  return useSupabase ? supabase.attemptStats() : (await sq()).attemptStats();
 }
 
-function shuffle<T>(items: T[]): T[] {
-  const arr = [...items];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
+export async function attemptHistory() {
+  return useSupabase ? supabase.attemptHistory() : (await sq()).attemptHistory();
 }
 
-/**
- * Builds a full 150-question mock exam distributed per BLUEPRINT's
- * per-category exam counts. If a category has fewer questions available
- * than its blueprint count, logs the shortfall via console.warn and
- * includes whatever is available for that category (degrades gracefully
- * rather than throwing).
- */
-export function randomMock(): Question[] {
-  const selected: Question[] = [];
-
-  for (const { category, examCount } of BLUEPRINT) {
-    const available = getQuestionsByCategory(category, examCount);
-    if (available.length < examCount) {
-      console.warn(
-        `[randomMock] shortfall in category "${category}": needed ${examCount}, found ${available.length}`
-      );
-    }
-    selected.push(...available);
-  }
-
-  return shuffle(selected);
+export async function missedQuestions() {
+  return useSupabase ? supabase.missedQuestions() : (await sq()).missedQuestions();
 }
 
-// ---------------------------------------------------------------------------
-// Attempts / answers
-// ---------------------------------------------------------------------------
-
-export function createAttempt(): number {
-  const db = getDb();
-  const result = db.prepare(`INSERT INTO quiz_attempts DEFAULT VALUES`).run();
-  return Number(result.lastInsertRowid);
+export async function saveChatMessage(m: NewChatMessage) {
+  return useSupabase ? supabase.saveChatMessage(m) : (await sq()).saveChatMessage(m);
 }
 
-export function recordAnswer(a: NewAnswer): void {
-  const db = getDb();
-  db.prepare(
-    `INSERT INTO answers (attempt_id, question_id, selected_index, is_correct)
-     VALUES (?, ?, ?, ?)`
-  ).run(a.attempt_id, a.question_id, a.selected_index, a.is_correct ? 1 : 0);
+export async function listChatMessages(session: string) {
+  return useSupabase ? supabase.listChatMessages(session) : (await sq()).listChatMessages(session);
 }
 
-export function getAttemptScore(attemptId: number): { correct: number; total: number } {
-  const db = getDb();
-  const row = db
-    .prepare(
-      `SELECT COUNT(*) AS total, COALESCE(SUM(is_correct), 0) AS correct
-       FROM answers
-       WHERE attempt_id = ?`
-    )
-    .get(attemptId) as { total: number; correct: number };
-  return { correct: row.correct, total: row.total };
-}
-
-/** True if a quiz attempt with this id exists. */
-export function attemptExists(attemptId: number): boolean {
-  const db = getDb();
-  return db.prepare(`SELECT 1 FROM quiz_attempts WHERE id = ?`).get(attemptId) !== undefined;
-}
-
-/** Marks an attempt finished by stamping completed_at (idempotent). */
-export function completeAttempt(attemptId: number): void {
-  const db = getDb();
-  db.prepare(`UPDATE quiz_attempts SET completed_at = datetime('now') WHERE id = ?`).run(attemptId);
-}
-
-/**
- * Per-attempt scores ordered oldest-first, for the dashboard trend line.
- * Only counts attempts that have at least one recorded answer.
- */
-export function attemptHistory(): AttemptScore[] {
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `SELECT qa.id AS attempt_id,
-              qa.completed_at AS completed_at,
-              COUNT(a.id) AS total,
-              COALESCE(SUM(a.is_correct), 0) AS correct
-       FROM quiz_attempts qa
-       JOIN answers a ON a.attempt_id = qa.id
-       GROUP BY qa.id
-       ORDER BY qa.id ASC`
-    )
-    .all() as {
-    attempt_id: number;
-    completed_at: string | null;
-    total: number;
-    correct: number;
-  }[];
-
-  return rows.map((row) => ({
-    attempt_id: row.attempt_id,
-    completed_at: row.completed_at,
-    total: row.total,
-    correct: row.correct,
-    pct: row.total > 0 ? Math.round((row.correct / row.total) * 100) : 0,
-  }));
-}
-
-export function attemptStats(): CategoryStat[] {
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `SELECT q.category AS category,
-              COUNT(*) AS attempted,
-              SUM(a.is_correct) AS correct
-       FROM answers a
-       JOIN questions q ON q.id = a.question_id
-       GROUP BY q.category`
-    )
-    .all() as { category: string; attempted: number; correct: number | null }[];
-
-  return rows.map((row) => {
-    const correct = row.correct ?? 0;
-    return {
-      category: row.category as BlueprintCategory,
-      attempted: row.attempted,
-      correct,
-      accuracy: row.attempted > 0 ? correct / row.attempted : 0,
-    };
-  });
-}
-
-export function missedQuestions(): Question[] {
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `SELECT DISTINCT q.*
-       FROM answers a
-       JOIN questions q ON q.id = a.question_id
-       WHERE a.is_correct = 0`
-    )
-    .all() as QuestionRow[];
-  return rows.map(rowToQuestion);
-}
-
-// ---------------------------------------------------------------------------
-// Chat messages
-// ---------------------------------------------------------------------------
-
-export function saveChatMessage(m: NewChatMessage): void {
-  const db = getDb();
-  db.prepare(
-    `INSERT INTO chat_messages (session, role, content) VALUES (?, ?, ?)`
-  ).run(m.session, m.role, m.content);
-}
-
-export function listChatMessages(session: string): ChatMessage[] {
-  const db = getDb();
-  const rows = db
-    .prepare(`SELECT * FROM chat_messages WHERE session = ? ORDER BY id ASC`)
-    .all(session) as ChatMessage[];
-  return rows;
-}
+export type { Chunk, Question };

@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import readline from "node:readline";
-import { getDb, insertChunks } from "../lib/db";
+import { getDb, insertChunks } from "../lib/db/sqlite";
 import type { Chunk } from "../lib/db/types";
 
 const CHUNKS_PATH = path.join(process.cwd(), "pipeline", "output", "chunks.jsonl");
