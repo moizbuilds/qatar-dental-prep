@@ -1,0 +1,592 @@
+[
+  {
+    "stem": "In cephalometric analysis of a lateral skull radiograph, which landmark is defined as the most anterior point on the chin?",
+    "options": ["Menton (Me)", "Pogonion (Pog)", "Gnathion (Gn)", "Gonion (Go)"],
+    "answer_index": 1,
+    "justification": "Pogonion is defined in cephalometric analysis as the most anterior point on the chin, distinguishing it from menton (the lowest point of the chin) and gonion (the most inferior and posterior point at the angle of the mandible). The source text states: 'Pog = pogonion (most anterior point on the chin)'.",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 55,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to classic mastication research using premasticated and unmasticated food placed in cotton net bags, for which category of foods did chewing most improve digestive efficiency?",
+    "options": ["Category 1 foods (e.g. roast pork)", "Category 2 foods (e.g. stewed lamb)", "Category 3 foods (e.g. boiled rice)", "All food categories equally"],
+    "answer_index": 1,
+    "justification": "The research classified foods into three categories, and it was only for Category 2 foods that mastication improved digestion, since they left residues when unchewed but were usually completely digested when chewed. The text states 'it is only for the few types of food in Category 2 that mastication improves digestion.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 105,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the term used for dentine that forms when the original odontoblasts in a region have been destroyed and new calcified tissue is produced by newly differentiated 'odontoblast-like' cells?",
+    "options": ["Reactionary dentine", "Reparative dentine", "Sclerotic dentine", "Peritubular dentine"],
+    "answer_index": 1,
+    "justification": "Reparative dentine is defined as dentine forming after a stimulus in which the original odontoblasts have been destroyed and new tissue is formed by newly differentiated 'odontoblast-like' cells, in contrast with reactionary dentine where the existing odontoblasts survive. The text states this explicitly: 'The term reparative dentine relates to dentine forming after a stimulus in which the original odontoblasts in the associated region have been destroyed and new calcified tissue... has been formed by newly differentiated cells.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 155,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the periodontal ligament, which cell type is characterized by numerous intracytoplasmic granules and is associated with the production of histamine and heparin?",
+    "options": ["Macrophage", "Mast cell", "Eosinophil", "Fibroblast"],
+    "answer_index": 1,
+    "justification": "Mast cells in the periodontal ligament show a large number of intracytoplasmic granules and, when stimulated, degranulate to release bioactive substances. The text states: 'Numerous functions have been ascribed to the mast cell, including the production of histamine, heparin and factors associated with anaphylaxis.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 205,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "The ventral surface of the tongue and floor of the mouth are covered by which type of oral mucosa?",
+    "options": ["Masticatory mucosa", "Specialized mucosa", "Typical lining mucosa", "Keratinized gingival mucosa"],
+    "answer_index": 2,
+    "justification": "The ventral tongue surface and floor of the mouth are lined by lining mucosa adapted for mobility rather than wear resistance. The text states: 'The ventral surface of the tongue and the floor of the mouth are covered by typical lining mucosa.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 254,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "During mandibular development, which secondary cartilage is considered the largest and most important, serving as a growth centre functioning up to about age 16?",
+    "options": ["Coronoid cartilage", "Symphyseal cartilage", "Condylar cartilage", "Meckel's cartilage"],
+    "answer_index": 2,
+    "justification": "The condylar cartilage is described as the largest and most important of the three secondary cartilages that develop in the mandible, appearing beneath the future condyle and functioning as a growth centre. The text notes 'The largest and most important of these is the condylar cartilage... functioning up to about the 16th year of life.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 304,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During formation of the periodontal ligament's principal collagen fibres, which teeth typically develop these fibre groups earlier: those with predecessors or those without?",
+    "options": ["Teeth without predecessors, i.e. deciduous teeth and permanent molars", "Teeth with predecessors, i.e. permanent incisors, canines and premolars", "Both develop principal fibres at the same rate", "Neither group forms principal fibres before eruption"],
+    "answer_index": 0,
+    "justification": "The text explains a major difference in fibre formation exists between teeth with and without predecessors, with the principal fibre groups developing earlier in deciduous teeth and permanent molars. It states: 'in the latter (i.e. deciduous teeth and permanent molars) the principal fibre groups develop earlier than in the former (i.e. permanent incisors, canines and premolars).'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 354,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Infection spreading from the tissue spaces around the infratemporal fossa is of particular clinical concern because these spaces communicate with which region, potentially compromising the airway?",
+    "options": ["The orbit", "The pharynx", "The nasal cavity", "The temporal fossa"],
+    "answer_index": 1,
+    "justification": "Unlike odontogenic infections that drain directly into the oral cavity, infections around the infratemporal fossa can spread to the pharyngeal tissue spaces, which is dangerous because it may affect the larynx and airway. The text states: 'Of particular relevance in this regard are the tissue spaces around the pharynx, as involvement of these spaces may affect the larynx and thus compromise the airway.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 88,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A submandibular space abscess is most commonly caused by spread of infection from which teeth?",
+    "options": ["Maxillary central incisors", "Mandibular canines", "The second or third mandibular molar", "Maxillary third molars"],
+    "answer_index": 2,
+    "justification": "The submandibular space lies below the mylohyoid muscle and communicates with the sublingual space, and infection typically spreads there from posterior mandibular teeth. The text states: 'A submandibular abscess is commonly caused by spread of infection from the second or third mandibular molar tooth.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 88,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What type of intercellular junction between odontoblasts allows the direct movement of small molecules between adjacent cells, important for synchronizing odontoblast activity?",
+    "options": ["Desmosome", "Tight junction", "Gap junction", "Hemidesmosome"],
+    "answer_index": 2,
+    "justification": "Gap junctions permit intercellular communication by allowing small molecules to pass directly between neighbouring odontoblasts. The text states: 'The third type of junction seen between odontoblasts is the gap junction. This allows the movement of small molecules directly between adjacent cells... in synchronizing the activity of all the odontoblasts in the layer.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 168,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A clinical crevice (gingival sulcus) depth measured at 4 mm on periodontal probing would generally be described using which term?",
+    "options": ["Normal free gingival groove", "Junctional epithelium extension", "Periodontal pocket", "Attached gingiva defect"],
+    "answer_index": 2,
+    "justification": "Crevices deeper than 3 mm are generally considered pathological. The text states: 'Crevices deeper than 3 mm (measured clinically) are generally accepted as diseased and are described as periodontal pockets.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 247,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "During amelogenesis, what structural feature of the ameloblast is primarily responsible for producing the prismatic structure of mature enamel?",
+    "options": ["The stratum intermedium", "The Tomes process", "The proximal terminal web", "The stellate reticulum"],
+    "answer_index": 1,
+    "justification": "The cone-shaped Tomes process that forms at the secretory end of the ameloblast determines the prismatic architecture of the enamel it produces. The text states: 'a cone-shaped process, Tomes process, forms at the distal, secretory end of the ameloblasts... The shape of Tomes processes is responsible for the prismatic structure of enamel.'",
+    "source_book": "Oral Anatomy, Histology and Embryology",
+    "source_page": 327,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During early embryonic development, which structure is directly pinched off from the neural plate/neural tube junction and gives rise to the dermis of the head, meninges, and much of the craniofacial skeleton?",
+    "options": ["Notochord", "Somatic mesoderm", "Neural crest", "Intraembryonic coelom"],
+    "answer_index": 2,
+    "justification": "The neural crest arises at the junction of the neural plate and ectoderm and is pinched off rather than incorporated into the neural tube, giving rise to ectomesenchyme that forms craniofacial structures. The text states the neural crest 'gives rise to ectomesenchyme which migrates widely to form, or contribute to, the dermis in the head region... the skeleton and connective tissue component of the musculature of the branchial arches.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 45,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In a comparison of a six-year-old skull with a sixteen-year-old skull using superimposed radiographic outlines, how do anterior points on the facial skeleton (such as the anterior nasal spine) tend to move as growth proceeds?",
+    "options": ["Directly downward only", "Downwards and forwards", "Backwards and upwards", "They remain essentially static"],
+    "answer_index": 1,
+    "justification": "Facial growth studies show anterior facial landmarks move along an antero-inferior pathway, distinct from posterior points which move more directly downward. The text states: 'Anterior points on the facial skeleton move downwards and forwards whereas posterior points move more directly downwards.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 81,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A typical cranial vault suture has five distinct layers. Which zone contains osteogenic cells that can differentiate into osteoblasts?",
+    "options": ["Central zone", "Capsular zone", "Cambial zone", "Endosteal zone"],
+    "answer_index": 2,
+    "justification": "The cambial zone covers each bone surface entering the suture and contains the osteogenic cells responsible for bone deposition during growth. The text states: 'A typical suture has five distinct layers comprising a cambial zone, containing osteogenic cells, covering each of the bone surfaces entering into the suture.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 81,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "During an inferior alveolar nerve block, if the needle is advanced too far into the pterygomandibular space, which structure is at risk of being pierced, potentially causing temporary facial paralysis?",
+    "options": ["The lingual nerve sheath", "The parotid capsule", "The medial pterygoid muscle belly", "The sphenomandibular ligament"],
+    "answer_index": 1,
+    "justification": "Advancing the needle too far risks piercing the parotid capsule, allowing local anaesthetic to spread to branches of the facial nerve within the gland. The text states: 'If advanced too far there is a possibility that the tip of the needle will pierce the parotid capsule... A degree of facial paralysis will ensue.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 190,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In dental radiography, which of the following structures has the greatest radiodensity, producing the whitest image on a periapical film?",
+    "options": ["Cortical bone", "Dentine", "Enamel", "Trabecular bone"],
+    "answer_index": 2,
+    "justification": "Radiodensity of dental structures decreases progressively from enamel through dentine and bone to soft tissue and air. The text states: 'radiodensity decreases in the following sequence—enamel, dentine + cementum, cortical bone, trabecular bone, soft tissue, and finally air.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 226,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "The stylopharyngeus muscle, which arises from the styloid process and elevates the pharynx and larynx, is innervated by which cranial nerve, reflecting its embryological origin from the third pharyngeal arch?",
+    "options": ["Facial nerve (VII)", "Glossopharyngeal nerve (IX)", "Vagus nerve (X)", "Hypoglossal nerve (XII)"],
+    "answer_index": 1,
+    "justification": "Stylopharyngeus is the only muscle derived from the third pharyngeal arch, and its innervation reflects this. The text states: 'The glossopharyngeal nerve curves around and supplies the muscle as it passes between the two carotid arteries... the muscle is derived from the third pharyngeal arch, being in fact the only muscle so derived.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 190,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the corticospinal and corticobulbar motor pathways, where do the corticospinal tracts get their alternate name 'pyramidal pathways' from?",
+    "options": ["They originate in the pyramidal cells of the thalamus", "They traverse the pyramids of the medulla", "They form pyramid-shaped bundles in the spinal cord", "They synapse in the pyramidal lobe of the cerebellum"],
+    "answer_index": 1,
+    "justification": "The corticospinal tracts pass through the medullary pyramids, giving rise to the term pyramidal pathways. The text states: 'Because the corticospinal tracts traverse the pyramids of the medulla they are frequently termed the pyramidal pathways.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 262,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "During development of the mandible, ossification begins at seven weeks at a centre located near which structure?",
+    "options": ["The condylar cartilage", "The future mental foramen", "The mandibular foramen", "The coronoid process"],
+    "answer_index": 1,
+    "justification": "Mandibular ossification originates from a single centre near the future mental foramen before spreading anteriorly and posteriorly. The text states: 'Ossification of the mandible commences at seven weeks at a centre cradled in the V of the mental and incisive nerves, close to the future mental foramen.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 69,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "The infraorbital nerve enters the orbit and traverses the orbital floor via which pathway?",
+    "options": ["The superior orbital fissure only", "The inferior orbital fissure, infraorbital groove and canal", "The optic canal", "The nasolacrimal canal"],
+    "answer_index": 1,
+    "justification": "The infraorbital nerve, a continuation of the maxillary nerve, enters through the inferior orbital fissure and travels along the infraorbital groove and canal to exit at the infraorbital foramen. The text states: 'Leading forwards across the floor of the orbit from the medial part of the inferior orbital fissure is the infraorbital groove... Groove, canal, and foramen transmit the infraorbital nerve.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 128,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which muscle of mastication has an action of pulling the head of the mandible and the articular disc forward during opening and protrusive movements?",
+    "options": ["Masseter", "Temporalis", "Lateral pterygoid", "Medial pterygoid"],
+    "answer_index": 2,
+    "justification": "The lateral pterygoid inserts into the pterygoid fovea and the disc of the temporomandibular joint, and its action pulls the condyle and disc anteriorly. The text states: 'Its action is to pull the head of the mandible and the disc forwards.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 186,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "The median aperture of the fourth ventricle (foramen of Magendie) provides which important function?",
+    "options": ["Production of cerebrospinal fluid by the choroid plexus", "The principal route by which cerebrospinal fluid exits the ventricular system", "Passage of the vestibulocochlear nerve", "Drainage of venous blood from the cerebellum"],
+    "answer_index": 1,
+    "justification": "The median aperture is the main route through which CSF passes from the ventricular system into the subarachnoid space. The text states: 'The median aperture communicates with the subarachnoid space in the region of the cerebellomedullary cistern and provides the principal route by which cerebrospinal fluid passes out of the ventricular system.'",
+    "source_book": "Anatomy for Dental Students",
+    "source_page": 244,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "When performing electrical pulp testing (EPT), what does a complete lack of response most likely indicate?",
+    "options": ["Reversible pulpitis", "Irreversible pulpitis", "Normal healthy pulp", "Pulpal necrosis, pulp absence, or prior root canal therapy"],
+    "answer_index": 3,
+    "justification": "No response to EPT is a key diagnostic finding suggesting the pulp is no longer vital or absent. The text states: 'no response to the EPT = indicative of pulpal necrosis, pulp absence or root canal therapy.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 39,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What is the term for the congenital absence of six or more teeth?",
+    "options": ["Anodontia", "Hypodontia", "Oligodontia", "Hyperdontia"],
+    "answer_index": 2,
+    "justification": "Oligodontia specifically refers to the congenital absence of six or more teeth, distinct from anodontia (complete absence) and the broader inclusive term hypodontia. The text states: 'Oligodontia refers to six or more congenitally missing teeth.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 75,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Among Caucasian populations, hyperdontia (supernumerary teeth) in the permanent dentition typically occurs at what approximate prevalence?",
+    "options": ["0.4% to 2.1%", "10% to 25%", "30%", "50%"],
+    "answer_index": 0,
+    "justification": "The prevalence of hyperdontia varies by population, and Caucasian populations show a relatively low rate. The text states: 'Hyperdontia in the permanent dentition for Caucasian people ranges from 0.4% to 2.1%; while they are lower than 3.4% for Japanese and 6% for African Americans.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 75,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "According to guidance on cavity liners, when 0.6-1.5 mm of dentine remains overlying the pulp, which material should be placed in that area?",
+    "options": ["Only a dentine bonding agent sealer", "Hard-setting calcium hydroxide alone", "Resin-modified glass ionomer", "Zinc oxide/eugenol cement"],
+    "answer_index": 2,
+    "justification": "Intermediate remaining dentine thickness calls for resin-modified glass ionomer with a sealer over the remaining dentine, whereas very thin dentine requires calcium hydroxide first. The text states: 'When 0.6–1.5 mm of dentine remains overlying the pulp, resin-modified glass ionomer is placed in these areas (green) and sealer placed over the remaining dentine (blue).'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 110,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the management of traumatised teeth with pulpal bruising that presents as discoloured but vital, what is the recommended approach?",
+    "options": ["Immediate root canal therapy", "No pulpal treatment, with monitoring for loss of vitality", "Immediate extraction", "Apexogenesis regardless of root maturity"],
+    "answer_index": 1,
+    "justification": "For discoloured but vital teeth following pulpal bruising, active pulpal treatment is not indicated; instead the tooth is monitored for signs of complications. The text states: 'Discoloured but vital: No pulpal treatment. Monitor for loss of vitality or possible internal calcification... or resorption.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 145,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which instrument is described as useful for the diagnosis of cracked tooth syndrome, particularly when a patient reports irregular pain on biting?",
+    "options": ["Electrical pulp tester", "Tooth Sleuth", "Periodontal probe", "Transillumination device"],
+    "answer_index": 1,
+    "justification": "The Tooth Sleuth is specifically indicated for diagnosing cracked tooth syndrome by isolating pain to individual cusps during biting. The text states: 'The Tooth Sleuth device is available commercially and is useful in the diagnosis of cracked tooth syndrome (CTS). It is of particular use when the patient reports sensitivity on biting that is both irregular and infrequent.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 39,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In oral surgery, which retractor is specifically described as being used to depress or retract the tongue during suturing and to help protect the airway during tooth removal with elevators?",
+    "options": ["Kilner cheek retractor", "Bowdler Henry rake retractor", "Lack's tongue depressor", "Austin retractor"],
+    "answer_index": 2,
+    "justification": "Lack's tongue depressor serves both to retract the tongue during suturing and to protect the airway from displaced fragments. The text states: 'Lack's tongue depressor: This may be used to depress or retract the tongue... It is also helpful for protection of the airway to prevent accidental displacement of tooth and bone fragments into the aerodigestive tract.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 179,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the described caries control model, what is described as the principal action of fluoride when present in plaque fluid?",
+    "options": ["Killing cariogenic bacteria directly", "Promoting remineralisation over demineralisation", "Neutralizing dietary sugars", "Preventing bacterial adhesion to enamel"],
+    "answer_index": 1,
+    "justification": "Fluoride's key anticaries mechanism in plaque fluid is shifting the balance toward remineralisation rather than demineralisation. The text states: 'It has several anticaries properties but the principal action when present in plaque fluid is to promote remineralisation over demineralisation in the caries process.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 64,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "For gold inlay preparation design, what is the recommended minimum isthmus width?",
+    "options": ["0.5 mm", "1 mm", "At least 2 mm with a depth of at least 1.5 mm", "5 mm"],
+    "answer_index": 2,
+    "justification": "Gold inlay preparations require a minimum isthmus width and depth to provide adequate strength and resistance form. The text states: 'Isthmus width should be at least 2 mm with a depth of at least 1.5 mm.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 120,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In a tooth avulsion injury, what extra-alveolar dry time (EADT) threshold is associated with periodontal ligament (PDL) cell death, necessitating removal of the PDL before replantation and resulting in ankylosis?",
+    "options": ["Greater than 5 minutes", "Greater than 15 minutes", "Greater than 60 minutes", "Greater than 24 hours"],
+    "answer_index": 2,
+    "justification": "An EADT of more than 60 minutes leads to death of the PDL cells, changing the management approach for replantation. The text states: 'EADT >60 minutes will result in PDL cell death and the need to remove the PDL before replantation, which will result in ankylosis.'",
+    "source_book": "Dentistry at a Glance",
+    "source_page": 175,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the biopsy assessment of Sjogren's syndrome, which specific glands are typically biopsied to assess focal lymphocytic sialadenitis and obtain a focus score?",
+    "options": ["Parotid glands", "Submandibular glands", "Labial (minor salivary) glands", "Sublingual glands"],
+    "answer_index": 2,
+    "justification": "Labial gland biopsy is the standard diagnostic procedure for assessing focal lymphocytic sialadenitis in suspected Sjogren's syndrome. The text lists: 'Labial gland biopsy to assess focal lymphocytic sialadenitis (Focus score).'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 108,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Histopathologically, lichen plana lesions show degenerating basal epithelial cells that appear as shrunken, condensed bodies undergoing apoptosis. What are these bodies called?",
+    "options": ["Russell bodies", "Civatte bodies", "Verocay bodies", "Michaelis-Gutmann bodies"],
+    "answer_index": 1,
+    "justification": "The apoptotic basal keratinocytes seen in lichen planus are termed Civatte bodies, a classic histopathological feature. The text states: 'The degenerating cells appear as shrunken, condensed bodies (Civatte bodies) and are undergoing apoptosis.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 69,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Metastasis to the oral cavity from a distant primary cancer is uncommon. Which region of the jaw is the most frequent location for such metastatic deposits?",
+    "options": ["Anterior maxilla", "Condyle", "Retromolar region of the mandible", "Hard palate"],
+    "answer_index": 2,
+    "justification": "Among oral metastatic sites, the retromolar mandible is identified as the most frequent location for deposits from distant cancers. The text states: 'The retromolar region of the mandible is the most frequent location for the metastatic deposit.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 99,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Dental fluorosis severity depends on the amount and timing of fluoride exposure. Changes occur when excess fluoride exposure happens during which age range?",
+    "options": ["Birth to 12 months", "1 to 4 years of age", "8 to 12 years of age", "Adolescence (13-18 years)"],
+    "answer_index": 1,
+    "justification": "Dental fluorosis develops when excess fluoride is ingested during the specific developmental window of early childhood when enamel is forming. The text states: 'Changes occur when excess fluoride exposure occurs between 1 and 4 years of age.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 130,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What distinguishes the growth pattern of the odontogenic keratocyst from other odontogenic cysts?",
+    "options": ["It expands in a unicentric ballooning pattern like other cysts", "It has a destructive pattern of growth, burrowing through cancellous bone in an antero-posterior direction", "It grows exclusively by peripheral epithelial rests", "It is limited strictly to the maxilla"],
+    "answer_index": 1,
+    "justification": "Unlike other odontogenic cysts that expand in a ballooning fashion, the odontogenic keratocyst has a distinctive infiltrative growth pattern along the medullary bone. The text states: 'The odontogenic keratocyst has a destructive pattern of growth, burrowing through cancellous bone in a predominantly antero-posterior direction, this distinguishes it from the other odontogenic cysts.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 159,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Osteosarcoma of the jaws typically presents radiographically with a classic feature involving the periodontal ligament. What is this feature?",
+    "options": ["Complete obliteration of the periodontal ligament space", "Widening of the periodontal ligament space", "Calcification of the periodontal ligament", "Displacement of the lamina dura only"],
+    "answer_index": 1,
+    "justification": "Widening of the periodontal ligament space around involved teeth is described as a classic radiographic sign of osteosarcoma. The text states: 'Widening of the periodontal ligament is a classic radiographic feature.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 191,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Cervicofacial actinomycosis characteristically produces sinus tracts that discharge pus containing small yellowish granules. What are these granules called?",
+    "options": ["Rushton bodies", "Sulphur granules", "Michaelis-Gutmann bodies", "Psammoma bodies"],
+    "answer_index": 1,
+    "justification": "The discharge from actinomycosis sinus tracts contains characteristic yellow granular colonies of the causative bacteria. The text states: 'Multiple sinus tracts may then form and these typically discharge pus containing small yellowish granules, known as sulphur granules.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 206,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A thyroglossal cyst characteristically presents in the midline of the neck, and has a distinctive clinical sign. What is this sign?",
+    "options": ["The lump is fixed to the overlying skin", "The lump moves upwards with swallowing", "The lump is fluctuant only at night", "The lump transilluminates brightly"],
+    "answer_index": 1,
+    "justification": "Because thyroglossal cysts are derived from remnants of the thyroglossal duct connected to the tongue base, they characteristically rise with swallowing. The text states: 'thyroglossal cysts arise in the midline of the neck, typically in the region of the hyoid bone, and have a distinctive clinical sign; the lump moves upwards with swallowing.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 221,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Ewing's sarcoma of the jaws typically shows a characteristic cytogenetic fusion. Which genes are most commonly involved in this fusion?",
+    "options": ["BRAF-RET", "EWS-FLI1", "MYC-IGH", "TP53-MDM2"],
+    "answer_index": 1,
+    "justification": "Ewing's sarcoma is characterized by a specific chromosomal translocation producing the EWS-FLI1 fusion gene, useful in diagnosis. The text states: 'Ewing's sarcoma typically shows a cytogenetic fusion of the EWS-FLI1 genes, though other fusions may be present.'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 191,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In basic leukaemia classification, which suffix denotes chronic leukaemia, where the abnormal white cells retain the morphological features of their normal counterparts?",
+    "options": ["-blastic", "-cytic", "-oid", "-genic"],
+    "answer_index": 1,
+    "justification": "Chronic leukaemias, unlike acute leukaemias which show primitive undifferentiated cells (-blastic), are denoted by the -cytic suffix as the cells resemble mature counterparts. The text states: 'Chronic leukaemia is characterized by abnormal white cells in the blood, they have the morphological features of normal counterparts (suffix -cytic).'",
+    "source_book": "Soames' & Southam's Oral Pathology",
+    "source_page": 99,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In the sliding filament mechanism of skeletal muscle contraction, which protein blocks the myosin-binding sites on actin at rest, preventing cross-bridge formation?",
+    "options": ["Troponin-C", "Troponin-T", "Tropomyosin", "Titin"],
+    "answer_index": 2,
+    "justification": "Tropomyosin physically covers the myosin-binding sites on actin filaments at rest, preventing contraction until calcium-mediated changes occur. The text states: 'At rest, tropomyosin blocks the myosin-binding sites thus preventing cross-bridge formation and muscle contraction.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 42,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which troponin subunit binds to calcium ions (Ca2+) to initiate skeletal muscle contraction?",
+    "options": ["Troponin-T", "Troponin-I", "Troponin-C", "Troponin-M"],
+    "answer_index": 2,
+    "justification": "Troponin-C is the calcium-binding subunit of the troponin complex, triggering the conformational change that permits actin-myosin interaction. The text states: 'Troponin-C binds to Ca2+ to initiate muscle contraction.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 42,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the Starling Equation governing capillary fluid exchange, net filtration pressure (NFP) is dependent on the difference between which two pressures?",
+    "options": ["Systolic and diastolic pressure", "Hydrostatic pressure and oncotic pressure", "Central venous pressure and arterial pressure", "Pulmonary and systemic pressure"],
+    "answer_index": 1,
+    "justification": "The Starling Equation, first described by Ernest Starling, defines net filtration pressure as the balance between the outward hydrostatic pressure and the inward oncotic (colloid osmotic) pressure. The text states: 'the Starling Equation states that the net filtration pressure (NFP) is dependent on the difference between hydrostatic pressure (HP) and oncotic pressure (OP).'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 70,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What percentage of the fluid volume filtered out at the arterial end of a capillary does not return at the venous end, instead being returned to circulation via the lymphatic system?",
+    "options": ["About 1%", "About 5%", "About 15%", "About 50%"],
+    "answer_index": 2,
+    "justification": "A portion of filtered fluid does not return directly to the capillary at the venous end and is instead drained via lymphatics, preventing oedema under normal conditions. The text states: 'about 15% of the volume of fluid filtered out of the arterial end does not return to the venous end of the capillary, thereby creating a potential accumulation of fluid... a phenomenon known as oedema.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 70,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is the most common medical emergency observed during dental treatment, associated with reduced venous return and cerebral ischaemia?",
+    "options": ["Anaphylaxis", "Vasovagal fainting", "Myocardial infarction", "Status epilepticus"],
+    "answer_index": 1,
+    "justification": "Vasovagal fainting is explicitly identified as the most frequent medical emergency in dental settings. The text states: 'Vasovagal fainting is the commonest medical emergency observed during dental treatment. Loss of consciousness may result from reduced venous return and consequent cerebral ischaemia.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 70,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In the stomach, which cell type secretes hydrochloric acid and intrinsic factor?",
+    "options": ["Chief (peptic) cells", "Mucous neck cells", "Parietal (oxyntic) cells", "G cells"],
+    "answer_index": 2,
+    "justification": "Parietal cells within the oxyntic glands are responsible for secreting both hydrochloric acid and intrinsic factor, essential for vitamin B12 absorption. The text states: 'Parietal (oxyntic) cells secrete hydrochloric acid and intrinsic factor.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 111,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "The gag reflex is triggered by tactile stimulation of which structures?",
+    "options": ["Anterior hard palate and incisive papilla only", "Posterior tongue, soft palate, tonsillar regions, and pharynx", "Buccal mucosa and vestibule", "Lips and vermillion border"],
+    "answer_index": 1,
+    "justification": "The gag reflex is a protective reflex triggered by stimulation of posterior oropharyngeal structures. The text states: 'The gag reflex is triggered by tactile stimulation soft tissues of the posterior tongue, soft palate, tonsillar regions, and pharynx.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 102,
+    "category": "scientific_knowledge",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to the coagulation factors table, which factor is also known as the 'antihaemophilic factor' and whose deficiency causes Haemophilia A?",
+    "options": ["Factor VII", "Factor VIII", "Factor IX", "Factor XI"],
+    "answer_index": 1,
+    "justification": "Factor VIII is the antihaemophilic factor, and its deficiency is the cause of Haemophilia A, a key bleeding disorder relevant to dental treatment planning. The table lists: 'VIII Antihaemophilic factor Cofactor in the activation of factor X. Haemophilia A.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 166,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Deficiency of which coagulation factor does NOT significantly affect coagulation, because respiratory arrest would likely occur before bleeding manifests?",
+    "options": ["Factor I (fibrinogen)", "Factor IV (calcium)", "Factor X", "Factor XIII"],
+    "answer_index": 1,
+    "justification": "Calcium (Factor IV) is essential for clotting factor binding to phospholipids, but a deficiency severe enough to impair coagulation would be incompatible with life due to other effects first. The table states for Factor IV: 'Deficiency does not affect coagulation as respiratory arrest may occur prior to bleeding.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 166,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Secondary hyperparathyroidism, resulting from chronic renal failure and vitamin D malabsorption, is characterised by which laboratory findings?",
+    "options": ["Reduced serum calcium and raised PTH levels", "Raised serum calcium and raised PTH levels", "Reduced serum calcium and reduced PTH levels", "Raised serum calcium and reduced PTH levels"],
+    "answer_index": 0,
+    "justification": "Secondary hyperparathyroidism arises as a compensatory response to low calcium, so PTH rises while calcium remains low until compensation is achieved. The text states: 'Secondary: Results from chronic renal failure and malabsorption of vitamin D. It is characterised by reduced serum calcium and raised PTH levels.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 198,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Calcitonin, secreted by parafollicular cells of the thyroid gland, acts on which target cells to inhibit bone resorption?",
+    "options": ["Osteoblasts", "Osteoclasts", "Chondrocytes", "Fibroblasts"],
+    "answer_index": 1,
+    "justification": "Calcitonin's main action is to inactivate osteoclasts, rapidly inhibiting bone resorption and lowering plasma calcium. The text states: 'It targets the osteoclasts and acts to inactivate osteoclasts, which results in the rapid inhibition of bone resorption.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 198,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Which cranial nerve provides parasympathetic innervation to the parotid gland via the otic ganglion?",
+    "options": ["Facial nerve (VII)", "Glossopharyngeal nerve (IX)", "Vagus nerve (X)", "Trigeminal nerve (V)"],
+    "answer_index": 1,
+    "justification": "The glossopharyngeal nerve carries parasympathetic preganglionic fibres that synapse in the otic ganglion before supplying the parotid gland. The diagram and text associate the otic ganglion with the parotid gland, innervated via the glossopharyngeal (IX) pathway shown alongside auriculotemporal nerve distribution.",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 111,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A classic example of Type IV (delayed) hypersensitivity relevant to dentistry is contact allergy resulting in mucositis and oral lichenoid reactions caused by which dental material?",
+    "options": ["Composite resin", "Amalgam restorations", "Zinc oxide eugenol", "Glass ionomer cement"],
+    "answer_index": 1,
+    "justification": "Contact allergy to amalgam is specifically cited as a dental example of type IV hypersensitivity producing oral lichenoid lesions. The text states: 'Contact allergy to amalgam restorations resulting in mucositis and oral lichenoid reactions also represents type IV hypersensitivity.'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 162,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Pemphigus is characterised by autoantibodies directed against which structures, leading to separation of cells from the basal layer (acantholysis)?",
+    "options": ["Basement membrane hemidesmosomes", "Proteins of desmosomes in the spinous layer", "Intercellular tight junctions of the granular layer", "Collagen fibres of the lamina propria"],
+    "answer_index": 1,
+    "justification": "Pemphigus involves autoantibodies against desmosomal proteins in the spinous layer of the epithelium, causing loss of cell-to-cell adhesion. The text states: 'Pemphigus is characterised by autoantibodies directed against the proteins of desmosomes in the spinous layer leading to separation of cells from the basal cell layer (acantholysis).'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 162,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the spinal cord grey matter, which region is described as containing Clarke's column (nucleus dorsalis), which relays proprioceptive impulses to the cerebellum?",
+    "options": ["Ventral horn", "Lateral horn", "Dorsal horn", "Central canal"],
+    "answer_index": 2,
+    "justification": "Clarke's column, also called nucleus dorsalis, is located in the sensory dorsal horn and relays proprioceptive information. The text states: 'Nucleus dorsalis (Clarke's column) relay proprioceptive impulses to the cerebellum' under the description of the dorsal horn.",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 213,
+    "category": "scientific_knowledge",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Amyloidosis, involving extracellular deposition of pathologic proteinaceous substance, can commonly affect which oral structure, resulting in an enlargement condition?",
+    "options": ["The tongue, resulting in macroglossia", "The lips, resulting in macrocheilia", "The gingiva, resulting in gingival hyperplasia", "The palate, resulting in torus palatinus"],
+    "answer_index": 0,
+    "justification": "Amyloid deposition can affect the tongue, causing macroglossia, among other systemic organ involvement. The text states: 'Amyloidosis may also lead to tongue enlargement (macroglossia).'",
+    "source_book": "Essential Physiology for Dental Students",
+    "source_page": 162,
+    "category": "scientific_knowledge",
+    "difficulty": "medium"
+  }
+]

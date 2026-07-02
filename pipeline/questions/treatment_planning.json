@@ -1,0 +1,152 @@
+[
+  {
+    "stem": "Evidence-based dentistry, as defined in the treatment planning literature, requires integrating best research evidence with which two additional elements?",
+    "options": ["Insurance coverage and practice overhead", "Clinical expertise and patient values", "Laboratory turnaround time and material cost", "Continuing education credits and peer review"],
+    "answer_index": 1,
+    "justification": "The chapter defines evidence-based dentistry as 'the integration of best research evidence with clinical expertise and patient values,' explicitly naming these components.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 105,
+    "category": "treatment_planning",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "When the risks of 'no treatment' (watchful waiting) are not significant and the reasons for intervening are not compelling, which ethical principle should guide the dentist toward conservative therapy?",
+    "options": ["Beneficence", "Nonmaleficence ('do no harm')", "Autonomy", "Justice"],
+    "answer_index": 1,
+    "justification": "The text states it 'behooves the dentist to place the ethical principle of nonmaleficence, or \"do no harm,\" in a position of preeminence' when intervention risks are not clearly justified.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 107,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the discussion of caries risk assessment, what has been shown to have limited predictability of current or future caries activity when considered alone?",
+    "options": ["Recent caries experience", "The presence of risk factors such as plaque and frequent fermentable carbohydrate consumption", "Fluoride exposure history", "Radiographic bone density"],
+    "answer_index": 1,
+    "justification": "The text states that 'the presence of those factors alone has been shown to have limited predictability of current or future caries activity,' referring to plaque and frequent fermentable carbohydrate consumption.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 114,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A 2012 systematic review of all-ceramic crowns found that molar crowns had a higher 5-year fracture rate than premolar crowns. What were the approximate rates cited for molars versus premolars?",
+    "options": ["8.1% for molars versus 3.0% for premolars", "50% for molars versus 10% for premolars", "1% for molars versus 5% for premolars", "20% for molars versus 20% for premolars"],
+    "answer_index": 0,
+    "justification": "The chapter reports 'Molar crowns (8.1%) showed a significantly higher 5-year fracture rate than premolar crowns (3.0%),' directly citing these figures from the systematic review.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 124,
+    "category": "treatment_planning",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What is a documented consequence of re-restoration when old dental restorations are replaced with new ones?",
+    "options": ["New restorations tend to be smaller and cheaper than their predecessors", "New restorations tend to be larger and more expensive than their predecessors", "Re-restoration always eliminates the risk of future pulpitis", "There is no measurable difference in restoration size over time"],
+    "answer_index": 1,
+    "justification": "The text states 'research demonstrates that when old restorations are replaced with new ones, the new restorations tend to be larger and more expensive than their predecessors,' warning that re-restoration is not an innocuous procedure.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 127,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In contrast to an active treatment plan, what defines a 'perpetual' treatment plan?",
+    "options": ["It has a fixed number of visits agreed in advance", "It has no end point and addresses concerns that may continue for the life of the doctor-patient relationship", "It only applies to pediatric patients", "It is used exclusively for emergency treatment"],
+    "answer_index": 1,
+    "justification": "The text explains 'the perpetual treatment plan has no end point' and 'addresses patient concerns, issues, and needs that will remain relevant beyond the completion of the active plan... for the life of the doctor-patient relationship,' unlike active plans which have an end point.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 152,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Interprofessional education and collaborative care, as advocated by the WHO and IOM, aim to achieve which three goals?",
+    "options": ["Reduce dental staff turnover, increase equipment sales, and shorten appointment times", "Improve patient experience of care, improve population health, and reduce per capita healthcare cost", "Eliminate the need for dental referrals, increase insurance premiums, and centralize records", "Increase specialist referrals, reduce general dentist workload, and standardize fees"],
+    "answer_index": 1,
+    "justification": "The text lists these as the three aims of interprofessional collaborative care: 'Improve how patients experience care in terms of quality, efficiency, and overall patient satisfaction. Improve the health of populations. Reduce the per capita cost of healthcare.'",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 154,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Before initiation of radiation therapy for head and neck cancer, what should be provided to patients with metal restorations to be coordinated before the radiation planning session?",
+    "options": ["A full set of dentures", "Radiation guards or a tongue-depressing stent", "Orthodontic brackets", "A mouth rinse containing chlorhexidine only"],
+    "answer_index": 1,
+    "justification": "The text states 'radiation guards or a tongue-depressing stent should be provided to patients with metal restorations and must be coordinated to be delivered before the planning session for radiation therapy.'",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 171,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In a patient scheduled for head and neck radiation therapy, why do rapidly progressing carious lesions often affect all remaining teeth rather than being confined to the radiation field?",
+    "options": ["Because of an alteration of the saliva's buffering capacity, resulting in an acidic change in the patient's saliva", "Because radiation directly destroys enamel on contact", "Because patients stop brushing entirely during treatment", "Because chemotherapy drugs are cariogenic"],
+    "answer_index": 0,
+    "justification": "The text explains 'this condition is attributed to an alteration of the saliva's buffering capacity, resulting in an acidic change in the patient's saliva,' which affects all teeth, not just those in the radiation field.",
+    "source_book": "Diagnosis and Treatment Planning in Dentistry",
+    "source_page": 170,
+    "category": "treatment_planning",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "According to the discussion of decision-making in primary dental care, what is the key difference between a clinical finding and a diagnosis, using dental caries as the example?",
+    "options": ["There is no meaningful difference between the two terms", "Dental caries is a clinical finding, while dental caries owing to frequent sugar intake is a diagnosis", "A diagnosis requires a radiograph while a clinical finding does not", "A clinical finding always requires immediate treatment, unlike a diagnosis"],
+    "answer_index": 1,
+    "justification": "The text states 'Dental caries is a Clinical finding: dental caries owing to frequent sugar intakes (e.g. in tea) is a diagnosis,' clarifying that diagnosis is not merely detection.",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 53,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A patient is getting married next week and has fractured a central incisor, but also has caries in molar teeth found on examination. According to the discussion of treatment priorities, how should the dentist approach this situation?",
+    "options": ["Insist on treating the molar caries first regardless of the patient's wishes", "Recognize that the caries in the molar teeth is not a priority to the patient given the circumstances, and this is not unreasonable", "Refuse to treat the fractured incisor until the caries is addressed", "Refer the patient elsewhere immediately"],
+    "answer_index": 1,
+    "justification": "The text gives this exact example: 'If your patient is getting married next week and has fractured a central incisor, the caries in their molar teeth is not a priority to them — not unreasonably.'",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 58,
+    "category": "treatment_planning",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What does the scientific evidence say about a link between dental amalgam restorations and health complaints such as headache and fatigue?",
+    "options": ["Studies show a strong causal link between amalgam and these complaints", "Studies have shown no link between amalgam and such complaints as headache and fatigue or between amalgam and cancer", "The evidence is inconclusive and requires further large-scale trials", "True amalgam allergy is extremely common in the general population"],
+    "answer_index": 1,
+    "justification": "The text states 'these studies have shown no link between amalgam and such complaints as headache and fatigue or between amalgam and cancer,' while noting true amalgam allergy is extremely rare.",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 52,
+    "category": "treatment_planning",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "When restoring a large cavity using a two-step (stepwise) caries removal technique, what is the recommended interval between the first and second visits?",
+    "options": ["24-48 hours", "1-2 weeks", "6-12 months", "5 years"],
+    "answer_index": 2,
+    "justification": "The text describes that 'caries is removed in two steps, 6-12 months apart,' with the first visit removing peripheral caries and sealing with glass ionomer before re-entry at the subsequent visit.",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 63,
+    "category": "treatment_planning",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "For a patient with erosive tooth surface loss caused by carbonated drinks, what preventive advice is most appropriate according to the treatment planning guidance?",
+    "options": ["Advise substitution with something less erosive", "Recommend increasing carbonated drink intake but only at mealtimes", "No dietary advice is needed since erosion is purely mechanical", "Advise brushing immediately after every carbonated drink"],
+    "answer_index": 0,
+    "justification": "The text states 'if erosive tooth surface loss caused by food or drink is the diagnosis then advice regarding substitution with something less erosive should be given,' specifically naming carbonated drinks as a common cause.",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 68,
+    "category": "treatment_planning",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What is the 'Dahl principle' as applied in restorative treatment planning for localized tooth wear?",
+    "options": ["Extracting all worn teeth and replacing with a full denture", "Using the difference in vertical space created anteriorly to place a restoration covering the palatal surfaces of the upper anterior teeth", "A method of bleaching non-vital teeth", "A protocol for antibiotic prophylaxis before extractions"],
+    "answer_index": 1,
+    "justification": "The text explains that using 'the upper anterior teeth that may be used for placing a restoration to cover the palatal surfaces. In restorative dentistry this is known as the \"Dahl principle,\"' which works by utilizing differential space over six to nine months.",
+    "source_book": "Treatment Planning in Primary Dental Care",
+    "source_page": 71,
+    "category": "treatment_planning",
+    "difficulty": "hard"
+  }
+]

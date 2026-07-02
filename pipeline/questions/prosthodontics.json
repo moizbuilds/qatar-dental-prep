@@ -1,0 +1,242 @@
+[
+  {
+    "stem": "In the Kennedy classification, how is a bilateral edentulous area located posterior to the remaining natural teeth classified?",
+    "options": ["Kennedy Class I", "Kennedy Class II", "Kennedy Class III", "Kennedy Class IV"],
+    "answer_index": 0,
+    "justification": "The figure describes Kennedy Class I as 'bilateral edentulous areas located posterior to the remaining natural teeth,' with denture saddles restoring such areas described as distal extension saddles.",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 12,
+    "category": "prosthodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "When an arch has both a distal extension saddle and an additional bounded edentulous area, which feature determines the overall Kennedy classification of the arch?",
+    "options": ["The bounded saddle area, since it is smaller", "The most posterior edentulous area, i.e. the distal extension saddle", "Whichever saddle has more remaining natural teeth adjacent to it", "The total number of missing teeth in the arch"],
+    "answer_index": 1,
+    "justification": "The text states 'classification is always determined by the most posterior edentulous area,' explaining that a distal extension saddle determines the class rather than an additional bounded saddle area, which is termed a modification.",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 12,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In vivo and in vitro studies on tooth support for distal extension saddles found that abutment tooth movement under load tends to occur in which direction, even when a distal rest is used?",
+    "options": ["Distal direction", "Mesial direction", "Purely vertical intrusion", "Lateral (buccal) direction only"],
+    "answer_index": 1,
+    "justification": "The text notes that 'in vitro and in vivo studies have shown that the movement of the abutment tooth is usually in a mesial direction even when a distal rest is used,' partly attributed to the influence of ridge slope on denture movement.",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 33,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "The RPI system used in removable partial denture design for mandibular distal extension saddles is a combination of which three components?",
+    "options": ["Occlusal rest, distal guide plate, and gingivally approaching I-bar clasp", "Cingulum rest, wrought wire clasp, and lingual bar", "Incisal rest, circumferential clasp, and mesial guide plate", "Onlay rest, ring clasp, and buccal bar"],
+    "answer_index": 0,
+    "justification": "The text defines 'the RPI system is a combination of occlusal rest (R) distal guide plate (P) and gingivally approaching I bar clasp (I) used primarily with mandibular distal extension saddles.'",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 44,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the informal German prosthodontic slang term used for a gingivally approaching clasp that traumatizes a bulbous ridge, as mentioned in A Clinical Guide to Removable Partial Denture Design?",
+    "options": ["Sauerkrautfanger (cabbage catcher)", "Zahnfleischklammer", "Brückenpfeiler", "Kronenrand"],
+    "answer_index": 0,
+    "justification": "The text states the German slang prosthodontic term for a gingivally approaching clasp is 'Sauerkrautfanger (cabbage catcher), graphically describes the situation' of clasp arm prominence irritating the buccal mucosa.",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 44,
+    "category": "prosthodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In a Kennedy Class III bounded saddle where direct retention can be achieved from both abutments, what is the requirement for indirect retention?",
+    "options": ["Indirect retention is not required", "Indirect retention is mandatory on the opposite side of the arch", "Indirect retention must be doubled compared to distal extension cases", "Indirect retention should be provided only on incisal rests"],
+    "answer_index": 0,
+    "justification": "The text explains that for a Kennedy III bounded saddle 'there is the potential for direct retention from both abutments. When this can be achieved... indirect retention is not required.'",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 56,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the most effective location for a reciprocating component relative to a retentive clasp tip on a clasped tooth?",
+    "options": ["On the clasped tooth, diametrically opposite the retentive tip of the clasp", "On the adjacent tooth only", "On the denture base away from any tooth", "Positioned mesial to the retentive tip on the same surface"],
+    "answer_index": 0,
+    "justification": "The text states the most effective location for a reciprocating component is 'on the clasped tooth' and 'diametrically opposite the retentive tip of the clasp,' noting the first factor is more important than the second.",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 89,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "Without adequate reciprocation on a clasped tooth, what happens when a retentive clasp arm flexes over the height of contour during denture insertion?",
+    "options": ["The clasp will apply a horizontal force to the tooth as it moves, displacing the tooth within the periodontal ligament", "The tooth will immediately fracture", "The clasp will lose all retentive properties permanently", "Nothing occurs since reciprocation is only cosmetic"],
+    "answer_index": 0,
+    "justification": "The text explains that if a retentive clasp is not reciprocated, 'the clasp will apply a horizontal force to a tooth as it moves towards the height of contour of the tooth and this will displace the tooth within the periodontal ligament.'",
+    "source_book": "A Clinical Guide to Removable Partial Denture Design",
+    "source_page": 89,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In complete denture assessment, why is it useful to ask a new patient fundamental questions such as their address or family details during soft tissue assessment?",
+    "options": ["To tend to promote unguarded replies and provide an opportunity to observe lip and cheek tone", "To satisfy legal documentation requirements only", "To distract the patient while impressions are poured", "To assess the patient's cognitive function for consent"],
+    "answer_index": 0,
+    "justification": "The text explains that asking fundamental questions 'tend to promote unguarded replies and provide an opportunity for useful observations' when assessing the tone of the lips and cheeks.",
+    "source_book": "A Clinical Guide to Complete Denture Prosthetics",
+    "source_page": 14,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What clinical purpose does the alameter reading serve when customising the aesthetic control base (ACB) rim for a complete denture?",
+    "options": ["It establishes the horizontal inter-canine distance customised for each patient", "It measures the vertical dimension of occlusion directly", "It records the path of insertion of the denture", "It determines the shade of the denture base acrylic"],
+    "answer_index": 0,
+    "justification": "The text states 'the alameter reading further helps the technician customise the rim by establishing the (horizontal) inter-canine distance customised for each patient.'",
+    "source_book": "A Clinical Guide to Complete Denture Prosthetics",
+    "source_page": 38,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to A Clinical Guide to Complete Denture Prosthetics, what are the three factors a clinician must consider when deciding on posterior tooth form (cusped, cuspless, or hybrid)?",
+    "options": ["Occlusal factors, stability factors, and aesthetic factors", "Cost, manufacturer availability, and patient age", "Colour, translucency, and surface texture", "Arch width, palate depth, and tongue size"],
+    "answer_index": 0,
+    "justification": "The text states 'in essence, three factors have to be considered, namely occlusal factors, stability factors and aesthetic factors' when the clinician decides on the tooth form based on patient needs.",
+    "source_book": "A Clinical Guide to Complete Denture Prosthetics",
+    "source_page": 53,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A patient's complete denture rocks under finger pressure with a visible gap between the flange periphery and the ridge. According to the troubleshooting table, what is the likely cause?",
+    "options": ["Border under-extension in width", "Excessive occlusal vertical dimension", "Xerostomia reducing the ability to form a seal", "Neuromuscular control deficit"],
+    "answer_index": 0,
+    "justification": "The troubleshooting table links the symptom 'denture may rock under finger pressure. May see gap between periphery of flange and ridge' to the cause 'border under-extension in width.'",
+    "source_book": "A Clinical Guide to Complete Denture Prosthetics",
+    "source_page": 70,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the Glossary of Prosthodontic Terms as cited in A Clinical Guide to Complete Denture Prosthetics, what distinguishes 'relining' from 'rebasing'?",
+    "options": ["Relining resurfaces the tissue (impression) surface with new base material, while rebasing replaces the entire denture base", "Relining and rebasing are identical procedures with no clinical distinction", "Relining is done only for maxillary dentures and rebasing only for mandibular dentures", "Rebasing refers exclusively to replacing artificial teeth, not the base material"],
+    "answer_index": 0,
+    "justification": "The text states relining 'describes the procedures used to resurface the tissue (impression) surface of the denture with new base material,' while a rebase 'is described as the laboratory process of replacing the entire denture base of an existing prosthesis.'",
+    "source_book": "A Clinical Guide to Complete Denture Prosthetics",
+    "source_page": 79,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "For a metal-ceramic crown preparation on a lower incisor, what is the recommended relationship between the buccal shoulder and lingual chamfer widths described in the example preparation?",
+    "options": ["The buccal shoulder is wider (1.2 mm) than the lingual chamfer (0.5 mm)", "Both are prepared to an identical 2 mm width", "The lingual chamfer is wider than the buccal shoulder", "Neither margin requires a defined width since both are feather-edged"],
+    "answer_index": 0,
+    "justification": "The figure describes a metal-ceramic crown preparation where 'the width of the buccal shoulder is 1.2 mm and the lingual chamfer is 0.5 mm wide,' illustrating differential margin design for the labial versus lingual aspect.",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 71,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In crown preparation, why is an occlusal force directed straight down the long axis unlikely to dislodge even an unretentive crown, while a force on an inclined cusp plane during lateral excursion can dislodge it?",
+    "options": ["Straight occlusal loading does not generate a lateral dislodging component, whereas inclined-plane contact in lateral excursion has a dislodging effect on an unretentive preparation", "Inclined cusp contacts always exceed the cementation strength of any luting agent", "Straight occlusal forces are always weaker in magnitude than lateral forces", "Unretentive preparations only fail under vertical loading, never lateral loading"],
+    "answer_index": 0,
+    "justification": "The text explains 'an occlusal force, a, will not dislodge a crown, however unretentive the preparation. A force directed at an inclined cusp plane, b, occurring in lateral excursions of the mandible will, though, have a dislodging effect if the crown preparation is unretentive.'",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 71,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "What material is described as flexible yet sufficiently rigid to be used as an accurate interocclusal record for articulating casts, and which can be replaced without damage onto the model or patient's teeth?",
+    "options": ["Impression compound", "Silicone material", "Alginate", "Zinc oxide-eugenol paste"],
+    "answer_index": 1,
+    "justification": "The text states 'once set the silicone material is flexible but sufficiently rigid to be used as an accurate interocclusal record to articulate casts' and can be replaced onto the model or patient's teeth without damage.",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 104,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the thickness of shimstock, the thinnest plastic strip material used to test occlusal contact in various excursions during crown fitting?",
+    "options": ["8 micrometres", "40 micrometres", "100 micrometres", "250 micrometres"],
+    "answer_index": 0,
+    "justification": "The text describes shimstock as 'opaque and silver-coloured and is only 8 micrometres (µm) thick,' placed between opposing teeth and pulled aside once occlusal contact has been made.",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 104,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In a fixed-movable bridge design such as a DO inlay in the lower second premolar with a full crown on the molar, what is the function of the movable joint between the pontic and the minor retainer?",
+    "options": ["It allows independent minor movement between the abutment and pontic units, unlike a rigid fixed-fixed design", "It permits the bridge to be removed daily by the patient for cleaning", "It eliminates the need for any abutment tooth preparation", "It is purely decorative and provides no mechanical benefit"],
+    "answer_index": 0,
+    "justification": "The text describes a fixed-movable design where 'the movable joint can be seen between the pontic and the minor' retainer, distinguishing it from the rigid fixed-fixed bridge design described for the canine and central incisor retained bridge.",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 209,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "During dental implant treatment, how long is the implant normally left in the bone before the abutment is attached and the restoration placed?",
+    "options": ["2 weeks", "1 month", "3 months", "12 months"],
+    "answer_index": 2,
+    "justification": "The text states the implant 'is normally left for 3 months to allow the bone to grow on the surface before the abutment is attached and the restoration placed so that it is stable enough to be able to resist occlusal loads.'",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 273,
+    "category": "prosthodontics",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What surface roughness range on a titanium implant, similar to sandblasted or acid-etched surfaces, is described as working better than very smooth or very coarse surfaces for osseointegration?",
+    "options": ["1-5 microns", "40-80 microns", "150-200 microns", "300-400 microns"],
+    "answer_index": 1,
+    "justification": "The text explains the surface finish affects bone apposition, 'with slightly roughened surfaces (40-80 microns), similar to sandblasted or acid-etched surfaces working better than very smooth or very coarse surfaces.'",
+    "source_book": "Planning and Making Crowns and Bridges",
+    "source_page": 273,
+    "category": "prosthodontics",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In an edentulous patient assessment, what might the presence of angular cheilitis alert the clinician to, aside from poorly fitting dentures and poor hygiene?",
+    "options": ["Denture-induced stomatitis or systemic disease such as anaemia or poorly controlled diabetes", "Temporomandibular joint ankylosis exclusively", "Excessive freeway space only", "Normal age-related tissue changes requiring no further investigation"],
+    "answer_index": 0,
+    "justification": "The text notes 'the presence of angular cheilitis may alert the clinician to the presence of denture-induced stomatitis or systemic disease such as anaemia, poorly controlled diabetes or dietary deficiencies.'",
+    "source_book": "Treatment of Edentulous Patients",
+    "source_page": 17,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "When taking a functional reline impression for a denture, what property should the ideal impression material exhibit regarding flow and recovery?",
+    "options": ["The material should flow and retain the new form, not recover", "The material should be completely rigid and non-flowing", "The material should recover fully to its original shape after removal", "The material should dissolve gradually in saliva over weeks"],
+    "answer_index": 0,
+    "justification": "The text states 'ideally the chosen material should flow and retain the new form (i.e. not recover),' describing the requirements for a functional reline impression material that records tissue under functional stress.",
+    "source_book": "Treatment of Edentulous Patients",
+    "source_page": 42,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What clinical guideline underlies the use of the alameter device when setting anterior teeth for a complete denture?",
+    "options": ["The width between the alar cartilages in a smiling patient is approximately equal to the inter-canine width", "The alar width always equals the full arch width", "The alameter measures only vertical dimension of occlusion", "The alar cartilage width is unrelated to tooth position"],
+    "answer_index": 0,
+    "justification": "The text explains the alameter's use 'is based on a reasonable clinical guideline, namely that the width (i.e. horizontal distance) between the alar cartilages in a smiling patient is approximately equal to that of the' inter-canine distance.",
+    "source_book": "Treatment of Edentulous Patients",
+    "source_page": 54,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "A denture-wearing patient reports difficulty with sibilant sounds such as 's' due to excessive occlusal vertical dimension (OVD). What clinical test is recommended to assess this?",
+    "options": ["Ask the patient to count from 60 to 70 and observe whether the maxillary and mandibular incisor teeth are just out of contact", "Measure rest vertical dimension with a Willis gauge only", "Perform a swallowing test with the dentures removed", "Assess retention using a suction test on the maxillary denture"],
+    "answer_index": 0,
+    "justification": "The management table for speech problems states: 'ask the patient to count from 60 to 70. The maxillary and mandibular incisor teeth should be just out of contact. If in contact, selective grinding will be required.'",
+    "source_book": "Treatment of Edentulous Patients",
+    "source_page": 91,
+    "category": "prosthodontics",
+    "difficulty": "medium"
+  }
+]

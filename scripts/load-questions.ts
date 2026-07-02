@@ -65,6 +65,21 @@ function main() {
 
   const db = getDb();
 
+  // Reloading the bank clears questions and, by FK dependency, every recorded
+  // answer. That destroys the user's quiz history, so refuse to do it silently
+  // once answers exist — require an explicit --force.
+  const force = process.argv.includes("--force");
+  const answerCount = (
+    db.prepare(`SELECT COUNT(*) AS n FROM answers`).get() as { n: number }
+  ).n;
+  if (answerCount > 0 && !force) {
+    console.error(
+      `Refusing to reload: ${answerCount} recorded answer(s) exist and reloading clears them ` +
+        `(answers.question_id references questions.id). Re-run with --force to wipe quiz history and reload.`
+    );
+    process.exit(1);
+  }
+
   const loadAll = db.transaction(() => {
     // Clear dependent rows first (FK: answers.question_id -> questions.id).
     db.prepare(`DELETE FROM answers`).run();

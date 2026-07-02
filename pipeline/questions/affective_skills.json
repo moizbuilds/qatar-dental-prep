@@ -1,0 +1,392 @@
+[
+  {
+    "stem": "According to 'Dental Ethics and Law', what is described as the common strand linking ethics and law in professional practice?",
+    "options": [
+      "Both provide the standard expected by society, identified by ethics and upheld by law",
+      "Both are enforced solely through financial penalties",
+      "Ethics is legally binding while law is optional guidance",
+      "Law defines morality and ethics has no independent role"
+    ],
+    "answer_index": 0,
+    "justification": "The Preface states that ethics and law share 'the common strand...that it provides the standard expected by society, identified by the former and upheld by the latter', meaning ethics identifies the standard and law upholds it.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 6,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "How is professional self-regulation of dentistry by the General Dental Council (GDC) characterised in the opening chapter?",
+    "options": [
+      "A bargain or contract between the profession and the state for maintaining the highest standards of care",
+      "A purely administrative licensing function with no accountability",
+      "An arrangement funded entirely by government taxation",
+      "A voluntary scheme dentists may opt out of at will"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter states it 'is often stated that professional self-regulation is a bargain or a contract between the profession and the state for the maintenance of the highest standards of care and for the protection of the public'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 14,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Under the Dentists Act described in the text, what special provision exists for a dentist over the age of 65 regarding registration fees?",
+    "options": [
+      "They can apply for the 'retired practitioner's rate'",
+      "They are automatically exempt from all fees",
+      "They must pay double the retention fee",
+      "They are removed from the register without option to remain"
+    ],
+    "answer_index": 0,
+    "justification": "The text notes there is no reduced rate for part-time practitioners, 'but a practitioner over 65 can apply for the 'retired practitioner's rate''.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 17,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What is the title of the GDC's ethical guidance document, first published in November 1997, that focuses on best practice for dentists?",
+    "options": [
+      "Maintaining Standards",
+      "The First Five Years",
+      "Dental Practice Handbook",
+      "Code of Professional Conduct"
+    ],
+    "answer_index": 0,
+    "justification": "The chunk states 'The ethical guidance entitled Maintaining Standards, first published in November 1997, aims to be positive and focuses on best practice rather than conduct which can lead to disciplinary action'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 20,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to the principles of justice discussed in the ethics chapters, on what basis should healthcare resources be fairly distributed?",
+    "options": [
+      "Based on need rather than income or status",
+      "Based strictly on ability to pay privately",
+      "Based on the patient's occupation and social class",
+      "Based on order of registration with the practice"
+    ],
+    "answer_index": 0,
+    "justification": "The text states 'Justice also calls for resources to be fairly distributed, based on need rather than income or status', citing that elderly, sick or disabled patients have as much right to care as young, healthy patients.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 30,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What term did 19th-century practitioners of dentistry in Europe use to describe themselves, before formal scientific training was established?",
+    "options": [
+      "Surgeon-dentists",
+      "Registered dental officers",
+      "Licensed practitioners",
+      "Oral physicians"
+    ],
+    "answer_index": 0,
+    "justification": "The history section states 'those who practised dentistry in the 19th century were called 'surgeon-dentists'. They lacked any scientific knowledge and often inflicted harm on their patients'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 35,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "Under paragraph 4.2 of Maintaining Standards, what is stated about a dentist who is aware of being infected with a bloodborne virus and takes no action?",
+    "options": [
+      "The dentist is behaving unethically",
+      "The dentist must immediately stop all clinical work by law",
+      "The dentist is only at fault if a patient is actually infected",
+      "The dentist should self-report only if symptomatic"
+    ],
+    "answer_index": 0,
+    "justification": "The quoted guidance states 'A dentist who is aware of being infected with a bloodborne virus or any other transmissible disease or infection which might jeopardise the well-being of patients, and who takes no action, is behaving unethically'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 41,
+    "category": "affective_skills",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the chapter on resource allocation and business ethics, what ethical issues does the rationing of limited dental resources particularly raise?",
+    "options": [
+      "Issues of justice and rights, particularly the right to health",
+      "Issues of taxation policy exclusively",
+      "Issues of dental material sourcing only",
+      "Issues unrelated to ethics, purely economic matters"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter states 'Rationing is an ethical issue; in particular, it raises issues of justice and rights (particularly the right to health)'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 46,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "When a dentist faces competing new materials and techniques each claiming superiority, what ethical dilemma does the text highlight regarding treatment recommendations?",
+    "options": [
+      "Whether they should recommend less than the best, the best, or the optimum treatment",
+      "Whether patients should be charged extra for consultations",
+      "Whether advertising claims must be independently verified by law",
+      "Whether dental materials require government stockpiling"
+    ],
+    "answer_index": 0,
+    "justification": "The text asks whether practitioners facing competing claims of effectiveness 'should recommend less than the best, the best or the optimum', framing this as a constant source of ethical soul searching.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 51,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Kant's categorical imperative, discussed in the chapter on the clinical relationship, demands that we treat humanity in ourselves or others in what way?",
+    "options": [
+      "Never simply as a means but always at the same time as an end",
+      "Only as a means to achieving efficient clinical outcomes",
+      "As subordinate to the dentist's professional judgement",
+      "As a legal formality rather than a moral consideration"
+    ],
+    "answer_index": 0,
+    "justification": "The text cites Kant's categorical imperative that demands we treat 'humanity in your own person or in the person of any other never simply as a means but always at the same time as an end'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 58,
+    "category": "affective_skills",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "In the conclusion on the clinical relationship, what precondition does the interactive model of dentist-patient dialogue require of the dentist?",
+    "options": [
+      "That the dentist is an effective communicator",
+      "That the dentist has completed a law degree",
+      "That the dentist only treats adult patients",
+      "That the dentist works exclusively within the NHS"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that determining what an individual patient wants 'may only be determined by the employment of an interactive model for the relationship, with the precondition that the dentist is an effective communicator'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 63,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "If a patient's spouse rings the surgery asking whether her husband is having dental treatment there, what does the confidentiality chapter suggest the dentist should consider?",
+    "options": [
+      "Whether the information is confidential and how the dentist would feel if their own information were shared",
+      "That all family members automatically have a right to this information",
+      "That the receptionist may freely disclose treatment details to any caller",
+      "That confidentiality only applies to written records, not phone calls"
+    ],
+    "answer_index": 0,
+    "justification": "The chunk poses the scenario of a wife who 'rings to ask if her husband is having dental treatment' and suggests considering the situation 'from the patient's position... how we would feel about our own information being known to others'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 68,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "What right did the Data Protection Act 1998 extend to patients regarding the processing of their personal information?",
+    "options": [
+      "Control to prevent information being used without their consent and the right to be informed by any data controller",
+      "The right to demand free duplicate copies of all radiographs",
+      "The right to have all records destroyed after one year",
+      "The right to appoint a family member as sole record custodian"
+    ],
+    "answer_index": 0,
+    "justification": "The text states the Act 'extends their control to prevent information obtained, by any healthcare professional, being used without their consent and requires that they are 'to be informed by any data controller''.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 74,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the GDC's ethical guidance quoted in the consent chapter, how should a dentist act as a member of a caring profession?",
+    "options": [
+      "In the best interests of the patient",
+      "In the best financial interests of the practice",
+      "According to the preferences of the referring specialist",
+      "In accordance with insurance company recommendations"
+    ],
+    "answer_index": 0,
+    "justification": "The chunk quotes the GDC guidance which 'exhorts that 'as a member of a caring profession...a dentist will act in the best interests of the patient'', reflecting the principle of beneficence.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 80,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "What legal consequence follows if a dentist performs an operation without a patient's consent, according to Justice Cardozo's statement cited in the consent chapter?",
+    "options": [
+      "The surgeon commits an assault (battery) for which they are liable in damages",
+      "The surgeon is automatically referred to the GDC with no civil liability",
+      "The patient forfeits any right to complain if treatment succeeds",
+      "The dentist is only liable if the treatment caused physical harm"
+    ],
+    "answer_index": 0,
+    "justification": "Justice Cardozo's statement is quoted: 'a surgeon who performs an operation without his patient's consent commits an assault [sic. battery] for which he is liable in damages'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 88,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Under the Children Act 1989 as described in the text, what concept now governs who can consent to dental treatment on behalf of a child?",
+    "options": [
+      "Parental responsibility",
+      "Legal guardianship registration only",
+      "Automatic maternal consent rights",
+      "School authority consent"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains that rights and duties previously accorded to a parent, including the right to consent to medical treatment, 'are now replaced by the concept of 'parental responsibility'' under the Children Act 1989.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 95,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "Andrew Bridgman's chapter on informed consent opens with a quotation stating that, at its core, informed consent is what?",
+    "options": [
+      "Respect for the patient as an individual, not a defense against a later malpractice suit",
+      "A legal formality required only for surgical procedures",
+      "A financial safeguard for the dental practice",
+      "A bureaucratic requirement imposed by insurers"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter opens with the quotation: 'At its core, it is respect for the patient as an individual, not as a defense against the possibility of later malpractice suit' (Jory Graham).",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 102,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "As a moral concept rather than a mere legal endpoint, how is informed consent described in the text?",
+    "options": [
+      "As a process involving a two-way exchange of information between dentist and patient",
+      "As a single signature obtained before treatment begins",
+      "As an optional courtesy with no bearing on treatment validity",
+      "As a formality completed exclusively by administrative staff"
+    ],
+    "answer_index": 0,
+    "justification": "The text contrasts the legal view with the moral concept: 'the doctrine is more of a process in which there is a two-way exchange of information in order to help the dentist understand the patient's needs and expectations'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 110,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "When parents speak little English and dental treatment is complex, such as long-term management of a child with a cleft palate, what does the text say is essential before treatment begins?",
+    "options": [
+      "A bilingual health advocate",
+      "A signed waiver from the local school",
+      "Referral to a different practice entirely",
+      "A delay of treatment until the child learns English"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that for complex cases such as 'the long-term management of treatment for a child with a cleft palate...a bilingual health advocate is essential before embarking on treatment'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 117,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In assessing decision-making capacity of patients with mental disability, what does the text say a dentist should do with the views of family and carers?",
+    "options": [
+      "Take them into account but do so with caution",
+      "Disregard them entirely as legally irrelevant",
+      "Treat them as automatically overriding the patient's own wishes",
+      "Only accept them if provided in writing by a solicitor"
+    ],
+    "answer_index": 0,
+    "justification": "The text concludes that 'a dentist needs to take into account the views of others but should do so with caution', after outlining a range of attitudes toward patients' decision-making capacity.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 125,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "The chapter on practising in the NHS opens with a quotation from Aneurin Bevan about what condition disqualifying a society from calling itself civilised?",
+    "options": [
+      "Denying medical aid to a sick person because of lack of means",
+      "Failing to provide free dental check-ups annually",
+      "Allowing private dental practices to operate",
+      "Restricting access to specialist orthodontic care"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter epigraph reads: 'No society can legitimately call itself civilised if a sick person is denied medical aid because of lack of means...' (Aneurin Bevan, 1941).",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 132,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "According to the NHS records section, for how long must a dentist retain a patient's records after completion of a course of treatment?",
+    "options": [
+      "Two years",
+      "Six months",
+      "Ten years",
+      "Indefinitely with no minimum specified"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter states the keeping of satisfactory records is of paramount importance and well-documented records form the basis of the defence to allegations; it specifies 'there is a requirement to retain the records for two years after completion of a course of treatment (paragraph 25(2))'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 140,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  },
+  {
+    "stem": "In negligence and litigation, what is generally said to be the precursor to litigation when a patient is dissatisfied with treatment?",
+    "options": [
+      "A complaint, which provides an opportunity for resolution",
+      "An immediate court summons",
+      "A referral to the Dental Reference Service only",
+      "A mandatory GDC hearing"
+    ],
+    "answer_index": 0,
+    "justification": "The chapter opens by stating 'it is often said that complaints are the precursors of litigation. A complaint, in whatever form it arises, provides an opportunity for resolution but if it is not resolved, the patient may resort to litigation'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 152,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "In Scotland, what is the term for the award made to a patient to compensate for pain and suffering following a breach of a legal duty causing injury?",
+    "options": [
+      "Solatium",
+      "Provisional damages",
+      "Legal privilege",
+      "Contribution principle"
+    ],
+    "answer_index": 0,
+    "justification": "The text explains 'the patient is made an award of solatium to compensate for their pain and suffering and patrimonial loss to compensate for their financial losses'.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 172,
+    "category": "affective_skills",
+    "difficulty": "hard"
+  },
+  {
+    "stem": "According to the Declaration of Helsinki as discussed in the research ethics chapter, what basic premise is maintained regarding a doctor's priorities?",
+    "options": [
+      "The health of a patient is a doctor's first consideration",
+      "Research outcomes take precedence over individual patient welfare",
+      "Informed consent is optional if the research benefits society",
+      "A physician's institutional obligations outweigh patient interests"
+    ],
+    "answer_index": 0,
+    "justification": "The text states that under the Declaration of Helsinki 'the basic premise is maintained that 'the health of a patient is a doctor's first consideration'', incorporated into the International Code of Medical Ethics.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 180,
+    "category": "affective_skills",
+    "difficulty": "medium"
+  },
+  {
+    "stem": "According to the chapter on professional duties, why is good communication among members of the dental team, including hygienist, nurse, receptionist and technician, important?",
+    "options": [
+      "It avoids misunderstandings in the dental team and adds to the efficiency of a practice",
+      "It is required only for legal record-keeping purposes",
+      "It replaces the need for written treatment notes",
+      "It is relevant only to communication with patients, not team members"
+    ],
+    "answer_index": 0,
+    "justification": "The text states 'Good communication avoids misunderstandings in the dental team and adds to the efficiency of a practice', extending this to the hygienist, dental nurse, receptionist, dental technician and practice manager.",
+    "source_book": "Dental Ethics and Law",
+    "source_page": 44,
+    "category": "affective_skills",
+    "difficulty": "easy"
+  }
+]
