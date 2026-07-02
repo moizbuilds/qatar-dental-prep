@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { verifyPasscode, signSession, verifySession } from "./auth";
 
@@ -50,5 +51,49 @@ describe("signSession / verifySession", () => {
 
   it("rejects an empty string cookie value", () => {
     expect(verifySession("")).toBe(false);
+  });
+
+  it("accepts a freshly signed session (not expired)", () => {
+    const cookie = signSession();
+    expect(verifySession(cookie)).toBe(true);
+  });
+
+  it("rejects an expired token, even with a correct HMAC signature", () => {
+    const pastExpiry = Math.floor(Date.now() / 1000) - 60; // 60s in the past
+    const expiryStr = String(pastExpiry);
+    const hmac = crypto
+      .createHmac("sha256", process.env.SESSION_SECRET as string)
+      .update(expiryStr)
+      .digest("hex");
+    const expiredCookie = `${expiryStr}.${hmac}`;
+    expect(verifySession(expiredCookie)).toBe(false);
+  });
+
+  it("accepts a token with a correctly signed future expiry", () => {
+    const futureExpiry = Math.floor(Date.now() / 1000) + 60; // 60s from now
+    const expiryStr = String(futureExpiry);
+    const hmac = crypto
+      .createHmac("sha256", process.env.SESSION_SECRET as string)
+      .update(expiryStr)
+      .digest("hex");
+    const validCookie = `${expiryStr}.${hmac}`;
+    expect(verifySession(validCookie)).toBe(true);
+  });
+
+  it("rejects a token with a tampered expiry (HMAC no longer matches)", () => {
+    const futureExpiry = Math.floor(Date.now() / 1000) + 60;
+    const expiryStr = String(futureExpiry);
+    const hmac = crypto
+      .createHmac("sha256", process.env.SESSION_SECRET as string)
+      .update(expiryStr)
+      .digest("hex");
+    // Bump the expiry after signing, so the HMAC no longer matches.
+    const tamperedExpiryStr = String(futureExpiry + 1000);
+    const tamperedCookie = `${tamperedExpiryStr}.${hmac}`;
+    expect(verifySession(tamperedCookie)).toBe(false);
+  });
+
+  it("rejects a malformed cookie missing the separator", () => {
+    expect(verifySession("no-dot-here")).toBe(false);
   });
 });

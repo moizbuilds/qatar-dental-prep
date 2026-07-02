@@ -1,6 +1,8 @@
 import crypto from "node:crypto";
 
-const SESSION_VALUE = "authenticated";
+// Session lifetime: how long a signed-in session stays valid before the
+// user must re-enter the passcode.
+const SESSION_LIFETIME_SECONDS = 30 * 24 * 60 * 60; // 30 days
 
 function getPasscode(): string {
   return process.env.APP_PASSCODE ?? "";
@@ -32,18 +34,22 @@ export function verifyPasscode(input: string): boolean {
 }
 
 /**
- * Produces a session cookie value: `<value>.<hmac>` where the HMAC is
- * keyed by SESSION_SECRET, so the cookie cannot be forged without the key.
+ * Produces a session cookie value: `<expiryEpochSeconds>.<hmac>` where the
+ * HMAC is keyed by SESSION_SECRET over the expiry string, so the cookie
+ * cannot be forged or extended without the key, and it stops being valid
+ * once the expiry timestamp has passed.
  */
 export function signSession(): string {
   const secret = getSessionSecret();
-  const hmac = crypto.createHmac("sha256", secret).update(SESSION_VALUE).digest("hex");
-  return `${SESSION_VALUE}.${hmac}`;
+  const expiry = Math.floor(Date.now() / 1000) + SESSION_LIFETIME_SECONDS;
+  const expiryStr = String(expiry);
+  const hmac = crypto.createHmac("sha256", secret).update(expiryStr).digest("hex");
+  return `${expiryStr}.${hmac}`;
 }
 
 /**
  * Verifies a session cookie value produced by signSession(). Rejects
- * missing, malformed, or tampered values.
+ * missing, malformed, tampered, or expired values.
  */
 export function verifySession(cookieValue: string | undefined): boolean {
   if (!cookieValue) return false;
@@ -51,12 +57,17 @@ export function verifySession(cookieValue: string | undefined): boolean {
   const separatorIndex = cookieValue.lastIndexOf(".");
   if (separatorIndex === -1) return false;
 
-  const value = cookieValue.slice(0, separatorIndex);
+  const expiryStr = cookieValue.slice(0, separatorIndex);
   const providedHmac = cookieValue.slice(separatorIndex + 1);
 
-  const secret = getSessionSecret();
-  const expectedHmac = crypto.createHmac("sha256", secret).update(value).digest("hex");
+  if (!/^\d+$/.test(expiryStr)) return false;
 
-  if (value !== SESSION_VALUE) return false;
-  return timingSafeEqual(providedHmac, expectedHmac);
+  const secret = getSessionSecret();
+  const expectedHmac = crypto.createHmac("sha256", secret).update(expiryStr).digest("hex");
+
+  if (!timingSafeEqual(providedHmac, expectedHmac)) return false;
+
+  const expiry = Number(expiryStr);
+  const now = Math.floor(Date.now() / 1000);
+  return expiry > now;
 }
