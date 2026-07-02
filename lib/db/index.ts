@@ -97,6 +97,16 @@ export function insertChunks(chunks: Chunk[]): number {
   return insertMany(chunks);
 }
 
+export function getChunkById(id: string): Chunk | undefined {
+  const db = getDb();
+  const row = db
+    .prepare(
+      `SELECT id, book, page_start, page_end, category_hint, text FROM chunks WHERE id = ?`
+    )
+    .get(id) as Chunk | undefined;
+  return row;
+}
+
 export function searchChunks(query: string, limit: number): Chunk[] {
   const ftsQuery = toFtsQuery(query);
   if (!ftsQuery) return [];
@@ -183,6 +193,14 @@ export function listQuestions(filter: QuestionFilter = {}): Question[] {
   return rows.map(rowToQuestion);
 }
 
+export function getQuestionById(id: number): Question | undefined {
+  const db = getDb();
+  const row = db.prepare(`SELECT * FROM questions WHERE id = ?`).get(id) as
+    | QuestionRow
+    | undefined;
+  return row ? rowToQuestion(row) : undefined;
+}
+
 export function getQuestionsByCategory(cat: BlueprintCategory, n: number): Question[] {
   const db = getDb();
   const rows = db
@@ -239,6 +257,18 @@ export function recordAnswer(a: NewAnswer): void {
     `INSERT INTO answers (attempt_id, question_id, selected_index, is_correct)
      VALUES (?, ?, ?, ?)`
   ).run(a.attempt_id, a.question_id, a.selected_index, a.is_correct ? 1 : 0);
+}
+
+export function getAttemptScore(attemptId: number): { correct: number; total: number } {
+  const db = getDb();
+  const row = db
+    .prepare(
+      `SELECT COUNT(*) AS total, COALESCE(SUM(is_correct), 0) AS correct
+       FROM answers
+       WHERE attempt_id = ?`
+    )
+    .get(attemptId) as { total: number; correct: number };
+  return { correct: row.correct, total: row.total };
 }
 
 export function attemptStats(): CategoryStat[] {
