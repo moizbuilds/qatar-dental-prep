@@ -3,6 +3,7 @@ import {
   createAttempt,
   getQuestionsByCategory,
   missedQuestions,
+  completedQuestions,
   randomMock,
 } from "../../../../lib/db";
 import type { BlueprintCategory, Question } from "../../../../lib/db/types";
@@ -20,7 +21,7 @@ function toPublicQuestion(q: Question): PublicQuestion {
 }
 
 type StartBody = {
-  mode?: "full" | "topic" | "review";
+  mode?: "full" | "topic" | "review" | "completed";
   category?: BlueprintCategory;
   count?: number;
 };
@@ -49,9 +50,11 @@ export async function POST(request: NextRequest) {
     questions = await getQuestionsByCategory(category, count);
   } else if (mode === "review") {
     questions = await missedQuestions();
+  } else if (mode === "completed") {
+    questions = await completedQuestions();
   } else {
     return NextResponse.json(
-      { error: "Invalid 'mode'; expected 'full', 'topic', or 'review'" },
+      { error: "Invalid 'mode'; expected 'full', 'topic', 'review', or 'completed'" },
       { status: 400 }
     );
   }

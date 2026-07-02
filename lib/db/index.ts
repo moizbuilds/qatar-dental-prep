@@ -89,6 +89,10 @@ export async function missedQuestions() {
   return useSupabase ? supabase.missedQuestions() : (await sq()).missedQuestions();
 }
 
+export async function completedQuestions() {
+  return useSupabase ? supabase.completedQuestions() : (await sq()).completedQuestions();
+}
+
 export async function saveChatMessage(m: NewChatMessage) {
   return useSupabase ? supabase.saveChatMessage(m) : (await sq()).saveChatMessage(m);
 }

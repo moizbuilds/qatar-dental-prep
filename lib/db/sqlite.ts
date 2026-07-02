@@ -358,6 +358,18 @@ export function missedQuestions(): Question[] {
   return rows.map(rowToQuestion);
 }
 
+export function completedQuestions(): Question[] {
+  const db = getDb();
+  const rows = db
+    .prepare(
+      `SELECT DISTINCT q.*
+       FROM answers a
+       JOIN questions q ON q.id = a.question_id`
+    )
+    .all() as QuestionRow[];
+  return rows.map(rowToQuestion);
+}
+
 // ---------------------------------------------------------------------------
 // Chat messages
 // ---------------------------------------------------------------------------

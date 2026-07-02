@@ -17,6 +17,7 @@ import {
   completeAttempt,
   attemptStats,
   missedQuestions,
+  completedQuestions,
   saveChatMessage,
   listChatMessages,
   _setDbForTests,
@@ -242,6 +243,19 @@ describe("createAttempt / recordAnswer / attemptStats / missedQuestions", () => 
     const missed = missedQuestions();
     expect(missed.length).toBe(1);
     expect(missed[0].id).toBe(q1);
+  });
+
+  it("completedQuestions returns every answered question, right or wrong", () => {
+    const q1 = insertQuestion(makeQuestion("periodontics", 1));
+    const q2 = insertQuestion(makeQuestion("pediatric", 1));
+    insertQuestion(makeQuestion("orthodontics", 1)); // never answered
+
+    const attemptId = createAttempt();
+    recordAnswer({ attempt_id: attemptId, question_id: q1, selected_index: 1, is_correct: false });
+    recordAnswer({ attempt_id: attemptId, question_id: q2, selected_index: 0, is_correct: true });
+
+    const completed = completedQuestions();
+    expect(completed.map((q) => q.id).sort()).toEqual([q1, q2].sort());
   });
 });
 

@@ -206,6 +206,11 @@ export async function missedQuestions(): Promise<Question[]> {
   return (data as QuestionRow[]).map(toQuestion);
 }
 
+export async function completedQuestions(): Promise<Question[]> {
+  const data = must(await db().rpc("completed_questions"));
+  return (data as QuestionRow[]).map(toQuestion);
+}
+
 // --- Chat ---
 
 export async function saveChatMessage(m: NewChatMessage): Promise<void> {

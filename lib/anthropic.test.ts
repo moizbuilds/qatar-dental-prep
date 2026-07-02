@@ -26,8 +26,10 @@ describe("buildSystemPrompt", () => {
     const prompt = buildSystemPrompt(CHUNKS);
     expect(prompt).toContain("Guide to Periodontics, p.41");
     expect(prompt).toContain("periodontal probe is used to measure pocket depth");
-    expect(prompt).toContain("ONLY the reference passages");
-    expect(prompt).toContain("don't cover this");
+    expect(prompt).toContain("cite the book title and page number");
+    // Fallback: when the books don't cover it, still answer from general knowledge (clearly marked).
+    expect(prompt).toContain("Not covered in your textbooks");
+    expect(prompt).toContain("general-knowledge");
   });
 });
 

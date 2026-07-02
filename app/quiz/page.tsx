@@ -124,6 +124,22 @@ export default function QuizModePage() {
           Review mistakes
         </button>
       </section>
+
+      <section className="flex flex-col gap-3 w-full max-w-sm rounded-xl border border-black/[.08] dark:border-white/[.145] p-5">
+        <h2 className="text-lg font-semibold">Review completed questions</h2>
+        <p className="text-sm text-black/60 dark:text-white/60">
+          Revisit every question you have already answered, right or wrong,
+          with its explanation and source.
+        </p>
+        <button
+          type="button"
+          disabled={starting}
+          onClick={() => startQuiz({ mode: "completed" })}
+          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
+        >
+          Review completed questions
+        </button>
+      </section>
     </div>
   );
 }
