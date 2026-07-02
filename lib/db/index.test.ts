@@ -12,6 +12,7 @@ import {
   randomMock,
   createAttempt,
   recordAnswer,
+  attemptHistory,
   attemptStats,
   missedQuestions,
   saveChatMessage,
@@ -239,6 +240,36 @@ describe("createAttempt / recordAnswer / attemptStats / missedQuestions", () => 
     const missed = missedQuestions();
     expect(missed.length).toBe(1);
     expect(missed[0].id).toBe(q1);
+  });
+});
+
+describe("attemptHistory", () => {
+  it("returns per-attempt scores as rounded percentages, oldest first", () => {
+    const insertQ = db.prepare(
+      `INSERT INTO questions (category, stem, choices, correct_index, explanation, source_chunk_id) VALUES (?, ?, ?, ?, ?, ?)`
+    );
+    const q1 = Number(insertQ.run("periodontics", "Q1?", JSON.stringify(["A", "B", "C", "D"]), 0, "e", null).lastInsertRowid);
+    const q2 = Number(insertQ.run("periodontics", "Q2?", JSON.stringify(["A", "B", "C", "D"]), 0, "e", null).lastInsertRowid);
+
+    const a1 = createAttempt();
+    recordAnswer({ attempt_id: a1, question_id: q1, selected_index: 0, is_correct: true });
+    recordAnswer({ attempt_id: a1, question_id: q2, selected_index: 1, is_correct: false });
+
+    const a2 = createAttempt();
+    recordAnswer({ attempt_id: a2, question_id: q1, selected_index: 0, is_correct: true });
+    recordAnswer({ attempt_id: a2, question_id: q2, selected_index: 0, is_correct: true });
+
+    const history = attemptHistory();
+    expect(history.length).toBe(2);
+    expect(history[0].attempt_id).toBe(a1);
+    expect(history[0].pct).toBe(50); // 1/2
+    expect(history[1].attempt_id).toBe(a2);
+    expect(history[1].pct).toBe(100); // 2/2
+  });
+
+  it("ignores attempts with no recorded answers", () => {
+    createAttempt(); // no answers recorded
+    expect(attemptHistory().length).toBe(0);
   });
 });
 

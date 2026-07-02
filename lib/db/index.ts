@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   BLUEPRINT,
+  type AttemptScore,
   type BlueprintCategory,
   type CategoryStat,
   type ChatMessage,
@@ -269,6 +270,39 @@ export function getAttemptScore(attemptId: number): { correct: number; total: nu
     )
     .get(attemptId) as { total: number; correct: number };
   return { correct: row.correct, total: row.total };
+}
+
+/**
+ * Per-attempt scores ordered oldest-first, for the dashboard trend line.
+ * Only counts attempts that have at least one recorded answer.
+ */
+export function attemptHistory(): AttemptScore[] {
+  const db = getDb();
+  const rows = db
+    .prepare(
+      `SELECT qa.id AS attempt_id,
+              qa.completed_at AS completed_at,
+              COUNT(a.id) AS total,
+              COALESCE(SUM(a.is_correct), 0) AS correct
+       FROM quiz_attempts qa
+       JOIN answers a ON a.attempt_id = qa.id
+       GROUP BY qa.id
+       ORDER BY qa.id ASC`
+    )
+    .all() as {
+    attempt_id: number;
+    completed_at: string | null;
+    total: number;
+    correct: number;
+  }[];
+
+  return rows.map((row) => ({
+    attempt_id: row.attempt_id,
+    completed_at: row.completed_at,
+    total: row.total,
+    correct: row.correct,
+    pct: row.total > 0 ? Math.round((row.correct / row.total) * 100) : 0,
+  }));
 }
 
 export function attemptStats(): CategoryStat[] {

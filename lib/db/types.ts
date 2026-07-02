@@ -98,6 +98,15 @@ export interface CategoryStat {
   accuracy: number; // correct / attempted, 0 when attempted === 0
 }
 
+/** One completed quiz attempt's score, for the dashboard trend line. */
+export interface AttemptScore {
+  attempt_id: number;
+  completed_at: string | null;
+  total: number;
+  correct: number;
+  pct: number; // correct / total * 100, rounded; 0 when total === 0
+}
+
 export interface ChatMessage {
   id: number;
   session: string;
