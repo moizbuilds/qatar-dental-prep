@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Qatar Dental Prep
 
-## Getting Started
+A personal, mobile-friendly study app for the Qatar MOPH **National General
+Dental Qualifying Examination** (150 MCQs, 3½ hours, 60% pass). Everything is
+grounded in the official reading-list textbooks.
 
-First, run the development server:
+Two modes:
+
+- **Quiz** — a bank of 275 verified MCQs (every question cites a textbook
+  page). Full 150-question mocks weighted to the exam blueprint with a
+  3½-hour timer, topic drills, and a review-your-mistakes mode. A dashboard
+  tracks your score trend, per-category accuracy against the 60% line, and
+  your weakest areas. Works entirely offline.
+- **Ask** — free-form questions answered by Claude Sonnet 5, grounded only in
+  your textbooks, with book + page citations (and an honest "the books don't
+  cover this" when they don't).
+
+## Stack
+
+Next.js 15 (App Router, TypeScript) · SQLite (better-sqlite3) with FTS5
+full-text search · Tailwind CSS · Anthropic API (`claude-sonnet-5`) ·
+Python + pypdf for the ingestion pipeline. Single-user, protected by a
+passcode. The data layer is isolated behind `lib/db/*` so a later move to
+Supabase/pgvector + Vercel is a config swap — see [DEPLOY.md](DEPLOY.md).
+
+## Setup
+
+Requires Node 20+ and Python 3.9+.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1. Install dependencies
+npm install
+pip3 install -r pipeline/requirements.txt
+
+# 2. Configure environment
+cp .env.example .env.local
+#   - ANTHROPIC_API_KEY : your key (Ask mode only; quiz works without it)
+#   - APP_PASSCODE      : the passcode you'll type to enter the app
+#   - SESSION_SECRET    : node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+# 3. Build the source corpus from the textbooks
+#    Point the pipeline at your PDF folder if different (see pipeline/books.json).
+python3 pipeline/extract.py    # PDFs -> pipeline/output/pages.jsonl
+python3 pipeline/chunk.py      # pages -> pipeline/output/chunks.jsonl
+
+# 4. Initialise the database and load content
+npm run db:init                # create data/app.db schema
+npm run db:load                # load text chunks (for Ask-mode retrieval)
+npm run questions:load         # verify + load the 275-question bank
+
+# 5. Run
+npm run dev                    # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Log in with your `APP_PASSCODE`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Useful commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+|---|---|
+| `npm run dev` / `npm run build` | Run / build the app |
+| `npm test` | Unit + integration tests (Vitest) |
+| `npm run questions:verify` | Check every authored question is grounded in a cited chunk |
+| `npm run questions:load` | Verify then load the question bank (refuses to wipe recorded answers without `--force`) |
+| `python3 pipeline/selfcheck_questions.py <file>` | Validate one authored question file |
 
-## Learn More
+## Adding more questions
 
-To learn more about Next.js, take a look at the following resources:
+Question files live in `pipeline/questions/<category>.json`, one file per
+blueprint category. Each question cites a real chunk (verbatim `source_book`
++ a `source_page` inside that chunk's range) and its `justification` must
+share wording with the cited text. See
+[pipeline/questions/README.md](pipeline/questions/README.md) for the schema,
+then `npm run questions:verify` and `npm run questions:load --force`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes / known gaps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The Nayak *General and Systemic Pathology* PDF in the source set was a
+  0-byte download and is excluded; general pathology is covered by the other
+  books. Re-download it and re-run the pipeline to add it.
+- Vander's *Human Physiology* extracted with a garbled text layer (few usable
+  words per page) and contributes little; physiology is better covered by
+  *Essential Physiology for Dental Students*.
+- Question difficulty is authored but not yet stored (no DB column) — a future
+  enhancement if adaptive difficulty is wanted.

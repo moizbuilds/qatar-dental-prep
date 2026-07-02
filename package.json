@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
+    "test:e2e": "playwright test",
     "db:init": "tsx scripts/init-db.ts",
     "db:load": "tsx scripts/load-chunks.ts",
     "questions:verify": "tsx scripts/verify-questions.ts",
