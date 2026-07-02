@@ -1,0 +1,8 @@
+.env*
+data
+pipeline
+.superpowers
+docs
+tests
+scratchpad
+*.db
