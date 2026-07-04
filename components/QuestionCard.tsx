@@ -93,32 +93,36 @@ export default function QuestionCard({
   }
 
   return (
-    <div className="flex flex-col gap-4 w-full max-w-xl mx-auto p-4">
-      <p className="text-sm text-black/60 dark:text-white/60">
-        Question {questionNumber} of {totalQuestions}
+    <div className="flex flex-col gap-5 w-full max-w-xl mx-auto p-4">
+      <p className="font-mono text-xs tracking-wider text-ink-soft">
+        {String(questionNumber).padStart(2, "0")} / {totalQuestions}
       </p>
-      <h2 className="text-lg font-semibold">{question.stem}</h2>
+      <h2 className="text-xl font-medium leading-snug">{question.stem}</h2>
 
       <div
         role="radiogroup"
         aria-label="Answer choices"
         onKeyDown={handleKeyDown}
-        className="flex flex-col gap-2"
+        className="flex flex-col gap-2.5"
       >
         {question.choices.map((choice, i) => {
           const isSelected = selectedIndex === i;
           const isCorrectChoice = result && i === result.correctIndex;
           const isWrongSelected = result && isSelected && !result.correct;
 
-          let stateClasses = "border-black/[.08] dark:border-white/[.145]";
+          let stateClasses = "border-line bg-surface";
+          let badgeClasses = "text-ink-soft border-line";
           if (result) {
             if (isCorrectChoice) {
-              stateClasses = "border-green-600 bg-green-50 dark:bg-green-950";
+              stateClasses = "border-pine bg-pine-tint";
+              badgeClasses = "text-paper bg-pine border-pine";
             } else if (isWrongSelected) {
-              stateClasses = "border-red-600 bg-red-50 dark:bg-red-950";
+              stateClasses = "border-maroon bg-maroon-tint";
+              badgeClasses = "text-paper bg-maroon border-maroon";
             }
           } else if (isSelected) {
-            stateClasses = "border-foreground";
+            stateClasses = "border-pine bg-pine-tint";
+            badgeClasses = "text-paper bg-pine border-pine";
           }
 
           return (
@@ -132,12 +136,15 @@ export default function QuestionCard({
               aria-checked={isSelected}
               disabled={!!result}
               onClick={() => setSelectedIndex(i)}
-              className={`flex items-start gap-3 text-left rounded-xl border px-4 py-3 text-base transition-colors disabled:cursor-default focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${stateClasses}`}
+              className={`flex items-start gap-3 text-left rounded-xl border px-4 py-3.5 text-base transition-colors disabled:cursor-default focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-paper ${stateClasses}`}
             >
-              <span aria-hidden className="font-mono text-sm text-black/50 dark:text-white/50 pt-0.5">
+              <span
+                aria-hidden
+                className={`shrink-0 grid place-items-center h-6 w-6 rounded-md border font-mono text-xs transition-colors ${badgeClasses}`}
+              >
                 {CHOICE_LETTERS[i] ?? i + 1}
               </span>
-              <span>{choice}</span>
+              <span className="pt-0.5">{choice}</span>
             </button>
           );
         })}
@@ -146,7 +153,7 @@ export default function QuestionCard({
       {!result && (
         <div className="flex flex-col gap-2">
           {submitError && (
-            <p className="text-sm text-red-600 text-center" role="alert">
+            <p className="text-sm text-maroon text-center" role="alert">
               Couldn&apos;t submit your answer. Check your connection and try again.
             </p>
           )}
@@ -154,9 +161,9 @@ export default function QuestionCard({
             type="button"
             onClick={handleSubmit}
             disabled={selectedIndex === null || submitting}
-            className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+            className="btn btn-primary w-full"
           >
-            {submitting ? "Submitting..." : submitError ? "Retry" : "Submit"}
+            {submitting ? "Submitting…" : submitError ? "Retry" : "Submit"}
           </button>
         </div>
       )}
@@ -165,25 +172,20 @@ export default function QuestionCard({
         <div
           role="status"
           aria-live="polite"
-          className="flex flex-col gap-3 rounded-xl border border-black/[.08] dark:border-white/[.145] p-4"
+          className={`flex flex-col gap-3 rounded-xl border p-4 ${
+            result.correct ? "border-pine bg-pine-tint" : "border-maroon bg-maroon-tint"
+          }`}
         >
-          <p className={`font-semibold ${result.correct ? "text-green-700" : "text-red-700"}`}>
+          <p className={`font-medium ${result.correct ? "text-pine" : "text-maroon"}`}>
             {result.correct ? "✓ Correct" : "✗ Incorrect"}
           </p>
-          {result.explanation && (
-            <p className="text-sm">{result.explanation}</p>
-          )}
+          {result.explanation && <p className="text-sm text-ink leading-relaxed">{result.explanation}</p>}
           {result.citation && (
-            <p className="text-xs text-black/60 dark:text-white/60">
-              Source: {result.citation.book}, p.{result.citation.page_start}
+            <p className="font-mono text-xs text-ink-soft">
+              {result.citation.book} · p.{result.citation.page_start}
             </p>
           )}
-          <button
-            type="button"
-            autoFocus
-            onClick={handleNext}
-            className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-          >
+          <button type="button" autoFocus onClick={handleNext} className="btn btn-primary w-full">
             {questionNumber < totalQuestions ? "Next question" : "Finish"}
           </button>
         </div>

@@ -138,12 +138,8 @@ export default function QuizSessionPage() {
   if (!session) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-8 text-center">
-        <p>No active quiz session found.</p>
-        <button
-          type="button"
-          onClick={() => router.push("/quiz")}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5"
-        >
+        <p className="text-ink-soft">No active quiz session found.</p>
+        <button type="button" onClick={() => router.push("/quiz")} className="btn btn-primary">
           Choose a quiz mode
         </button>
       </div>
@@ -163,14 +159,14 @@ export default function QuizSessionPage() {
   if (finishError) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-8 text-center">
-        <p>Couldn&apos;t submit your quiz. Your answers are safe — try again.</p>
+        <p className="text-ink-soft">Couldn&apos;t submit your quiz. Your answers are safe — try again.</p>
         <button
           type="button"
           onClick={() => finishAttempt(session.attemptId)}
           disabled={finishing}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 disabled:opacity-50"
+          className="btn btn-primary"
         >
-          {finishing ? "Submitting..." : "Retry"}
+          {finishing ? "Submitting…" : "Retry"}
         </button>
       </div>
     );
@@ -217,21 +213,17 @@ export default function QuizSessionPage() {
   return (
     <div className="min-h-screen flex flex-col gap-6 p-4">
       <div className="w-full max-w-xl mx-auto flex items-center justify-between">
-        <button
-          type="button"
-          onClick={handleExit}
-          className="text-sm text-black/60 dark:text-white/60 hover:underline"
-        >
+        <button type="button" onClick={handleExit} className="eyebrow hover:text-pine transition-colors">
           ← Exit
         </button>
         {secondsLeft !== null && (
           <span
             role="timer"
             aria-live="off"
-            className={`text-sm font-mono rounded-full px-3 py-1 border ${
+            className={`text-sm font-mono rounded-lg px-3 py-1 border ${
               secondsLeft < 300
-                ? "border-red-600 text-red-700"
-                : "border-black/[.08] dark:border-white/[.145]"
+                ? "border-maroon text-maroon bg-maroon-tint"
+                : "border-line text-ink-soft"
             }`}
           >
             {secondsLeft < 300 ? "⏱ " : ""}

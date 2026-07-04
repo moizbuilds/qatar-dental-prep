@@ -25,22 +25,26 @@ export function CategoryBars({
         const passing = pct >= passThreshold;
         return (
           <div key={c.category}>
-            <div className="flex justify-between text-sm mb-1">
+            <div className="flex justify-between text-sm mb-1.5">
               <span>{labelFor(c.category)}</span>
-              <span className={attempted ? (passing ? "text-green-600" : "text-red-600") : "text-gray-400"}>
+              <span
+                className={`font-mono text-xs ${
+                  attempted ? (passing ? "text-pine" : "text-maroon") : "text-ink-soft"
+                }`}
+              >
                 {attempted ? `${pct}%` : "—"}
               </span>
             </div>
-            <div className="relative h-3 w-full rounded bg-gray-200 dark:bg-gray-700">
+            <div className="relative h-2.5 w-full rounded bg-surface-2">
               {attempted && (
                 <div
-                  className={`h-3 rounded ${passing ? "bg-green-500" : "bg-red-500"}`}
+                  className={`h-2.5 rounded ${passing ? "bg-pine" : "bg-maroon"}`}
                   style={{ width: `${pct}%` }}
                 />
               )}
               {/* 60% pass line */}
               <div
-                className="absolute top-0 h-3 w-px bg-gray-900 dark:bg-white"
+                className="absolute top-0 h-2.5 w-px bg-ink/50"
                 style={{ left: `${passThreshold}%` }}
                 aria-hidden
               />

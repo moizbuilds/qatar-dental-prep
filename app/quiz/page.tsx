@@ -50,107 +50,117 @@ export default function QuizModePage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center gap-10 p-8">
-      {/* Top bar with a Home link so the mode screen is never a dead-end. */}
-      <div className="w-full max-w-sm flex items-center">
-        <Link
-          href="/"
-          className="text-sm text-black/60 dark:text-white/60 hover:underline"
-        >
+    <div className="min-h-screen flex flex-col items-center p-6">
+      <div className="w-full max-w-sm flex flex-col gap-6">
+        {/* Home link so the mode screen is never a dead-end. */}
+        <Link href="/" className="eyebrow self-start hover:text-pine transition-colors">
           ← Home
         </Link>
-      </div>
 
-      <h1 className="text-2xl font-bold text-center">Choose a quiz mode</h1>
+        <header className="flex flex-col gap-2">
+          <p className="eyebrow">Practice</p>
+          <h1 className="text-3xl font-semibold">Choose a mode</h1>
+        </header>
 
-      {error && (
-        <p className="text-sm text-red-600 text-center" role="alert">
-          {error}
-        </p>
-      )}
+        {error && (
+          <p className="text-sm text-maroon" role="alert">
+            {error}
+          </p>
+        )}
 
-      <section className="flex flex-col gap-3 w-full max-w-sm rounded-xl border border-black/[.08] dark:border-white/[.145] p-5">
-        <h2 className="text-lg font-semibold">Full mock exam</h2>
-        <p className="text-sm text-black/60 dark:text-white/60">
-          150 blueprint-weighted questions, 210-minute timer, 60% to pass.
-        </p>
-        <button
-          type="button"
-          disabled={starting}
-          onClick={() => startQuiz({ mode: "full" })}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
-        >
-          Start full mock
-        </button>
-      </section>
-
-      <section className="flex flex-col gap-3 w-full max-w-sm rounded-xl border border-black/[.08] dark:border-white/[.145] p-5">
-        <h2 className="text-lg font-semibold">Topic drill</h2>
-        <label className="flex flex-col gap-1 text-sm">
-          Category
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value as BlueprintCategory)}
-            className="rounded-lg border border-black/[.08] dark:border-white/[.145] px-3 h-10 bg-transparent"
+        <section className="card flex flex-col gap-4 p-5 border-l-2 border-l-pine">
+          <div className="flex flex-col gap-1">
+            <p className="eyebrow">01 · Mock Exam</p>
+            <h2 className="text-lg font-medium">Full mock</h2>
+          </div>
+          <p className="font-mono text-xs text-ink-soft">150 items · 210 min · 60% to pass</p>
+          <button
+            type="button"
+            disabled={starting}
+            onClick={() => startQuiz({ mode: "full" })}
+            className="btn btn-primary w-full"
           >
-            {BLUEPRINT.map(({ category: c }) => (
-              <option key={c} value={c}>
-                {formatCategory(c)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1 text-sm">
-          Number of questions
-          <input
-            type="number"
-            min={1}
-            max={50}
-            value={count}
-            onChange={(e) => setCount(Number(e.target.value))}
-            className="rounded-lg border border-black/[.08] dark:border-white/[.145] px-3 h-10 bg-transparent"
-          />
-        </label>
-        <button
-          type="button"
-          disabled={starting || !Number.isFinite(count) || count <= 0}
-          onClick={() => startQuiz({ mode: "topic", category, count })}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
-        >
-          Start topic drill
-        </button>
-      </section>
+            Start full mock
+          </button>
+        </section>
 
-      <section className="flex flex-col gap-3 w-full max-w-sm rounded-xl border border-black/[.08] dark:border-white/[.145] p-5">
-        <h2 className="text-lg font-semibold">Review mistakes</h2>
-        <p className="text-sm text-black/60 dark:text-white/60">
-          Retry every question you have answered incorrectly so far.
-        </p>
-        <button
-          type="button"
-          disabled={starting}
-          onClick={() => startQuiz({ mode: "review" })}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
-        >
-          Review mistakes
-        </button>
-      </section>
+        <section className="card flex flex-col gap-4 p-5">
+          <div className="flex flex-col gap-1">
+            <p className="eyebrow">02 · Focused</p>
+            <h2 className="text-lg font-medium">Topic drill</h2>
+          </div>
+          <label className="flex flex-col gap-1.5 text-sm text-ink-soft">
+            Category
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value as BlueprintCategory)}
+              className="field text-ink"
+            >
+              {BLUEPRINT.map(({ category: c }) => (
+                <option key={c} value={c}>
+                  {formatCategory(c)}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="flex flex-col gap-1.5 text-sm text-ink-soft">
+            Number of questions
+            <input
+              type="number"
+              min={1}
+              max={50}
+              value={count}
+              onChange={(e) => setCount(Number(e.target.value))}
+              className="field font-mono text-ink"
+            />
+          </label>
+          <button
+            type="button"
+            disabled={starting || !Number.isFinite(count) || count <= 0}
+            onClick={() => startQuiz({ mode: "topic", category, count })}
+            className="btn btn-secondary w-full"
+          >
+            Start topic drill
+          </button>
+        </section>
 
-      <section className="flex flex-col gap-3 w-full max-w-sm rounded-xl border border-black/[.08] dark:border-white/[.145] p-5">
-        <h2 className="text-lg font-semibold">Review completed questions</h2>
-        <p className="text-sm text-black/60 dark:text-white/60">
-          Revisit every question you have already answered, right or wrong,
-          with its explanation and source.
-        </p>
-        <button
-          type="button"
-          disabled={starting}
-          onClick={() => startQuiz({ mode: "completed" })}
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
-        >
-          Review completed questions
-        </button>
-      </section>
+        <section className="card flex flex-col gap-4 p-5">
+          <div className="flex flex-col gap-1">
+            <p className="eyebrow">03 · Review</p>
+            <h2 className="text-lg font-medium">Review mistakes</h2>
+          </div>
+          <p className="text-sm text-ink-soft">
+            Retry every question whose last answer was wrong. Shrinks as you improve.
+          </p>
+          <button
+            type="button"
+            disabled={starting}
+            onClick={() => startQuiz({ mode: "review" })}
+            className="btn btn-secondary w-full"
+          >
+            Review mistakes
+          </button>
+        </section>
+
+        <section className="card flex flex-col gap-4 p-5">
+          <div className="flex flex-col gap-1">
+            <p className="eyebrow">04 · Review</p>
+            <h2 className="text-lg font-medium">Completed questions</h2>
+          </div>
+          <p className="text-sm text-ink-soft">
+            Revisit every question you have answered, right or wrong, with its
+            explanation and source.
+          </p>
+          <button
+            type="button"
+            disabled={starting}
+            onClick={() => startQuiz({ mode: "completed" })}
+            className="btn btn-secondary w-full"
+          >
+            Review completed
+          </button>
+        </section>
+      </div>
     </div>
   );
 }

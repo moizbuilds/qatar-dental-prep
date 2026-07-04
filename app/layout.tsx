@@ -1,20 +1,41 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Display: Fraunces — an optical serif with authority and warmth, used with
+// restraint for headings and big numbers.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Body: IBM Plex Sans — a humanist, clinical sans with a "documentation" feel.
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+// Utility: IBM Plex Mono — the signature readout face for all quantitative UI
+// (timer, scores, question counts, page citations, category percentages).
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
   title: "Qatar Dental Prep",
-  description: "Local-first study app for Qatar dental licensing exam prep.",
+  description: "Study companion for the Qatar National General Dental Qualifying Examination.",
+};
+
+// theme-color matches the paper background so the mobile browser chrome blends
+// in; viewportFit=cover lets full-bleed layouts reach into notch safe areas.
+export const viewport: Viewport = {
+  themeColor: "#f3f5f2",
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -24,9 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${fraunces.variable} ${plexSans.variable} ${plexMono.variable} antialiased`}>
         {children}
       </body>
     </html>

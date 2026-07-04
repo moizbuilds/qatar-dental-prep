@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * "The Clinical Record" — design system for Qatar Dental Prep.
+ * A study tool styled like a precise dental clinical chart: calm pine-teal,
+ * Qatar maroon accents, bone-paper ground, and mono-typeset quantitative
+ * readouts. Committed light theme (a clinical tool reads best on paper).
+ */
+
+/* Make `dark:` class-based and never add the class — this neutralizes the
+   starter's ad-hoc dark: utilities so the committed light theme stays cohesive
+   even on phones set to dark mode. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-paper: #f3f5f2;
+  --color-surface: #ffffff;
+  --color-surface-2: #ebefeb;
+  --color-ink: #14201d;
+  --color-ink-soft: #5a6a64;
+  --color-line: #d7ded8;
+
+  --color-pine: #0e4d45;
+  --color-pine-600: #0a3e37;
+  --color-pine-tint: #e3eee9;
+
+  --color-maroon: #8a1538;
+  --color-maroon-600: #6f1029;
+  --color-maroon-tint: #f5e4e8;
+
+  /* Back-compat aliases for any starter utilities still referencing these. */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Fraunces is optical — a touch of weight + tight tracking for headings. */
+  h1, h2, h3 {
+    font-family: var(--font-display), Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+  /* Tabular figures everywhere numbers line up (timers, scores, tables). */
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+  ::selection {
+    background: var(--color-pine);
+    color: var(--color-paper);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Eyebrow: the clinical-chart label. Mono, tracked, quiet. */
+  .eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    color: var(--color-ink-soft);
+  }
+
+  /* Buttons — squared-precise, not pills. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 3rem;
+    padding-inline: 1.25rem;
+    border-radius: 0.625rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  .btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-paper), 0 0 0 4px var(--color-pine);
+  }
+
+  .btn-primary {
+    background: var(--color-pine);
+    color: var(--color-paper);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-pine-600);
+  }
+
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    border-color: var(--color-pine);
+    color: var(--color-pine);
+  }
+
+  /* Card — the "record" surface. */
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+  }
+
+  /* Text input / select. */
+  .field {
+    height: 3rem;
+    padding-inline: 1rem;
+    border-radius: 0.625rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 1rem;
+  }
+  .field::placeholder {
+    color: var(--color-ink-soft);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-pine);
+    box-shadow: 0 0 0 3px var(--color-pine-tint);
+  }
 }

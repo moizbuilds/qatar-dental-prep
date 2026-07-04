@@ -31,38 +31,49 @@ export default async function DashboardPage() {
 
   return (
     <main className="mx-auto max-w-2xl p-6">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <Link href="/" className="text-sm text-black/60 dark:text-white/60 hover:underline">
-            ← Home
-          </Link>
-          <h1 className="text-2xl font-bold">Your progress</h1>
+      <Link href="/" className="eyebrow hover:text-pine transition-colors">
+        ← Home
+      </Link>
+      <div className="mt-4 flex items-end justify-between mb-8">
+        <div className="flex flex-col gap-1">
+          <p className="eyebrow">Progress</p>
+          <h1 className="text-3xl font-semibold">Your record</h1>
         </div>
-        <Link href="/quiz" className="text-sm underline">
+        <Link href="/quiz" className="text-sm font-medium text-pine hover:underline">
           Take a quiz →
         </Link>
       </div>
 
       {history.length === 0 ? (
-        <p className="text-gray-500">
+        <div className="card p-6 text-center text-ink-soft">
           No attempts yet. Take a quiz and your scores will appear here.
-        </p>
+        </div>
       ) : (
         <>
-          <section className="mb-8">
-            <h2 className="text-lg font-semibold mb-2">Score trend</h2>
-            <p className="text-sm text-gray-500 mb-3">
-              {history.length} attempt{history.length === 1 ? "" : "s"}. Latest:{" "}
-              <span className={latest.pct >= PASS_THRESHOLD ? "text-green-600" : "text-red-600"}>
+          <section className="mb-10">
+            <h2 className="text-lg font-medium mb-1">Score trend</h2>
+            <p className="text-sm text-ink-soft mb-4">
+              {history.length} attempt{history.length === 1 ? "" : "s"}. Latest{" "}
+              <span
+                className={`font-mono ${latest.pct >= PASS_THRESHOLD ? "text-pine" : "text-maroon"}`}
+              >
                 {latest.pct}%
               </span>{" "}
-              (pass line {PASS_THRESHOLD}%).
+              · pass line {PASS_THRESHOLD}%.
             </p>
-            <div className="flex items-end gap-1 h-32 border-b border-gray-300">
+            <div className="relative flex items-end gap-1.5 h-32 border-b border-line">
+              {/* Pass-line marker across the chart. */}
+              <div
+                aria-hidden
+                className="absolute inset-x-0 border-t border-dashed border-ink-soft/40"
+                style={{ bottom: `${PASS_THRESHOLD}%` }}
+              />
               {history.map((h) => (
                 <div
                   key={h.attempt_id}
-                  className="flex-1 min-w-[6px] bg-blue-500 rounded-t"
+                  className={`flex-1 min-w-[6px] rounded-t ${
+                    h.pct >= PASS_THRESHOLD ? "bg-pine" : "bg-maroon"
+                  }`}
                   style={{ height: `${h.pct}%` }}
                   title={`Attempt ${h.attempt_id}: ${h.pct}% (${h.correct}/${h.total})`}
                 />
@@ -71,12 +82,20 @@ export default async function DashboardPage() {
           </section>
 
           {weakest.length > 0 && (
-            <section className="mb-8">
-              <h2 className="text-lg font-semibold mb-2">Weakest areas</h2>
-              <ol className="list-decimal list-inside text-sm">
-                {weakest.map((w) => (
-                  <li key={w.category}>
-                    {CATEGORY_LABELS[w.category] ?? w.category} — {w.accuracyPercent}%
+            <section className="mb-10">
+              <h2 className="text-lg font-medium mb-3">Weakest areas</h2>
+              <ol className="flex flex-col gap-2">
+                {weakest.map((w, i) => (
+                  <li key={w.category} className="flex items-center gap-3 text-sm">
+                    <span className="eyebrow">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="flex-1">{CATEGORY_LABELS[w.category] ?? w.category}</span>
+                    <span
+                      className={`font-mono ${
+                        w.accuracyPercent >= PASS_THRESHOLD ? "text-pine" : "text-maroon"
+                      }`}
+                    >
+                      {w.accuracyPercent}%
+                    </span>
                   </li>
                 ))}
               </ol>
@@ -84,9 +103,9 @@ export default async function DashboardPage() {
           )}
 
           <section>
-            <h2 className="text-lg font-semibold mb-3">Accuracy by category</h2>
-            <p className="text-sm text-gray-500 mb-3">
-              Bars show your accuracy; the vertical line marks the {PASS_THRESHOLD}% pass threshold.
+            <h2 className="text-lg font-medium mb-1">Accuracy by category</h2>
+            <p className="text-sm text-ink-soft mb-4">
+              Bars show your accuracy; the dashed line marks the {PASS_THRESHOLD}% pass threshold.
             </p>
             <CategoryBars categories={categories} passThreshold={PASS_THRESHOLD} />
           </section>

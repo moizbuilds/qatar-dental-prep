@@ -32,17 +32,17 @@ export function ChatMessage({
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
           isUser
-            ? "whitespace-pre-wrap bg-blue-600 text-white"
-            : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            ? "whitespace-pre-wrap bg-pine text-paper"
+            : "border border-line bg-surface text-ink"
         }`}
       >
         {isUser ? <p>{content}</p> : <MarkdownAnswer content={content} />}
         {!isUser && sources && sources.length > 0 && (
-          <div className="mt-2 border-t border-gray-300 dark:border-gray-600 pt-2 text-xs text-gray-500">
-            <span className="font-medium">Sources: </span>
+          <div className="mt-3 border-t border-line pt-2 font-mono text-[0.7rem] text-ink-soft">
+            <span className="uppercase tracking-wider">Sources · </span>
             {dedupeSources(sources)
               .map((s) => `${s.book} p.${s.page_start}`)
-              .join(" · ")}
+              .join("  ·  ")}
           </div>
         )}
       </div>
@@ -68,26 +68,15 @@ function MarkdownAnswer({ content }: { content: string }) {
           h1: (props) => <h1 className="text-base font-bold" {...props} />,
           h2: (props) => <h2 className="text-base font-bold" {...props} />,
           h3: (props) => <h3 className="text-sm font-semibold" {...props} />,
-          a: (props) => (
-            <a className="text-blue-600 underline dark:text-blue-400" {...props} />
-          ),
+          a: (props) => <a className="text-pine underline" {...props} />,
           code: (props) => (
-            <code
-              className="rounded bg-black/[.06] px-1 py-0.5 font-mono text-[0.85em] dark:bg-white/[.1]"
-              {...props}
-            />
+            <code className="rounded bg-surface-2 px-1 py-0.5 font-mono text-[0.85em]" {...props} />
           ),
           pre: (props) => (
-            <pre
-              className="overflow-x-auto rounded-lg bg-black/[.06] p-3 text-xs dark:bg-white/[.08]"
-              {...props}
-            />
+            <pre className="overflow-x-auto rounded-lg bg-surface-2 p-3 text-xs" {...props} />
           ),
           blockquote: (props) => (
-            <blockquote
-              className="border-l-2 border-gray-400 pl-3 text-gray-600 dark:text-gray-400"
-              {...props}
-            />
+            <blockquote className="border-l-2 border-pine pl-3 text-ink-soft" {...props} />
           ),
           // Wrap tables so wide ones scroll horizontally on mobile instead of
           // breaking the chat width.
@@ -96,16 +85,11 @@ function MarkdownAnswer({ content }: { content: string }) {
               <table className="w-full border-collapse text-xs" {...props} />
             </div>
           ),
-          thead: (props) => <thead className="bg-black/[.04] dark:bg-white/[.06]" {...props} />,
+          thead: (props) => <thead className="bg-surface-2" {...props} />,
           th: (props) => (
-            <th
-              className="border border-gray-300 px-2 py-1 text-left font-semibold dark:border-gray-600"
-              {...props}
-            />
+            <th className="border border-line px-2 py-1 text-left font-semibold" {...props} />
           ),
-          td: (props) => (
-            <td className="border border-gray-300 px-2 py-1 align-top dark:border-gray-600" {...props} />
-          ),
+          td: (props) => <td className="border border-line px-2 py-1 align-top" {...props} />,
         }}
       >
         {content}

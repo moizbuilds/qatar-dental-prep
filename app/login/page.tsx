@@ -40,31 +40,34 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-8 p-8">
-      <h1 className="text-2xl font-bold text-center">Qatar Dental Prep</h1>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 w-full max-w-xs"
-      >
+    <div className="min-h-screen flex flex-col items-center justify-center gap-8 p-6">
+      <header className="flex flex-col gap-2 text-center">
+        <p className="eyebrow">QNGDQE · Study Companion</p>
+        <h1 className="text-3xl font-semibold text-pine">Qatar Dental Prep</h1>
+      </header>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-xs">
         <input
           type="password"
+          name="passcode"
+          aria-label="Passcode"
           inputMode="text"
           autoFocus
           autoComplete="off"
+          spellCheck={false}
           placeholder="Enter passcode"
           value={passcode}
           onChange={(e) => setPasscode(e.target.value)}
-          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] px-5 h-12 text-base w-full bg-transparent"
+          className="field w-full text-center tracking-widest"
         />
         <button
           type="submit"
           disabled={submitting || passcode.length === 0}
-          className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-base h-12 px-5 w-full disabled:opacity-50"
+          className="btn btn-primary w-full"
         >
-          {submitting ? "Checking..." : "Enter"}
+          {submitting ? "Checking…" : "Enter"}
         </button>
         {error && (
-          <p className="text-sm text-red-600 text-center" role="alert">
+          <p className="text-sm text-maroon text-center" role="alert">
             {error}
           </p>
         )}

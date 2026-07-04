@@ -8,33 +8,29 @@ export interface QuizResultProps {
 }
 
 export default function QuizResult({ correct, total, percentage, passed }: QuizResultProps) {
+  // Full literal class strings so Tailwind's JIT can see them (dynamic
+  // `border-${x}` names are never generated).
+  const gauge = passed ? "border-pine bg-pine-tint" : "border-maroon bg-maroon-tint";
+  const accentText = passed ? "text-pine" : "text-maroon";
   return (
-    <div className="flex flex-col items-center gap-6 w-full max-w-md mx-auto p-8 text-center">
-      <h1 className="text-2xl font-bold">Quiz complete</h1>
+    <div className="flex flex-col items-center gap-7 w-full max-w-md mx-auto p-8 text-center">
+      <p className="eyebrow">Result</p>
 
-      <div
-        className={`rounded-full h-32 w-32 flex items-center justify-center text-3xl font-bold border-4 ${
-          passed
-            ? "border-green-600 text-green-700"
-            : "border-red-600 text-red-700"
-        }`}
-      >
-        {percentage}%
+      {/* Clinical gauge: the score as an instrument readout. */}
+      <div className={`grid place-items-center h-40 w-40 rounded-full border-4 ${gauge}`}>
+        <span className={`font-mono text-4xl font-medium ${accentText}`}>{percentage}%</span>
       </div>
 
-      <p className="text-lg font-semibold">{passed ? "Pass" : "Fail"}</p>
-      <p className="text-black/60 dark:text-white/60">
-        {correct} of {total} correct (60% required to pass)
-      </p>
-
-      <div className="flex flex-col gap-3 w-full">
-        <Link
-          href="/quiz"
-          className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full flex items-center justify-center"
-        >
-          Back to quiz modes
-        </Link>
+      <div className="flex flex-col gap-1">
+        <p className={`text-2xl font-semibold ${accentText}`}>{passed ? "Pass" : "Below pass"}</p>
+        <p className="font-mono text-xs text-ink-soft">
+          {correct} / {total} correct · 60% to pass
+        </p>
       </div>
+
+      <Link href="/quiz" className="btn btn-primary w-full">
+        Back to modes
+      </Link>
     </div>
   );
 }

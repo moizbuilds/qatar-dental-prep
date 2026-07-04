@@ -25,7 +25,7 @@ export function LogoutButton() {
       type="button"
       onClick={logout}
       disabled={busy}
-      className="text-sm text-black/50 dark:text-white/50 hover:underline disabled:opacity-50"
+      className="eyebrow hover:text-pine transition-colors disabled:opacity-50"
     >
       {busy ? "Logging out…" : "Log out"}
     </button>

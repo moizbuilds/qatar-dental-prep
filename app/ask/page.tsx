@@ -80,30 +80,38 @@ export default function AskPage() {
 
   return (
     <main className="mx-auto flex h-screen max-w-2xl flex-col p-4">
-      <div className="mb-3 flex items-center justify-between">
-        <h1 className="text-xl font-bold">Ask the books</h1>
-        <Link href="/" className="text-sm underline">
-          Home
+      <div className="mb-4 flex items-center justify-between">
+        <div className="flex flex-col">
+          <p className="eyebrow">Ask the textbooks</p>
+          <h1 className="text-xl font-semibold">Consult</h1>
+        </div>
+        <Link href="/" className="eyebrow hover:text-pine transition-colors">
+          ← Home
         </Link>
       </div>
 
       <div className="flex-1 space-y-3 overflow-y-auto pb-4">
         {messages.length === 0 && !loading && (
-          <p className="text-sm text-gray-500">
-            Ask any dental question. Answers are grounded in your textbooks with citations.
+          <p className="text-sm text-ink-soft">
+            Ask any dental question. Answers are grounded in your textbooks with page citations —
+            and clearly flagged when they fall back to general knowledge.
           </p>
         )}
         {messages.map((m, i) => (
           <ChatMessage key={i} role={m.role} content={m.content} sources={m.sources} />
         ))}
-        {loading && <p className="text-sm text-gray-400">Thinking…</p>}
+        {loading && <p className="font-mono text-xs text-ink-soft">Consulting…</p>}
         {error && (
-          <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">
+          <div
+            role="alert"
+            aria-live="polite"
+            className="rounded-xl border border-maroon bg-maroon-tint p-3 text-sm text-maroon"
+          >
             <p>{error}</p>
             {lastQuestion && (
               <button
                 onClick={() => void send(lastQuestion)}
-                className="mt-1 underline"
+                className="mt-1 font-medium underline"
                 disabled={loading}
               >
                 Retry
@@ -116,16 +124,19 @@ export default function AskPage() {
 
       <form onSubmit={handleSubmit} className="flex gap-2 pt-2">
         <input
+          name="question"
+          aria-label="Your question"
+          autoComplete="off"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="e.g. How is a pulpotomy performed?"
-          className="flex-1 rounded-full border border-gray-300 px-4 py-2 text-sm dark:bg-gray-900"
+          className="field flex-1 text-sm"
           disabled={loading}
         />
         <button
           type="submit"
           disabled={loading || !input.trim()}
-          className="rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="btn btn-primary px-5"
         >
           Send
         </button>
