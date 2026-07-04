@@ -51,20 +51,29 @@ CREATE TABLE IF NOT EXISTS questions (
 CREATE INDEX IF NOT EXISTS idx_questions_category ON questions (category);
 
 -- One row per mock-exam / quiz attempt.
+-- `mode` records how the attempt was started. Only graded modes ('full',
+-- 'topic', 'review') feed the dashboard trend and category accuracy; the
+-- pure re-reading mode ('completed') is excluded so revisiting explanations
+-- doesn't drag your stats around.
 CREATE TABLE IF NOT EXISTS quiz_attempts (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  mode TEXT NOT NULL DEFAULT 'full',
   started_at TEXT NOT NULL DEFAULT (datetime('now')),
   completed_at TEXT
 );
 
 -- One row per answered question within an attempt.
+-- UNIQUE(attempt_id, question_id): a question can only be answered once per
+-- attempt. Re-answering (e.g. after an accidental reload) upserts the same
+-- row instead of inserting a duplicate, so scores can't be double-counted.
 CREATE TABLE IF NOT EXISTS answers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   attempt_id INTEGER NOT NULL REFERENCES quiz_attempts (id),
   question_id INTEGER NOT NULL REFERENCES questions (id),
   selected_index INTEGER NOT NULL,
   is_correct INTEGER NOT NULL,  -- 0/1
-  answered_at TEXT NOT NULL DEFAULT (datetime('now'))
+  answered_at TEXT NOT NULL DEFAULT (datetime('now')),
+  UNIQUE (attempt_id, question_id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_answers_attempt_id ON answers (attempt_id);

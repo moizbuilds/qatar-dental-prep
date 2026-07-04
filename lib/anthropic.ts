@@ -17,6 +17,41 @@ export interface GroundedAnswer {
   sources: SourceRef[];
 }
 
+/** A prior conversation turn, passed in so Ask mode can handle follow-ups. */
+export interface PriorTurn {
+  role: "user" | "assistant";
+  content: string;
+}
+
+/** Marker the model prints when a question isn't covered by the passages. */
+const NOT_COVERED_MARKER = "Not covered in your textbooks";
+
+/**
+ * Returns only the sources the answer actually cited, so the "Sources" footer
+ * never implies a non-sourced answer was grounded. A source counts as cited
+ * when the answer text references its page (e.g. "p.41"). General-knowledge
+ * answers (which carry the not-covered marker) get no sources at all.
+ */
+export function selectCitedSources(answer: string, chunks: Chunk[]): SourceRef[] {
+  if (answer.includes(NOT_COVERED_MARKER)) return [];
+  const seen = new Set<string>();
+  const cited: SourceRef[] = [];
+  for (const c of chunks) {
+    const pageCited = new RegExp(`p\\.?\\s*${c.page_start}\\b`).test(answer);
+    if (!pageCited) continue;
+    const key = `${c.book}:${c.page_start}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    cited.push({
+      chunk_id: c.id,
+      book: c.book,
+      page_start: c.page_start,
+      page_end: c.page_end,
+    });
+  }
+  return cited;
+}
+
 /** Minimal shape of the Anthropic client we depend on — lets tests inject a mock. */
 export interface AnthropicLike {
   messages: {
@@ -63,16 +98,24 @@ export function buildSystemPrompt(chunks: Chunk[]): string {
 export async function askGrounded(
   question: string,
   chunks: Chunk[],
+  history: PriorTurn[] = [],
   client?: AnthropicLike
 ): Promise<GroundedAnswer> {
   const anthropic: AnthropicLike = client ?? new Anthropic();
+
+  // Prior turns give Claude conversational context so follow-ups like "what
+  // about in children?" resolve, instead of being read as a fresh question.
+  const messages = [
+    ...history.map((t) => ({ role: t.role, content: t.content })),
+    { role: "user" as const, content: question },
+  ];
 
   const message = await anthropic.messages.create({
     model: ASK_MODEL,
     max_tokens: 2000,
     thinking: { type: "disabled" },
     system: buildSystemPrompt(chunks),
-    messages: [{ role: "user", content: question }],
+    messages,
   });
 
   const answer = message.content
@@ -81,12 +124,5 @@ export async function askGrounded(
     .join("")
     .trim();
 
-  const sources: SourceRef[] = chunks.map((c) => ({
-    chunk_id: c.id,
-    book: c.book,
-    page_start: c.page_start,
-    page_end: c.page_end,
-  }));
-
-  return { answer, sources };
+  return { answer, sources: selectCitedSources(answer, chunks) };
 }

@@ -5,16 +5,21 @@
  * inserts over the network, so the data never has to pass through anything
  * else. Idempotent-ish: clears the app tables first.
  *
- * Run: SUPABASE_URL=... SUPABASE_ANON_KEY=... npx tsx scripts/load-supabase.ts
+ * Run: SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npx tsx scripts/load-supabase.ts
+ *
+ * Uses the SERVICE ROLE key, not the anon key: RLS now blocks DELETE for anon
+ * (see supabase/migrations/0002), and this script clears the tables before
+ * reloading. The service role key bypasses RLS and must stay operator-only —
+ * never ship it to the client or the deployed app (which uses the anon key).
  */
 import fs from "node:fs";
 import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
 const URL = process.env.SUPABASE_URL;
-const KEY = process.env.SUPABASE_ANON_KEY;
+const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!URL || !KEY) {
-  console.error("SUPABASE_URL and SUPABASE_ANON_KEY must be set.");
+  console.error("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set.");
   process.exit(1);
 }
 const supabase = createClient(URL, KEY, { auth: { persistSession: false } });
@@ -64,15 +69,8 @@ async function main() {
   const chunks = loadChunks();
   console.log(`loaded ${chunks.length} chunks locally`);
 
-  // Clear app tables (respect FK order).
-  for (const t of ["answers", "chat_messages", "quiz_attempts", "questions", "chunks"]) {
-    const { error } = await supabase.from(t).delete().neq("id", "___none___");
-    // delete-all needs a filter; use a never-true-ish match on id via not-null
-    if (error && !/invalid input syntax/.test(error.message)) {
-      // id types differ (text vs bigint); fall back to gte
-    }
-  }
-  // Robust clear: use gte on a sentinel that matches all.
+  // Clear app tables (respect FK order). delete() needs a filter, so match all
+  // rows via gte on the id; chunks has a text id so uses a neq("") match-all.
   await supabase.from("answers").delete().gte("id", 0);
   await supabase.from("chat_messages").delete().gte("id", 0);
   await supabase.from("quiz_attempts").delete().gte("id", 0);

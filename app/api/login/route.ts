@@ -75,6 +75,10 @@ export async function POST(request: NextRequest) {
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
+    // Persist the cookie for the full session lifetime. Without maxAge it's a
+    // browser-session cookie that Safari/iOS drops on close, forcing a re-login
+    // far sooner than the 30-day HMAC expiry intends.
+    maxAge: 30 * 24 * 60 * 60, // 30 days, matches SESSION_LIFETIME_SECONDS
   });
   return response;
 }

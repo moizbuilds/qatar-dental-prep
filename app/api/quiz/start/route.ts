@@ -6,7 +6,7 @@ import {
   completedQuestions,
   randomMock,
 } from "../../../../lib/db";
-import type { BlueprintCategory, Question } from "../../../../lib/db/types";
+import type { BlueprintCategory, Question, QuizMode } from "../../../../lib/db/types";
 
 /** Client-safe question shape: never leaks correct_index or explanation. */
 interface PublicQuestion {
@@ -21,7 +21,7 @@ function toPublicQuestion(q: Question): PublicQuestion {
 }
 
 type StartBody = {
-  mode?: "full" | "topic" | "review" | "completed";
+  mode?: QuizMode;
   category?: BlueprintCategory;
   count?: number;
 };
@@ -41,13 +41,15 @@ export async function POST(request: NextRequest) {
     questions = await randomMock();
   } else if (mode === "topic") {
     const { category, count } = body;
-    if (!category || typeof count !== "number" || count <= 0) {
+    // Number.isFinite rejects NaN (an empty count field serializes to NaN,
+    // which slips past a bare `count <= 0` check and 500s in the DB layer).
+    if (!category || !Number.isFinite(count) || (count as number) <= 0) {
       return NextResponse.json(
         { error: "Topic drill requires 'category' and a positive 'count'" },
         { status: 400 }
       );
     }
-    questions = await getQuestionsByCategory(category, count);
+    questions = await getQuestionsByCategory(category, count as number);
   } else if (mode === "review") {
     questions = await missedQuestions();
   } else if (mode === "completed") {
@@ -59,7 +61,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const attemptId = await createAttempt();
+  // Don't create an attempt for an empty question set (e.g. review with no
+  // outstanding mistakes) — that would litter the DB with 0-question orphans.
+  if (questions.length === 0) {
+    return NextResponse.json({ attemptId: null, questions: [] });
+  }
+
+  const attemptId = await createAttempt(mode);
 
   return NextResponse.json({
     attemptId,

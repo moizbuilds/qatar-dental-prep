@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAttemptScore, completeAttempt } from "../../../../lib/db";
+import { getAttemptScore, completeAttempt, attemptExists } from "../../../../lib/db";
 
 const PASS_THRESHOLD_PERCENT = 60;
 
@@ -18,6 +18,12 @@ export async function POST(request: NextRequest) {
   const { attemptId } = body;
   if (typeof attemptId !== "number") {
     return NextResponse.json({ error: "'attemptId' is required" }, { status: 400 });
+  }
+
+  // Reject bogus ids instead of silently "finishing" a non-existent attempt
+  // as a 0/0 Fail.
+  if (!(await attemptExists(attemptId))) {
+    return NextResponse.json({ error: "Attempt not found" }, { status: 404 });
   }
 
   const { correct, total } = await getAttemptScore(attemptId);

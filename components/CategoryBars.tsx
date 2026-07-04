@@ -1,26 +1,14 @@
+import { CATEGORY_LABELS, type BlueprintCategory } from "../lib/db/types";
+
 interface CategoryRow {
   category: string;
   attempted: number;
   accuracyPercent: number;
 }
 
-/** Human-readable labels for the 14 blueprint categories. */
-const LABELS: Record<string, string> = {
-  scientific_knowledge: "Scientific Knowledge",
-  patient_assessment: "Patient Assessment & Diagnosis",
-  treatment_planning: "Treatment Planning",
-  health_safety: "Health & Safety",
-  emergencies: "Management of Emergencies",
-  prevention_population: "Prevention & Population Health",
-  pain_anxiety: "Pain & Anxiety Control",
-  periodontics: "Periodontics",
-  pediatric: "Pediatric Dentistry",
-  orthodontics: "Orthodontics",
-  restorative_endodontics: "Restorative & Endodontics",
-  prosthodontics: "Prosthodontics",
-  oral_surgery_medicine: "Oral Surgery & Medicine",
-  affective_skills: "Affective Skills",
-};
+function labelFor(category: string): string {
+  return CATEGORY_LABELS[category as BlueprintCategory] ?? category;
+}
 
 export function CategoryBars({
   categories,
@@ -38,7 +26,7 @@ export function CategoryBars({
         return (
           <div key={c.category}>
             <div className="flex justify-between text-sm mb-1">
-              <span>{LABELS[c.category] ?? c.category}</span>
+              <span>{labelFor(c.category)}</span>
               <span className={attempted ? (passing ? "text-green-600" : "text-red-600") : "text-gray-400"}>
                 {attempted ? `${pct}%` : "—"}
               </span>

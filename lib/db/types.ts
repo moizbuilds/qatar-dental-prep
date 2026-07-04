@@ -35,6 +35,24 @@ export const BLUEPRINT: { category: BlueprintCategory; examCount: number }[] = [
   { category: "affective_skills", examCount: 15 },
 ];
 
+/** Human-readable display names for the 14 blueprint categories. */
+export const CATEGORY_LABELS: Record<BlueprintCategory, string> = {
+  scientific_knowledge: "Scientific Knowledge",
+  patient_assessment: "Patient Assessment & Diagnosis",
+  treatment_planning: "Treatment Planning",
+  health_safety: "Health & Safety",
+  emergencies: "Management of Emergencies",
+  prevention_population: "Prevention & Population Health",
+  pain_anxiety: "Pain & Anxiety Control",
+  periodontics: "Periodontics",
+  pediatric: "Pediatric Dentistry",
+  orthodontics: "Orthodontics",
+  restorative_endodontics: "Restorative & Endodontics",
+  prosthodontics: "Prosthodontics",
+  oral_surgery_medicine: "Oral Surgery & Medicine",
+  affective_skills: "Affective Skills",
+};
+
 export interface Chunk {
   id: string;
   book: string;
@@ -69,8 +87,19 @@ export interface QuestionFilter {
   limit?: number;
 }
 
+/**
+ * How a quiz attempt was started. Single source of truth shared by the API,
+ * the session page, and the data layer so the union can't drift out of sync.
+ * Only GRADED_MODES feed the dashboard; "completed" is pure re-reading.
+ */
+export type QuizMode = "full" | "topic" | "review" | "completed";
+
+/** Modes whose answers count toward the dashboard trend and category stats. */
+export const GRADED_MODES: QuizMode[] = ["full", "topic", "review"];
+
 export interface Attempt {
   id: number;
+  mode: QuizMode;
   started_at: string;
   completed_at: string | null;
 }

@@ -15,6 +15,7 @@ import type {
   NewQuestion,
   Question,
   QuestionFilter,
+  QuizMode,
 } from "./types";
 import * as supabase from "./supabase";
 
@@ -57,8 +58,8 @@ export async function getQuestionById(id: number) {
   return useSupabase ? supabase.getQuestionById(id) : (await sq()).getQuestionById(id);
 }
 
-export async function createAttempt() {
-  return useSupabase ? supabase.createAttempt() : (await sq()).createAttempt();
+export async function createAttempt(mode: QuizMode = "full") {
+  return useSupabase ? supabase.createAttempt(mode) : (await sq()).createAttempt(mode);
 }
 
 export async function recordAnswer(a: NewAnswer) {

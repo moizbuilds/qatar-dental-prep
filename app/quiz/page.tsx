@@ -113,7 +113,7 @@ export default function QuizModePage() {
         </label>
         <button
           type="button"
-          disabled={starting || count <= 0}
+          disabled={starting || !Number.isFinite(count) || count <= 0}
           onClick={() => startQuiz({ mode: "topic", category, count })}
           className="rounded-full border border-solid border-transparent bg-foreground text-background font-medium text-base h-12 px-5 w-full disabled:opacity-50"
         >

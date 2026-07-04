@@ -8,8 +8,22 @@ function getPasscode(): string {
   return process.env.APP_PASSCODE ?? "";
 }
 
+// Fail closed: an unset or trivially-short SESSION_SECRET must never sign
+// sessions. If it's empty, verifySession would happily accept any cookie
+// forged with an empty HMAC key (a real login-bypass hole). Throwing here
+// surfaces the misconfiguration loudly at request time instead of silently
+// "working". 16 chars is a low bar that still rejects blank/placeholder values.
+const MIN_SESSION_SECRET_LENGTH = 16;
+
 function getSessionSecret(): string {
-  return process.env.SESSION_SECRET ?? "";
+  const secret = process.env.SESSION_SECRET ?? "";
+  if (secret.length < MIN_SESSION_SECRET_LENGTH) {
+    throw new Error(
+      `SESSION_SECRET is missing or too short (need ≥ ${MIN_SESSION_SECRET_LENGTH} chars). ` +
+        "Set it to a random value, e.g. `node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\"`."
+    );
+  }
+  return secret;
 }
 
 function timingSafeEqual(a: string, b: string): boolean {

@@ -1,6 +1,5 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import {
-  BLUEPRINT,
   type AttemptScore,
   type BlueprintCategory,
   type CategoryStat,
@@ -11,6 +10,7 @@ import {
   type NewQuestion,
   type Question,
   type QuestionFilter,
+  type QuizMode,
 } from "./types";
 
 let cached: SupabaseClient | null = null;
@@ -69,7 +69,9 @@ function shuffle<T>(arr: T[]): T[] {
 // --- Chunks / search ---
 
 export async function searchChunks(query: string, limit: number): Promise<Chunk[]> {
-  if (!query.trim()) return [];
+  // Parity with the SQLite backend: a query with no word-like tokens (empty or
+  // punctuation-only) retrieves nothing rather than erroring in the RPC.
+  if (!/[\p{L}\p{N}]/u.test(query)) return [];
   const data = must(await db().rpc("search_chunks", { q: query, k: limit }));
   return (data as Chunk[]).map((c) => ({
     id: c.id,
@@ -110,17 +112,10 @@ export async function getQuestionsByCategory(
 }
 
 export async function randomMock(): Promise<Question[]> {
-  const selected: Question[] = [];
-  for (const { category, examCount } of BLUEPRINT) {
-    const available = await getQuestionsByCategory(category, examCount);
-    if (available.length < examCount) {
-      console.warn(
-        `[randomMock] shortfall in category "${category}": needed ${examCount}, found ${available.length}`
-      );
-    }
-    selected.push(...available);
-  }
-  return shuffle(selected);
+  // One round-trip: the random_mock RPC applies the blueprint weighting
+  // server-side (was 14 sequential category RPCs — a slow full-mock start).
+  const data = must(await db().rpc("random_mock"));
+  return shuffle((data as QuestionRow[]).map(toQuestion));
 }
 
 export async function getQuestionById(id: number): Promise<Question | undefined> {
@@ -130,18 +125,27 @@ export async function getQuestionById(id: number): Promise<Question | undefined>
 
 // --- Attempts / answers ---
 
-export async function createAttempt(): Promise<number> {
-  const data = must(await db().from("quiz_attempts").insert({}).select("id").single());
+export async function createAttempt(mode: QuizMode = "full"): Promise<number> {
+  const data = must(await db().from("quiz_attempts").insert({ mode }).select("id").single());
   return Number((data as unknown as { id: number }).id);
 }
 
 export async function recordAnswer(a: NewAnswer): Promise<void> {
-  const { error } = await db().from("answers").insert({
-    attempt_id: a.attempt_id,
-    question_id: a.question_id,
-    selected_index: a.selected_index,
-    is_correct: a.is_correct,
-  });
+  // Upsert on (attempt_id, question_id) — mirrors the SQLite backend so a
+  // re-answered question (e.g. after a reload) doesn't create a duplicate row.
+  // Requires the UNIQUE(attempt_id, question_id) constraint (see migrations).
+  const { error } = await db()
+    .from("answers")
+    .upsert(
+      {
+        attempt_id: a.attempt_id,
+        question_id: a.question_id,
+        selected_index: a.selected_index,
+        is_correct: a.is_correct,
+        answered_at: new Date().toISOString(),
+      },
+      { onConflict: "attempt_id,question_id" }
+    );
   if (error) throw new Error(error.message);
 }
 

@@ -232,7 +232,7 @@ describe("createAttempt / recordAnswer / attemptStats / missedQuestions", () => 
     expect(pedo!.accuracy).toBeCloseTo(1);
   });
 
-  it("missedQuestions returns questions answered incorrectly at least once", () => {
+  it("missedQuestions returns questions whose latest answer is incorrect", () => {
     const q1 = insertQuestion(makeQuestion("periodontics", 1));
     const q2 = insertQuestion(makeQuestion("pediatric", 1));
 
@@ -243,6 +243,20 @@ describe("createAttempt / recordAnswer / attemptStats / missedQuestions", () => 
     const missed = missedQuestions();
     expect(missed.length).toBe(1);
     expect(missed[0].id).toBe(q1);
+  });
+
+  it("missedQuestions drops a question once its latest answer is correct", () => {
+    const q1 = insertQuestion(makeQuestion("periodontics", 5));
+
+    // First attempt: got it wrong → should appear.
+    const a1 = createAttempt();
+    recordAnswer({ attempt_id: a1, question_id: q1, selected_index: 1, is_correct: false });
+    expect(missedQuestions().map((q) => q.id)).toContain(q1);
+
+    // Later attempt: got it right → latest answer is correct → drops off.
+    const a2 = createAttempt();
+    recordAnswer({ attempt_id: a2, question_id: q1, selected_index: 0, is_correct: true });
+    expect(missedQuestions().map((q) => q.id)).not.toContain(q1);
   });
 
   it("completedQuestions returns every answered question, right or wrong", () => {
@@ -290,10 +304,12 @@ describe("attemptHistory", () => {
     const a1 = createAttempt();
     recordAnswer({ attempt_id: a1, question_id: q1, selected_index: 0, is_correct: true });
     recordAnswer({ attempt_id: a1, question_id: q2, selected_index: 1, is_correct: false });
+    completeAttempt(a1);
 
     const a2 = createAttempt();
     recordAnswer({ attempt_id: a2, question_id: q1, selected_index: 0, is_correct: true });
     recordAnswer({ attempt_id: a2, question_id: q2, selected_index: 0, is_correct: true });
+    completeAttempt(a2);
 
     const history = attemptHistory();
     expect(history.length).toBe(2);
@@ -305,6 +321,22 @@ describe("attemptHistory", () => {
 
   it("ignores attempts with no recorded answers", () => {
     createAttempt(); // no answers recorded
+    expect(attemptHistory().length).toBe(0);
+  });
+
+  it("excludes unfinished attempts (no completed_at) from the trend", () => {
+    const q = insertQuestion(makeQuestion("periodontics", 9));
+    const a = createAttempt();
+    recordAnswer({ attempt_id: a, question_id: q, selected_index: 0, is_correct: true });
+    // Not completed → must not appear in the trend line.
+    expect(attemptHistory().length).toBe(0);
+  });
+
+  it("excludes pure 'completed' review attempts from the trend", () => {
+    const q = insertQuestion(makeQuestion("periodontics", 8));
+    const a = createAttempt("completed");
+    recordAnswer({ attempt_id: a, question_id: q, selected_index: 0, is_correct: true });
+    completeAttempt(a);
     expect(attemptHistory().length).toBe(0);
   });
 });

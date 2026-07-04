@@ -39,6 +39,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Question not found" }, { status: 404 });
   }
 
+  if (selectedIndex < 0 || selectedIndex >= question.choices.length) {
+    return NextResponse.json(
+      { error: "'selectedIndex' is out of range for this question" },
+      { status: 400 }
+    );
+  }
+
   const correct = selectedIndex === question.correct_index;
 
   await recordAnswer({

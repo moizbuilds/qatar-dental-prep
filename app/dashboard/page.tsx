@@ -1,29 +1,12 @@
 import Link from "next/link";
 import { attemptStats, attemptHistory } from "../../lib/db";
-import { BLUEPRINT } from "../../lib/db/types";
+import { BLUEPRINT, CATEGORY_LABELS } from "../../lib/db/types";
 import { CategoryBars } from "../../components/CategoryBars";
 
 const PASS_THRESHOLD = 60;
 
 // Reads the local SQLite DB per request; never statically prerendered.
 export const dynamic = "force-dynamic";
-
-const LABELS: Record<string, string> = {
-  scientific_knowledge: "Scientific Knowledge",
-  patient_assessment: "Patient Assessment & Diagnosis",
-  treatment_planning: "Treatment Planning",
-  health_safety: "Health & Safety",
-  emergencies: "Management of Emergencies",
-  prevention_population: "Prevention & Population Health",
-  pain_anxiety: "Pain & Anxiety Control",
-  periodontics: "Periodontics",
-  pediatric: "Pediatric Dentistry",
-  orthodontics: "Orthodontics",
-  restorative_endodontics: "Restorative & Endodontics",
-  prosthodontics: "Prosthodontics",
-  oral_surgery_medicine: "Oral Surgery & Medicine",
-  affective_skills: "Affective Skills",
-};
 
 export default async function DashboardPage() {
   const statsByCategory = new Map((await attemptStats()).map((s) => [s.category, s]));
@@ -93,7 +76,7 @@ export default async function DashboardPage() {
               <ol className="list-decimal list-inside text-sm">
                 {weakest.map((w) => (
                   <li key={w.category}>
-                    {LABELS[w.category] ?? w.category} — {w.accuracyPercent}%
+                    {CATEGORY_LABELS[w.category] ?? w.category} — {w.accuracyPercent}%
                   </li>
                 ))}
               </ol>

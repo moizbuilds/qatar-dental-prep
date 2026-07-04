@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   BLUEPRINT,
+  GRADED_MODES,
   type AttemptScore,
   type BlueprintCategory,
   type CategoryStat,
@@ -13,7 +14,12 @@ import {
   type NewQuestion,
   type Question,
   type QuestionFilter,
+  type QuizMode,
 } from "./types";
+
+// SQL fragment: the set of attempt modes that count toward the dashboard.
+// Built from GRADED_MODES so the two can't drift apart.
+const GRADED_MODES_SQL = GRADED_MODES.map((m) => `'${m}'`).join(", ");
 
 const DEFAULT_DB_PATH = path.join(process.cwd(), "data", "app.db");
 // Resolve from the project root (process.cwd()), not __dirname: under the
@@ -64,16 +70,30 @@ export function _resetDbForTests(): void {
 // Chunks / full-text search
 // ---------------------------------------------------------------------------
 
+// Common English words that carry no retrieval signal. Dropping them stops a
+// question like "how is a pulpotomy performed" from matching every chunk that
+// merely contains "how"/"is"/"a". Kept small on purpose — mirror this list in
+// the Supabase search_chunks RPC (which uses websearch_to_tsquery natively).
+const STOPWORDS = new Set([
+  "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
+  "of", "to", "in", "on", "at", "for", "and", "or", "with", "how", "what",
+  "which", "who", "whom", "that", "this", "these", "those", "do", "does",
+  "did", "can", "could", "should", "would", "it", "its", "as", "by", "from",
+]);
+
 /**
  * Sanitizes a free-text user query into a safe FTS5 MATCH expression.
- * Extracts word-like tokens, double-quotes each one (escaping embedded
- * quotes) to neutralize FTS5 operators/punctuation, then joins with OR so
- * any queried term can match.
+ * Extracts word-like tokens, drops stopwords, double-quotes each remaining
+ * token (escaping embedded quotes) to neutralize FTS5 operators/punctuation,
+ * then joins with OR so any queried term can match. Falls back to the raw
+ * tokens if every token was a stopword, so a query is never emptied entirely.
  */
 function toFtsQuery(query: string): string {
   const tokens = query.match(/[\p{L}\p{N}]+/gu) ?? [];
   if (tokens.length === 0) return "";
-  return tokens.map((t) => `"${t.replace(/"/g, '""')}"`).join(" OR ");
+  const meaningful = tokens.filter((t) => !STOPWORDS.has(t.toLowerCase()));
+  const chosen = meaningful.length > 0 ? meaningful : tokens;
+  return chosen.map((t) => `"${t.replace(/"/g, '""')}"`).join(" OR ");
 }
 
 /**
@@ -250,17 +270,24 @@ export function randomMock(): Question[] {
 // Attempts / answers
 // ---------------------------------------------------------------------------
 
-export function createAttempt(): number {
+export function createAttempt(mode: QuizMode = "full"): number {
   const db = getDb();
-  const result = db.prepare(`INSERT INTO quiz_attempts DEFAULT VALUES`).run();
+  const result = db.prepare(`INSERT INTO quiz_attempts (mode) VALUES (?)`).run(mode);
   return Number(result.lastInsertRowid);
 }
 
 export function recordAnswer(a: NewAnswer): void {
   const db = getDb();
+  // Upsert on (attempt_id, question_id): re-answering the same question in the
+  // same attempt (e.g. after a page reload) overwrites the prior row rather
+  // than adding a duplicate that would inflate the attempt's total.
   db.prepare(
     `INSERT INTO answers (attempt_id, question_id, selected_index, is_correct)
-     VALUES (?, ?, ?, ?)`
+     VALUES (?, ?, ?, ?)
+     ON CONFLICT (attempt_id, question_id) DO UPDATE SET
+       selected_index = excluded.selected_index,
+       is_correct = excluded.is_correct,
+       answered_at = datetime('now')`
   ).run(a.attempt_id, a.question_id, a.selected_index, a.is_correct ? 1 : 0);
 }
 
@@ -302,6 +329,8 @@ export function attemptHistory(): AttemptScore[] {
               COALESCE(SUM(a.is_correct), 0) AS correct
        FROM quiz_attempts qa
        JOIN answers a ON a.attempt_id = qa.id
+       WHERE qa.mode IN (${GRADED_MODES_SQL})
+         AND qa.completed_at IS NOT NULL
        GROUP BY qa.id
        ORDER BY qa.id ASC`
     )
@@ -330,6 +359,8 @@ export function attemptStats(): CategoryStat[] {
               SUM(a.is_correct) AS correct
        FROM answers a
        JOIN questions q ON q.id = a.question_id
+       JOIN quiz_attempts qa ON qa.id = a.attempt_id
+       WHERE qa.mode IN (${GRADED_MODES_SQL})
        GROUP BY q.category`
     )
     .all() as { category: string; attempted: number; correct: number | null }[];
@@ -347,12 +378,23 @@ export function attemptStats(): CategoryStat[] {
 
 export function missedQuestions(): Question[] {
   const db = getDb();
+  // Return questions whose MOST RECENT answer (across all attempts) is wrong.
+  // Using the latest answer — not "ever wrong" — means answering a question
+  // correctly in review removes it from the list, so the set actually shrinks
+  // as you improve.
   const rows = db
     .prepare(
-      `SELECT DISTINCT q.*
-       FROM answers a
-       JOIN questions q ON q.id = a.question_id
-       WHERE a.is_correct = 0`
+      `SELECT q.*
+       FROM questions q
+       JOIN (
+         SELECT a.question_id, a.is_correct,
+                ROW_NUMBER() OVER (
+                  PARTITION BY a.question_id
+                  ORDER BY a.answered_at DESC, a.id DESC
+                ) AS rn
+         FROM answers a
+       ) latest ON latest.question_id = q.id AND latest.rn = 1
+       WHERE latest.is_correct = 0`
     )
     .all() as QuestionRow[];
   return rows.map(rowToQuestion);
