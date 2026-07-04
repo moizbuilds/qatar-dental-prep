@@ -10,7 +10,10 @@ const FULL_MOCK_SECONDS = 210 * 60; // 3.5 hours
 interface QuizSessionState {
   attemptId: number;
   questions: PublicQuestion[];
-  mode: "full" | "topic" | "review";
+  // Must list every mode /api/quiz/start can send. "completed" was added later
+  // for the "review completed questions" flow; leaving it out silently typed
+  // those sessions wrong.
+  mode: "full" | "topic" | "review" | "completed";
 }
 
 interface FinishResult {
@@ -125,10 +128,29 @@ export default function QuizSessionPage() {
     }
   }
 
+  // Leaving mid-quiz abandons the attempt. For the timed full mock we confirm
+  // first (you lose the run); review/completed/topic drills are low-stakes, so
+  // we just navigate straight back to the mode picker.
+  function handleExit() {
+    const isTimed = session!.mode === "full";
+    if (isTimed && !window.confirm("Leave the mock exam? Your progress on this attempt will be lost.")) {
+      return;
+    }
+    sessionStorage.removeItem("quizSession");
+    router.push("/quiz");
+  }
+
   return (
     <div className="min-h-screen flex flex-col gap-6 p-4">
-      {secondsLeft !== null && (
-        <div className="w-full max-w-xl mx-auto flex justify-end">
+      <div className="w-full max-w-xl mx-auto flex items-center justify-between">
+        <button
+          type="button"
+          onClick={handleExit}
+          className="text-sm text-black/60 dark:text-white/60 hover:underline"
+        >
+          ← Exit
+        </button>
+        {secondsLeft !== null && (
           <span
             className={`text-sm font-mono rounded-full px-3 py-1 border ${
               secondsLeft < 300
@@ -138,8 +160,8 @@ export default function QuizSessionPage() {
           >
             {formatTime(secondsLeft)}
           </span>
-        </div>
-      )}
+        )}
+      </div>
       <QuestionCard
         key={currentQuestion.id}
         question={currentQuestion}

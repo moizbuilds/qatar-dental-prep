@@ -49,7 +49,12 @@ export default async function DashboardPage() {
   return (
     <main className="mx-auto max-w-2xl p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">Your progress</h1>
+        <div className="flex items-center gap-3">
+          <Link href="/" className="text-sm text-black/60 dark:text-white/60 hover:underline">
+            ← Home
+          </Link>
+          <h1 className="text-2xl font-bold">Your progress</h1>
+        </div>
         <Link href="/quiz" className="text-sm underline">
           Take a quiz →
         </Link>

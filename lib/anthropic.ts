@@ -47,6 +47,7 @@ export function buildSystemPrompt(chunks: Chunk[]): string {
     "- Only cite a book for statements actually supported by the passages. Never attach a book/page citation to a general-knowledge statement, and never invent a citation.",
     "- If a question mixes covered and uncovered parts, cite the covered parts and clearly mark the rest as general knowledge.",
     "- Explain at the level of a candidate preparing for a licensing exam: clear, accurate, and concise.",
+    "- Format your answer in Markdown. When the student asks for a comparison, classification, doses, or any structured breakdown — or whenever a table is the clearest form — use a GitHub-flavored Markdown table. Use bullet lists, headings, and bold for key terms where they aid readability.",
     "",
     "Reference passages:",
     "",

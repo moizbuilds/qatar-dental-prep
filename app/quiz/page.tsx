@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { BLUEPRINT, type BlueprintCategory } from "../../lib/db/types";
 
 function formatCategory(category: BlueprintCategory): string {
@@ -50,6 +51,16 @@ export default function QuizModePage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center gap-10 p-8">
+      {/* Top bar with a Home link so the mode screen is never a dead-end. */}
+      <div className="w-full max-w-sm flex items-center">
+        <Link
+          href="/"
+          className="text-sm text-black/60 dark:text-white/60 hover:underline"
+        >
+          ← Home
+        </Link>
+      </div>
+
       <h1 className="text-2xl font-bold text-center">Choose a quiz mode</h1>
 
       {error && (
